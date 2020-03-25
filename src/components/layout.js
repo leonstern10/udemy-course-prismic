@@ -7,39 +7,73 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import { StaticQuery, graphql, Link } from "gatsby"
 import "./layout.css"
+import styled  from 'styled-components';
+import { query } from "../templates/page";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const MainWrapper =styled.main`
+  max-width: 800px;
+  margin: 0 auto;  `
+
+  const navigationQuery = graphql `
+   {
+    prismic {
+      allNavigations {
+        edges {
+          node {
+            navigation_links {
+              label
+              link {
+                ... on PRISMIC_Page {
+                  _meta {
+                    uid
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
-  `)
+  }
+  `
+  const NavLink = styled.div ``;
+
+  const Header = styled.header `
+  display: flex;
+  backgorund: white;
+  height: 66px; 
+  padding: 0 100px;
+  box-sizing: border-box;
+  `;
+
+  const Layout = ({ children }) => {
+
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+        <Header>
+        <StaticQuery 
+        query = {`${navigationQuery}`} 
+        render = {(data) =>{
+        console.log(data); 
+        return data.prismic.allNavigations.edges[0].node.navigation_links.map((link) =>
+        {
+          return (
+            <NavLink key={link.link._meta.uid}>
+              <Link to={`/${link.link._meta.uid}`}>
+              {link.label}
+              </Link>
+            </NavLink>
+          )
+
+        })
+
+        }} />
+        </Header>
+        <MainWrapper>{children}</MainWrapper>
+   
     </>
   )
 }
