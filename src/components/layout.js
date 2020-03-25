@@ -22,6 +22,7 @@ const MainWrapper =styled.main`
       allNavigations {
         edges {
           node {
+            logo
             navigation_links {
               label
               link {
@@ -38,15 +39,43 @@ const MainWrapper =styled.main`
     }
   }
   `
-  const NavLink = styled.div ``;
+  const NavLink = styled.div `
+  margin: auto 0;
+  
+
+  a{
+    color:  #0C1C30;
+    padding: 0 36px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:hover{
+      color: #8461C9; 
+
+    }
+  }
+  
+  
+  `;
 
   const Header = styled.header `
   display: flex;
-  backgorund: white;
-  height: 66px; 
-  padding: 0 100px;
+  height: 109px;
+  padding: 0 102px;
+  border: 1px solid #CACACA;
+  background-color: rgba(0,0,0,0.0)
   box-sizing: border-box;
   `;
+  const NavLinks = styled.div `
+  margin-right: auto;
+  display: flex;
+  `;
+  const Logo = styled.div`
+  color: #8461C9;
+  font-weight: bold;
+  margin-right: auto; 
+  `
 
   const Layout = ({ children }) => {
 
@@ -54,23 +83,33 @@ const MainWrapper =styled.main`
   return (
     <>
         <Header>
+          
         <StaticQuery 
         query = {`${navigationQuery}`} 
         render = {(data) =>{
         console.log(data); 
-        return data.prismic.allNavigations.edges[0].node.navigation_links.map((link) =>
-        {
+        return (
+          <>
+            <Logo>
+              {data.prismic.allNavigations.edges[0].logo}
+            </Logo>
+          <NavLinks>
+            {data.prismic.allNavigations.edges[0].node.navigation_links.map((link) =>{
           return (
-            <NavLink key={link.link._meta.uid}>
-              <Link to={`/${link.link._meta.uid}`}>
-              {link.label}
-              </Link>
-            </NavLink>
-          )
-
-        })
+              <NavLink key={link.link._meta.uid}>
+                <Link to={`/${link.link._meta.uid}`}>
+                {link.label}
+                </Link>
+              </NavLink>
+            )
+          })}
+          </NavLinks>
+          </>
+        )
+         
 
         }} />
+       
         </Header>
         <MainWrapper>{children}</MainWrapper>
    
