@@ -45,8 +45,11 @@ const MainWrapper =styled.main`
 
   a{
     color:  #0C1C30;
-    padding: 0 36px;
+    padding: 0;
+    padding-right: 15px;
+    padding-left 40px;
     text-decoration: none;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 16px;
 
@@ -64,18 +67,20 @@ const MainWrapper =styled.main`
   height: 109px;
   padding: 0 102px;
   border: 1px solid #CACACA;
-  background-color: rgba(0,0,0,0.0)
   box-sizing: border-box;
   `;
   const NavLinks = styled.div `
   margin-right: auto;
   display: flex;
   `;
-  const Logo = styled.div`
+  const Logo = styled.div `
   color: #8461C9;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  margin-right: auto; 
-  `
+  font-size: 36px;
+  margin: auto 0;
+  margin-right: 35px;
+  `;
 
   const Layout = ({ children }) => {
 
@@ -90,24 +95,22 @@ const MainWrapper =styled.main`
         console.log(data); 
         return (
           <>
-            <Logo>
-              {data.prismic.allNavigations.edges[0].logo}
-            </Logo>
+          <Logo>
+            {data.prismic.allNavigations.edges[0].node.logo}
+          </Logo>
           <NavLinks>
-            {data.prismic.allNavigations.edges[0].node.navigation_links.map((link) =>{
+            { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
           return (
-              <NavLink key={link.link._meta.uid}>
-                <Link to={`/${link.link._meta.uid}`}>
-                {link.label}
-                </Link>
-              </NavLink>
-            )
-          })}
+            <NavLink key={link.link._meta.uid}>
+              <Link to={`/${link.link._meta.uid}`}>
+              {link.label}
+              </Link>
+            </NavLink>
+          )
+        })}
           </NavLinks>
           </>
         )
-         
-
         }} />
        
         </Header>
