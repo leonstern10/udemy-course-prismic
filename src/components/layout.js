@@ -92,12 +92,7 @@ const MainWrapper =styled.main`
   margin: auto 0;
   margin-right: 35px;
   `;
-  const Categorias = styled.div `
-  margin: auto 0;
-  `;
-  const DropDown = styled.div `
-  margin: auto 0;
-  `;
+  
 
   
 
@@ -117,19 +112,7 @@ const MainWrapper =styled.main`
           <Logo>
             {data.prismic.allNavigations.edges[0].node.logo}
           </Logo>
-          <DropDown>
-            {data.prismic.allNavigations.edges[0].node.dropdown.categorias.map((category_link) =>{
-              return (
-                <Categorias key={category_link.category_link._meta.uid}>
-              <Link to={`/${category_link.category_link._meta.uid}`}>
-              {category_link.categorias}
-              </Link>
-            </Categorias>
-              )
-            })}
-            </DropDown>
-
-
+        
           <NavLinks>
             { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
           return (
