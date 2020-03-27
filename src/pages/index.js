@@ -20,6 +20,27 @@ query MyQuery {
                 hero_image
               }
             }
+            ... on PRISMIC_Home_pageBodyLists_grid {
+              type
+              primary {
+                list_title
+              }
+              fields {
+                button_destination {
+                  ... on PRISMIC_Page {
+                    page_title
+                    content
+                    _meta {
+                      uid
+                    }
+                  }
+                }
+                button_label
+                article_title
+                content
+                list_image
+              }
+            }
           }
         }
       }
