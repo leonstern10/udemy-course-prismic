@@ -17,6 +17,7 @@ query MyQuery {
               primary {
                 hero_content
                 hero_title
+                hero_image
               }
             }
           }

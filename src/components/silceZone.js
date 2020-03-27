@@ -9,6 +9,7 @@ const SliceZone = ({body}) => {
                     if(bodyContent.type === 'hero'){
                         return (
                             <Hero
+                            heroImage = {bodyContent.primary.hero_image.url}
                             title = {bodyContent.primary.hero_title}
                             content={bodyContent.primary.hero_content}
                             key={i}/>

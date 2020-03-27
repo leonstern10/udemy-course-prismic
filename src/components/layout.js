@@ -13,7 +13,7 @@ import styled  from 'styled-components';
 import { query } from "../templates/page";
 
 const MainWrapper =styled.main`
-  max-width: 800px;
+ 
   margin: 0 auto;  `
 
   const navigationQuery = graphql `
