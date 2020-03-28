@@ -6,7 +6,7 @@ import ListBox from './listBox';
 
 
 const ListsGridWrapper = styled.section `
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 
     h3{
@@ -18,11 +18,10 @@ const ListsGridWrapper = styled.section `
     margin-bottom: 0;
 }
 p{
-    font-family: 'Lat
+    font-family: 'Lato', sans-serif;
     margin-block-start: 0px;
 
 }`;
-
 
 const ListsGrid = ({title, lists}) => {
     return (
@@ -32,10 +31,11 @@ const ListsGrid = ({title, lists}) => {
             {lists.map((list,i) => {
                 return (
                     <ListBox 
+                    listImage= {list.list_image.url}
                     title={list.article_title}
                     content={list.content}
                     buttonLabel={list.button_label}
-                    buttonDestination={'/${list.button_destination._meta.uid}'}
+                    buttonDestination={`/${list.button_destination._meta.uid}`}
                     key={i}/>
                         
                    
