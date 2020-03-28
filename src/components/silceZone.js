@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from './hero';
+import ListsGrid from './listsGrid';
+
 
 const SliceZone = ({body}) => {
     console.log(body);
@@ -15,7 +17,16 @@ const SliceZone = ({body}) => {
                             key={i}/>
                         )
                         
-                    } else {
+                    }else if (bodyContent.type ==='lists_grid'){
+                        return ( 
+                                    <ListsGrid 
+                                    key={i}
+                                    lists={bodyContent.fields}
+                                    title={bodyContent.primary.list_title} />
+                        )
+                    }
+
+                     else {
                         return null
                     }
                 } )}
