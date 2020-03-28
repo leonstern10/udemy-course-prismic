@@ -1,6 +1,5 @@
 import React from 'react';
-import ListsGrid from './listsGrid';
-import {RichText, KeyText} from 'prismic-reactjs';
+import {RichText} from 'prismic-reactjs';
 import styled from 'styled-components';
 import {Link} from 'gatsby';
 
@@ -14,10 +13,10 @@ border-bottom: 1px solid #CACACA;
     display: flex;
     margin: auto 0;
     align-self: center;
+
     .img-wrapper{      
     display: block;
-       
-    img {
+        img {
         max-width: 241px
        
     }
@@ -26,26 +25,20 @@ border-bottom: 1px solid #CACACA;
     .content-wrapper{
     margin: 0 20px;
     align-self: center;
-    display: flex;
+    display: block;
    flex-direction: column;
    max-width: 800px;
-   
-   
-   
-   }
+}
+.list-conent{
+    display: block;
+}
    .button-wrapper{
     align-self: center;
     width: 25%;
-
-
-
-
-   }
-
-  
-    }
-
 }
+    }
+}
+
 `;
 
 
@@ -54,6 +47,7 @@ background: #8461C9;
 display: inline-block;
 border-radius: 8px;
 cursor: pointer;
+float: right;
 
 
 
@@ -81,8 +75,12 @@ const ListBox = ({title, content, buttonLabel, buttonDestination, listImage}) =>
             <img src={listImage} alt= "Featured"/>
         </div>
         <div className="content-wrapper">
+            <div className="list-title">
         <RichText render={title}/>
+        </div>
+        <div className="list-content">
         <RichText render={content}/>
+        </div>
         </div>
         <div className="button-wrapper">
         <Button>
