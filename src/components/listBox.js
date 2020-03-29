@@ -13,6 +13,7 @@ border-bottom: 1px solid #CACACA;
     display: flex;
     margin: auto 0;
     align-self: center;
+    padding: 0 15px;
 
     .img-wrapper{      
     display: block;
@@ -29,12 +30,18 @@ border-bottom: 1px solid #CACACA;
    flex-direction: column;
    max-width: 800px;
 }
-.list-conent{
-    display: block;
-}
+
    .button-wrapper{
     align-self: center;
     width: 25%;
+    
+
+    .list-text{
+        display: block;
+        font-family: 'Lato', sans-serif;
+         
+        
+    }
 }
     }
 }
@@ -48,6 +55,8 @@ display: inline-block;
 border-radius: 8px;
 cursor: pointer;
 float: right;
+font-family: 'Raleway', sans-serif;
+font-weight: bold;
 
 
 
@@ -78,7 +87,7 @@ const ListBox = ({title, content, buttonLabel, buttonDestination, listImage}) =>
             <div className="list-title">
         <RichText render={title}/>
         </div>
-        <div className="list-content">
+        <div className="list-text">
         <RichText render={content}/>
         </div>
         </div>

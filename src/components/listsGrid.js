@@ -8,6 +8,7 @@ import ListBox from './listBox';
 const ListsGridWrapper = styled.section `
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 
     h3{
     font-family: 'Raleway', sans-serif;
@@ -16,10 +17,6 @@ const ListsGridWrapper = styled.section `
     padding-bottom: 21px;
     border-bottom: 1px solid #CACACA;
     margin-bottom: 0;
-}
-p{
-    font-family: 'Lato', sans-serif;
-    margin-block-start: 0px;
 
 }`;
 

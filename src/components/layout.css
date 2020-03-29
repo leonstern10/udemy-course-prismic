@@ -620,19 +620,22 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-  @media only screen and (max-width: 972px) {
+  @media only screen and (max-width: 992px) {
+    .list-text {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 905px) {
     html {
       font-size: 75%;
     }
   }
   @media only screen and (max-width: 859px) {
   .button-wrapper {
-        flex-wrap: wrap;
-  }
-  }
-  @media only screen and (max-width: 855px) {
-    .list-conent {
-          display: none;
+
+    
+  
+         
   
     }
 }}
