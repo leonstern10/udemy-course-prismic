@@ -206,7 +206,7 @@ html {
 }
 body {
   color: #0C1C30;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -217,6 +217,7 @@ body {
 }
 img {
   max-width: 100%;
+  max-height: 100%;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -620,22 +621,31 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1128px) {
     .list-text {
       display: none;
     }
   }
+  @media only screen and (max-width: 1128px) {
+    .content_button_wrapper {
+      flex-wrap: wrap;
+    }
+  }
+
   @media only screen and (max-width: 905px) {
     html {
       font-size: 75%;
     }
   }
-  @media only screen and (max-width: 859px) {
-  .button-wrapper {
 
-    
   
+  @media only screen and (max-width: 768px) {
+  .img-wrapper {
+    width: 120px;
+    height: 120px;
+}}
+
+
          
   
     }
-}}

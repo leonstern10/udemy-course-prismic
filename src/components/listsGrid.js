@@ -6,7 +6,7 @@ import ListBox from './listBox';
 
 
 const ListsGridWrapper = styled.section `
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 0 15px;
 

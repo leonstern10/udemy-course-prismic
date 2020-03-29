@@ -9,6 +9,7 @@ padding: 40px 0;
 background: #fffff;
 border-bottom: 1px solid #CACACA;
 
+
 .list-content{
     display: flex;
     margin: auto 0;
@@ -17,14 +18,24 @@ border-bottom: 1px solid #CACACA;
 
     .img-wrapper{      
     display: block;
+    width: 241px;
+    height: auto;
+    
         img {
-        max-width: 241px
-       
+       position: center;
+       width: 100%
+       height: 100%
+       margin: auto 0; 
+     }
     }
+
+    .content_button_wrapper{
+        display: flex;
+        margin: 0 20px;
         
     }
     .content-wrapper{
-    margin: 0 20px;
+    padding: 0 20px;
     align-self: center;
     display: block;
    flex-direction: column;
@@ -51,12 +62,13 @@ border-bottom: 1px solid #CACACA;
 
 const Button = styled.div ` 
 background: #8461C9;
-display: inline-block;
+display: flex;
 border-radius: 8px;
 cursor: pointer;
 float: right;
 font-family: 'Raleway', sans-serif;
 font-weight: bold;
+
 
 
 
@@ -83,6 +95,7 @@ const ListBox = ({title, content, buttonLabel, buttonDestination, listImage}) =>
         <div className= "img-wrapper">
             <img src={listImage} alt= "Featured"/>
         </div>
+        <div className="content_button_wrapper">
         <div className="content-wrapper">
             <div className="list-title">
         <RichText render={title}/>
@@ -97,6 +110,7 @@ const ListBox = ({title, content, buttonLabel, buttonDestination, listImage}) =>
                 {buttonLabel}
             </Link> 
         </Button>
+        </div>
         </div>
         </div>
     
