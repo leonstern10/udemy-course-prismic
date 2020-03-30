@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from "gatsby"
 import Layout from '../components/layout';
 import styled from 'styled-components';
+import RichText from '../components/richText'
 
 
 export const  query = graphql `
@@ -10,6 +11,8 @@ export const  query = graphql `
     allContact_pages {
       edges {
         node {
+            form_title
+            form_description
           form_fields {
             field_name
             field_type
@@ -31,11 +34,13 @@ margin-right: auto ;
 `
 const Button = styled.button `
 background: #8461C9;
-color: #fffff;
-cursor: pointer 
-padding: 16px 28px;
+color: #ffffff;
 box-shadow: none; 
+display: flex;
 border-radius: 8px;
+cursor: pointer;
+font-family: 'Raleway', sans-serif;
+font-weight: bold;
 
 `
 
@@ -44,6 +49,9 @@ const ContactUs = (props) => {
 
     return(
         <Layout>
+            <RichText render = {props.data.prismic.allContact_pages.edges[0].node.form_title}/>
+            <RichText render = {props.data.prismic.allContact_pages.edges[0].node.form_description}/>
+
             <Form onSubmit={e => e.preventDefault()}>
                 {props.data.prismic.allContact_pages.edges[0].node.form_fields.map((field, i) => {
                    if(field.field_type === 'textarea'){
@@ -67,7 +75,7 @@ const ContactUs = (props) => {
                    }
                 })}
                 <Button type="submit">
-                    Submit
+                Asóciate con nosotros
                 </Button>
 
             </Form>

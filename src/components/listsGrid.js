@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {RichText} from 'prismic-reactjs';
+import RichText from './richText';
 import ListBox from './listBox';
 
 
