@@ -13,7 +13,7 @@ border-bottom: 1px solid #CACACA;
 .list-content{
     display: flex;
     margin: auto 0;
-    align-self: center;
+    // align-self: center;
     padding: 0 15px;
 
     .img-wrapper{      
@@ -42,23 +42,19 @@ border-bottom: 1px solid #CACACA;
    max-width: 800px;
 }
 
-   .button-wrapper{
-    align-self: center;
-    width: 25%;
+   
     
 
-    .list-text{
-        display: block;
-        font-family: 'Lato', sans-serif;
-         
-        
-    }
-}
+
     }
 }
 
 `;
 
+// .list-text{
+//     display: block;
+//     font-family: 'Lato', sans-serif;
+// }
 
 const Button = styled.div ` 
 background: #8461C9;
