@@ -23,19 +23,14 @@ const MainWrapper =styled.main`
         edges {
           node {
             logo
-            dropdown {
-              categorias
-              category_link {
-                ... on PRISMIC_Page {
+            navigation_links {
+              label
+              link {
+                ... on PRISMIC_Contact_page {
                   _meta {
                     uid
                   }
                 }
-              }
-            }
-            navigation_links {
-              label
-              link {
                 ... on PRISMIC_Page {
                   _meta {
                     uid
@@ -85,12 +80,15 @@ const MainWrapper =styled.main`
   display: flex;
   `;
   const Logo = styled.div `
-  color: #8461C9;
+  margin: auto 0;
+ a{ color: #8461C9;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 36px;
-  margin: auto 0;
-  margin-right: 35px;
+    margin-right: 35px;
+    text-decoration: none;
+
+ }
   `;
   
 
@@ -110,8 +108,10 @@ const MainWrapper =styled.main`
         return (
           <>
           <Logo>
+            <Link to= "/" > 
             {data.prismic.allNavigations.edges[0].node.logo}
-          </Logo>
+            </Link>
+                      </Logo>
         
           <NavLinks>
             { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {

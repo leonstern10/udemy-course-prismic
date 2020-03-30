@@ -31,24 +31,46 @@ margin-top: 20px;
 max-width: 800px;
 margin-left: auto ;
 margin-right: auto ;
+input {
+    margin-bottom: 10px; 
+    border-radius: 4px;
+    height: 40px;
+    border: 1px solid #eee;
+    width: 100%;
+    }
+textarea{
+    margin-bottom: 10px; 
+    border-radius: 4px;
+    height: 100px;
+    border: 1px solid #eee;
+    width: 100%;
+    resize: none;
+    }
 `
 const Button = styled.button `
+box-shadow: none; 
 background: #8461C9;
 color: #ffffff;
-box-shadow: none; 
+border: none;
 display: flex;
+padding: 12px 16px; 
 border-radius: 8px;
 cursor: pointer;
 font-family: 'Raleway', sans-serif;
 font-weight: bold;
 
 `
-
+const ContactWrapper = styled.section `
+max-width: 800px;
+margin: 40px auto; 
+`
 const ContactUs = (props) => {
     console.log(props);
 
     return(
         <Layout>
+            <ContactWrapper>
+
             <RichText render = {props.data.prismic.allContact_pages.edges[0].node.form_title}/>
             <RichText render = {props.data.prismic.allContact_pages.edges[0].node.form_description}/>
 
@@ -79,6 +101,9 @@ const ContactUs = (props) => {
                 </Button>
 
             </Form>
+
+            </ContactWrapper>
+           
             
         </Layout>
     
