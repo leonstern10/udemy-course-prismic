@@ -22,6 +22,14 @@ const MainWrapper =styled.main`
       allNavigations {
         edges {
           node {
+            cta
+            contact_button {
+              ... on PRISMIC_Contact_page {
+                _meta {
+                  uid
+                }
+              }
+            }
             logo
             navigation_links {
               label
@@ -90,7 +98,18 @@ const MainWrapper =styled.main`
 
  }
   `;
-  
+  const CTA = styled.div `
+margin: auto 0;
+background: #8461C9;
+display: flex;
+border-radius: 8px;
+cursor: pointer;
+float: right;
+font-family: 'Raleway', sans-serif;
+font-weight: bold;
+padding: 16px 28px;
+color: white;
+`
 
   
 
@@ -111,10 +130,10 @@ const MainWrapper =styled.main`
             <Link to= "/" > 
             {data.prismic.allNavigations.edges[0].node.logo}
             </Link>
-                      </Logo>
+          </Logo>
         
           <NavLinks>
-            { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
+            {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
           return (
             <NavLink key={link.link._meta.uid}>
               <Link to={`/${link.link._meta.uid}`}>
@@ -122,8 +141,13 @@ const MainWrapper =styled.main`
               </Link>
             </NavLink>
           )
-        })}
+        })} */}
           </NavLinks>
+          <CTA>
+          <Link>
+          {data.prismic.allNavigations.edges[0].node.contact_button}
+          </Link>
+          </CTA>
           </>
         )
         }} />
