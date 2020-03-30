@@ -100,6 +100,7 @@ const MainWrapper =styled.main`
   `;
   const CTA = styled.div `
 margin: auto 0;
+a{
 background: #8461C9;
 display: flex;
 border-radius: 8px;
@@ -109,6 +110,9 @@ font-family: 'Raleway', sans-serif;
 font-weight: bold;
 padding: 16px 28px;
 color: white;
+text-decoration: none;
+
+}
 `
 
   
@@ -144,8 +148,9 @@ color: white;
         })} */}
           </NavLinks>
           <CTA>
-          <Link>
-          {data.prismic.allNavigations.edges[0].node.contact_button}
+          <Link to ="/contact-us/">
+          {data.prismic.allNavigations.edges[0].node.contact_button.uid}
+          {data.prismic.allNavigations.edges[0].node.cta}
           </Link>
           </CTA>
           </>
