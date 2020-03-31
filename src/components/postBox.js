@@ -1,5 +1,5 @@
 import React from 'react';
-import { RichText } from './richText';
+import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -15,7 +15,7 @@ const PostBoxWrapper = styled.section`
 
 
 
-const PostBox = ({  productImage, productName, productDescription, buttonLabel, productLink }) => {
+const PostBox =({  productImage, productName, productDescription, buttonLabel, productLink }) => {
 
     return (
         <PostBoxWrapper>
@@ -23,9 +23,9 @@ const PostBox = ({  productImage, productName, productDescription, buttonLabel, 
         <RichText render={productDescription} />
         <img src={productImage} alt="post" />
         <Button>
-         <Link to={productLink}>
+         <a href={productLink}>
            {buttonLabel}
-         </Link>
+         </a>
         </Button>
         </PostBoxWrapper>
     )}

@@ -26,8 +26,9 @@ return (
                     productName={post.product_name}
                     productDescription={post.product_description}
                     buttonLabel={post.button_label}
-                    productLink={`/${post.product_link._meta.url}`}
+                    productLink={post.product_link.url}
                     key={i}/>
+
                 )
     })}
 
