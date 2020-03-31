@@ -22,7 +22,7 @@ const SliceZone = ({body}) => {
                         return ( 
                                     <PostGrid 
                                     key={i}
-                                     />
+                                    title={bodyContent.primary.products_title} />
                         )
                     }
                                 else if (bodyContent.type ==='lists_grid'){
