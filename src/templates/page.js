@@ -11,9 +11,28 @@ prismic {
     allPages(id: $id) {
       edges {
         node {
-            content
-            page_title  
-           _meta {
+          page_title
+          author_name
+          post_image
+          content
+          body {
+            ... on PRISMIC_PageBodyPost_grid {
+              type
+              label
+              fields {
+                button_label
+                product_description
+                product_image
+                product_name
+                product_link {
+                  ... on PRISMIC__ExternalLink {
+                    url
+                  }
+                }
+              }
+            }
+          }
+          _meta {
             id
             uid
           }
@@ -25,7 +44,7 @@ prismic {
 
 const PageWrapper = styled.section `
 max-width: 800px;
-margin: 0 auto; 
+margin: 0 auto;
 `
 
 const Page = (props) => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './hero';
 import ListsGrid from './listsGrid';
+import PostGrid  from './postGrid';
 
 
 const SliceZone = ({body}) => {
@@ -17,7 +18,14 @@ const SliceZone = ({body}) => {
                             key={i}/>
                         )
                         
-                    }else if (bodyContent.type ==='lists_grid'){
+                    }    else if (bodyContent.type ==='post_grid'){
+                        return ( 
+                                    <PostGrid 
+                                    key={i}
+                                     />
+                        )
+                    }
+                                else if (bodyContent.type ==='lists_grid'){
                         return ( 
                                     <ListsGrid 
                                     key={i}
