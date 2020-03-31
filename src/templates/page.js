@@ -61,12 +61,12 @@ const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
 
     return (
         <Layout>
-          <PageWrapper>
+          <PageWrapper> 
 
           <RichText render= {pageTitle} />
           <RichText render= {authorName} />
           <RichText render= {content} />
-          <img src={postImage} alt="" />
+          <img src={postImage} alt="Post Image"/>
 
    {!!props.data.prismic.allPages.edges[0].node.body &&
    <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/>
