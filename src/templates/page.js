@@ -67,10 +67,11 @@ const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
           <RichText render= {authorName} />
           <RichText render= {content} />
           <img src={postImage} alt="Post Image"/>
+          <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/>
 
-   {!!props.data.prismic.allPages.edges[0].node.body &&
-   <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/>
-   }
+   {/* {!!props.data.prismic.allPages.edges[0].node.body &&
+   <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/> //Need to check this because it was blocking the data from SliceZone
+   } */}
           </PageWrapper>
    
    

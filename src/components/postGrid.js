@@ -28,12 +28,10 @@ return (
                     buttonLabel={post.button_label}
                     productLink={`/${post.product_link._meta.url}`}
                     key={i}/>
-                        
-                   
                 )
-            })}
-    </PostGridWrapper>
+    })}
 
+    </PostGridWrapper>
 )
 
 }

@@ -7,7 +7,10 @@ const PostBoxWrapper = styled.section`
     padding: 40px 0;
     `
 
-
+    const Button = styled.div` 
+        
+    a {
+    background: #8461C9;`
 
 
 
@@ -18,13 +21,13 @@ const PostBox = ({  productImage, productName, productDescription, buttonLabel, 
         <PostBoxWrapper>
         <RichText render={productName} />
         <RichText render={productDescription} />
-        <img src={productImage} alt="" />
+        <img src={productImage} alt="post" />
         <Button>
-                            <Link to={productLink}>
-                                {buttonLabel}
-                            </Link>
-                        </Button>
-                        </PostBoxWrapper>
+         <Link to={productLink}>
+           {buttonLabel}
+         </Link>
+        </Button>
+        </PostBoxWrapper>
     )}
 
     export default PostBox;
