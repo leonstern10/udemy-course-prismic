@@ -79,9 +79,9 @@ const MainWrapper =styled.main`
   const Header = styled.header `
   display: flex;
   height: 109px;
-  padding: 0 102px;
-  border: 1px solid #CACACA;
+  padding: 0 40px;
   box-sizing: border-box;
+  
   `;
   const NavLinks = styled.div `
   margin-right: auto;
@@ -89,6 +89,7 @@ const MainWrapper =styled.main`
   `;
   const Logo = styled.div `
   margin: auto 0;
+  
  a{ color: #8461C9;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -111,6 +112,10 @@ font-weight: bold;
 padding: 16px 28px;
 color: white;
 text-decoration: none;
+font-size: 16px;
+&:hover{
+  background: #1D0276;
+}
 
 }
 `

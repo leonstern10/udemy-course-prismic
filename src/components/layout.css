@@ -191,7 +191,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  /* font: 112.5%/1.45em georgia, serif; */
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -386,7 +386,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   
 }
 figure {
@@ -619,72 +619,40 @@ pre tt:after {
   content: "";
 }
 
-@media only screen and (max-width: 1920px) {
-  html {
-    font-size: 100%;
-  }
-  .button-wrapper{
-    width: 25%;
-    align-self: center;
-  
-  }
-}
-    
-  @media only screen and (max-width: 1000px) {
-    .list-text {
-      display: none;
-    }
-    .content_button_wrapper {
-      flex-wrap: wrap;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start
-    }
-    .button_wrapper{
-      width: auto;
-    }
-  }
-  
-
-  @media only screen and (max-width: 905px) {
-    html {
-      font-size: 75%;
-    }
-    .list-text {
-      display: none;
-    }
-    .content_button_wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start
-    }
-    .button_wrapper{
-      width: unset;
-      align-self: unset;
-    }
-  }
-
-  
-  @media only screen and (max-width: 768px) {
-  .img-wrapper {
-    width: 120px;
-    height: 120px;
-}
-.list-text {
-  display: none;
-}
-.content_button_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start
-}
-.button_wrapper{
-  width: unset;
-  align-self: unset;
-}
+.axis {
+  display: table; /* Default: child cells arranged in horisenatal order */  
 }
 
+.axis-cell {
+  float: left;
+  padding: 0 20px;
+  width: 100%; /* Default: each child cell fill half of the horisenatal space */  
+}
 
-         
   
-    
+@media only screen and (max-width: 1000px) {
+  .axis {
+    display: grid; /* Arrange child cells in vertical order*/
+  }
+  .axis-cell {
+    width: 100%;  /* Let each child cell to fill the entire horisenatal space */
+  }
+  .list-text {
+    display: none; /* Hide the item's preview-text (i.e. show only its title) */
+  }
+}
+  
+@media only screen and (max-width: 705px) {
+  html{
+    font-size: 75%;
+  }
+ 
+}
+@media only screen and (max-width: 500px) {
+  html{
+    font-size: 65%;
+  }
+  
+  }
+  
+  
