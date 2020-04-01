@@ -49,7 +49,6 @@ const Button = styled.div`
         display: inline-block;
         text-decoration: none;
         text-align: center;
-        display: inline-block;
         font-size: 16px;   
         &:hover{
             background: #1D0276;

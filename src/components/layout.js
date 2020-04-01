@@ -80,7 +80,8 @@ const MainWrapper =styled.main`
   const Header = styled.header `
   display: flex;
   height: 109px;
-  padding: 0 40px;
+  max-width: 1000px;
+  margin: 0 auto;
   box-sizing: border-box;
   border-bottom: 1px solid #CACACA;
 

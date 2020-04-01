@@ -6,7 +6,7 @@ import PostBox from './postBox';
 
 const PostGridWrapper = styled.section `
 max-width: 850px;
-margin: 100px auto; 
+margin: 70px auto; 
 
 .products-title{
     padding-bottom: 0;
