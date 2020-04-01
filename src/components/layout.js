@@ -66,6 +66,7 @@ const MainWrapper =styled.main`
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 16px;
+    
 
     &:hover{
       color: #8461C9; 
@@ -81,6 +82,8 @@ const MainWrapper =styled.main`
   height: 109px;
   padding: 0 40px;
   box-sizing: border-box;
+  border-bottom: 1px solid #CACACA;
+
   
   `;
   const NavLinks = styled.div `

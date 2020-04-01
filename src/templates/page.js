@@ -48,25 +48,58 @@ prismic {
 `
 
 const PageWrapper = styled.section `
-max-width: 800px;
-margin: 0 auto;
-`
+max-width: 1030px;
+margin: 50px auto;
+
+.header-section{
+  background:  url('${props => props.postImage}');
+  display: flex;
+  height: 280px;
+  align-items: center;
+  
+}
+.title-author{
+  box-sizing: border-box;
+  background: #EEEEEE;
+  margin: 0 0 0;
+  padding: 50px 84px 50px 50px;
+  
+
+
+}
+
+.post-description{
+  max-width: 700px;
+  margin-top: 60px ;
+  line-height: 28px;
+  color: #0C1C30;
+ 
+}
+`;
 
 const Page = (props) => {
 const pageTitle = props.data.prismic.allPages.edges[0].node.page_title;
-const content = props.data.prismic.allPages.edges[0].node.content;
 const authorName = props.data.prismic.allPages.edges[0].node.author_name;
 const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
+const content = props.data.prismic.allPages.edges[0].node.content;
 
 
     return (
         <Layout>
           <PageWrapper> 
-
+            <div className="header-section">
+            <div className="title-author">
+          <div className="page-title">
           <RichText render= {pageTitle} />
+          </div>
           <RichText render= {authorName} />
-          <RichText render= {content} />
+          </div>
           <img src={postImage} alt="Post Image"/>
+          </div>
+          <div className="post-description">
+          <RichText render= {content} />
+          </div>
+           
           <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/>
 
    {/* {!!props.data.prismic.allPages.edges[0].node.body &&

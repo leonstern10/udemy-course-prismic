@@ -8,7 +8,7 @@ const ListBoxWrapper = styled.section`
     background: #fffff;
     border-bottom: 1px solid #CACACA;
     .list-content {
-        display: flex; // Horisenatal order        
+        display: flex;       
         margin: auto 0;
         padding: 0 15px;
         align-items: center;
