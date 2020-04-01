@@ -670,6 +670,9 @@ pre tt:after {
         h1{
           font-size: 40px !important;
         }
+        a{
+          font-size: 12px ;
+        }
   }
   
 }

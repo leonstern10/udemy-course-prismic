@@ -26,7 +26,9 @@ export const  query = graphql `
 `
 const Form = styled.form `
 padding: 10px;
-background: #eee;
+background-color: rgba(0, 0, 0, 0.025);
+border-radius: 4px;
+padding: 50px;
 margin-top: 20px;
 max-width: 800px;
 margin-left: auto ;
@@ -35,34 +37,42 @@ input {
     margin-bottom: 10px; 
     border-radius: 4px;
     height: 40px;
-    border: 1px solid #eee;
+    border: none;
+    padding: 0 4px;
     width: 100%;
+    text-color: #0C1C30;
+    box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.05);
     }
 textarea{
     margin-bottom: 10px; 
     border-radius: 4px;
     height: 100px;
-    border: 1px solid #eee;
+    border: none;
+    padding: 0 4px;
     width: 100%;
     resize: none;
+    box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.05);
+    color: #0C1C30
     }
 `
 const Button = styled.button `
 box-shadow: none; 
-background: #8461C9;
-color: #ffffff;
-border: none;
+background: #ffffff;
+color: #0C1C30;
+border: 1px solid #eee;
 display: flex;
 padding: 12px 16px; 
 border-radius: 8px;
 cursor: pointer;
 font-family: 'Raleway', sans-serif;
 font-weight: bold;
+box-shadow: 6px 24px 58px 0px rgba(85, 85, 85, 0.2);
 
 `
 const ContactWrapper = styled.section `
 max-width: 800px;
 margin: 40px auto; 
+padding: 0 20px;
 `
 const ContactUs = (props) => {
     console.log(props);

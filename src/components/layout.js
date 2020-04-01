@@ -113,10 +113,10 @@ cursor: pointer;
 float: right;
 font-family: 'Raleway', sans-serif;
 font-weight: bold;
-padding: 16px 28px;
+padding: 16px 13px;
 color: white;
 text-decoration: none;
-font-size: 16px;
+font-size: 12px;
 &:hover{
   background: #1D0276;
 }
