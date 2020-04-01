@@ -50,12 +50,12 @@ prismic {
 const PageWrapper = styled.section `
 max-width: 1030px;
 margin: 50px auto;
+.page-wrapper{
+  margin: 50px auto;
+}
 
-.header-section{
-  background:  url('${props => props.postImage}');
-  display: flex;
-  height: 280px;
-  align-items: center;
+
+
   
 }
 .title-author{
@@ -64,7 +64,9 @@ margin: 50px auto;
   margin: 0 0 0;
   padding: 50px 84px 50px 50px;
   
+.post-image{
 
+}
 
 }
 
@@ -73,8 +75,14 @@ margin: 50px auto;
   margin-top: 60px ;
   line-height: 28px;
   color: #0C1C30;
+  font-size: 18px;
  
 }
+.header-section{
+  display: flex;
+height: 280px;
+align-items: center;
+
 `;
 
 const Page = (props) => {
@@ -86,7 +94,7 @@ const content = props.data.prismic.allPages.edges[0].node.content;
 
     return (
         <Layout>
-          <PageWrapper> 
+          <PageWrapper className="page-wrapper"> 
             <div className="header-section">
             <div className="title-author">
           <div className="page-title">
@@ -94,7 +102,7 @@ const content = props.data.prismic.allPages.edges[0].node.content;
           </div>
           <RichText render= {authorName} />
           </div>
-          <img src={postImage} alt="Post Image"/>
+          <img className="post-image" src={postImage} alt="Post Image"/>
           </div>
           <div className="post-description">
           <RichText render= {content} />
