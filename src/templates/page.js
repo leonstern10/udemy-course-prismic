@@ -49,9 +49,10 @@ prismic {
 
 const PageWrapper = styled.section `
 max-width: 1030px;
-margin: 50px auto;
+margin: 60px auto;
+padding: 0 10px;
 .page-wrapper{
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 
@@ -60,7 +61,7 @@ margin: 50px auto;
 }
 .title-author{
   box-sizing: border-box;
-  background: #EEEEEE;
+  background-color: #EEEEEE;
   margin: 0 0 0;
   padding: 50px 84px 50px 50px;
   
@@ -72,7 +73,7 @@ margin: 50px auto;
 
 .post-description{
   max-width: 700px;
-  margin-top: 60px ;
+  padding-top: 40px ;
   line-height: 28px;
   color: #0C1C30;
   font-size: 18px;
