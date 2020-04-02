@@ -15,8 +15,14 @@ module.exports = {
           match: '/:uid',
           path: '/',
           component: require.resolve('./src/templates/page.js')
-          
+        }, {
+          type: 'Footerpages',
+          match: '/:uid',
+          path: '/',
+          component: require.resolve('./src/templates/footerPage.js')
+        
         }]
+        
       }
     },
     `gatsby-plugin-react-helmet`,

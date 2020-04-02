@@ -27,7 +27,7 @@ const MainWrapper =styled.main`
                 footer {
                   label
                   link {
-                    ... on PRISMIC_Page {
+                    ... on PRISMIC_Footerpages {
                       _meta {
                         uid
                       }
@@ -218,8 +218,6 @@ a{
         console.log(data); 
         return (
           <>
-          
-        
           <FooterLinks>
             { data.prismic.allFooters.edges[0].node.footer.map((link) => {
           return (
