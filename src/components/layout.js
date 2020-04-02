@@ -19,7 +19,25 @@ const MainWrapper =styled.main`
   const navigationQuery = graphql `
    {
     prismic {
-      allNavigations {
+            allFooters {
+            edges {
+              node {
+                aviso
+                copyright
+                footer {
+                  label
+                  link {
+                    ... on PRISMIC_Page {
+                      _meta {
+                        uid
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+              allNavigations {
         edges {
           node {
             cta
@@ -123,52 +141,105 @@ font-size: 12px;
 
 }
 `
+const Footer = styled.div `
+display: flex;
+box-sizing: border-box;
+max-width: 1920px;
+height: 200px;
+background: #0C1C30;
+align-items: center;
+justify-content: center;
 
+`
+const FooterLinks = styled.div `
+display: flex;
+flex-direction: row;
+padding: 30px 0;
+border-bottom: 1px solid #CACACA;
+
+`
+const FooterLink = styled.div `
+
+a{
+  text-decoration: none;
+  color: #ffffff; 
+  padding: 0 30px;
+}`
   
 
   const Layout = ({ children }) => {
 
 
   return (
+
     <>
-        <Header>
+      <Header>
           
-        <StaticQuery 
+          <StaticQuery 
+          query = {`${navigationQuery}`} 
+          render = {(data) =>{
+          console.log(data); 
+          return (
+            <>
+            <Logo>
+              <Link to= "/" > 
+              {data.prismic.allNavigations.edges[0].node.logo}
+              </Link>
+            </Logo>
+          
+            <NavLinks>
+              {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
+            return (
+              <NavLink key={link.link._meta.uid}>
+                <Link to={`/${link.link._meta.uid}`}>
+                {link.label}
+                </Link>
+              </NavLink>
+            )
+          })} */}
+            </NavLinks>
+            <CTA>
+            <Link to ="/contact-us/">
+            {data.prismic.allNavigations.edges[0].node.contact_button.uid}
+            {data.prismic.allNavigations.edges[0].node.cta}
+            </Link>
+            </CTA>
+            </>
+          )
+          }} />
+         
+          </Header>
+          <MainWrapper>{children}</MainWrapper>
+     
+    <Footer>
+    <StaticQuery 
         query = {`${navigationQuery}`} 
         render = {(data) =>{
         console.log(data); 
         return (
           <>
-          <Logo>
-            <Link to= "/" > 
-            {data.prismic.allNavigations.edges[0].node.logo}
-            </Link>
-          </Logo>
+          
         
-          <NavLinks>
-            {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
+          <FooterLinks>
+            { data.prismic.allFooters.edges[0].node.footer.map((link) => {
           return (
-            <NavLink key={link.link._meta.uid}>
+            <FooterLink key={link.link._meta.uid}>
               <Link to={`/${link.link._meta.uid}`}>
               {link.label}
               </Link>
-            </NavLink>
+            </FooterLink>
           )
-        })} */}
-          </NavLinks>
-          <CTA>
-          <Link to ="/contact-us/">
-          {data.prismic.allNavigations.edges[0].node.contact_button.uid}
-          {data.prismic.allNavigations.edges[0].node.cta}
-          </Link>
-          </CTA>
+        })}
+          </FooterLinks>
+          
           </>
         )
         }} />
-       
-        </Header>
-        <MainWrapper>{children}</MainWrapper>
-   
+
+  
+    </Footer>
+
+      
     </>
   )
 }
