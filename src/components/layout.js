@@ -12,6 +12,7 @@ import "./layout.css"
 import styled  from 'styled-components';
 import { query } from "../templates/page";
 
+
 const MainWrapper =styled.main`
  
   margin: 0 auto;  `
@@ -165,6 +166,13 @@ a{
   color: #ffffff; 
   padding: 0 30px;
 }`
+
+const Aviso =styled.div `
+.aviso {
+
+}
+`
+
   
 
   const Layout = ({ children }) => {
@@ -226,9 +234,13 @@ a{
               {link.label}
               </Link>
             </FooterLink>
-          )
+                      )
         })}
           </FooterLinks>
+          
+            
+            
+           
           
           </>
         )

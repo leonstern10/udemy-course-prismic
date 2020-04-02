@@ -66,6 +66,7 @@ padding: 0 10px;
   padding: 50px 84px 50px 50px;
   
 .post-image{
+  max-height: 
 
 }
 

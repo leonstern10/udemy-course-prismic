@@ -15,7 +15,8 @@ const PostBoxWrapper = styled.section`
     }
 
         .image-wrapper{
-            margin-bottom: 30px;;
+            margin-bottom: 60px;
+            max-width: 560px;
         }
     
     `
@@ -32,7 +33,7 @@ const PostBoxWrapper = styled.section`
     font-weight: bold;
         border-radius: 8px;
         padding: 12px;
-       max-width: 500px;
+       max-width: 560px;
         color: white; 
         display: flex;
         text-decoration: none;

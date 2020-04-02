@@ -12,6 +12,8 @@ query FooterpageQuery($id: String){
       allFooterpagess(id: $id) {
         edges {
           node {
+            page_content
+                title
             _meta {
               uid
               id
@@ -28,13 +30,14 @@ query FooterpageQuery($id: String){
 
 
 const Footerpage = (props) => {
+  const title = props.data.prismic.allFooterpagess.edges[0].node.title;
+  const content = props.data.prismic.allFooterpagess.edges[0].node.page_content;
   console.log(props);
     return(
       
         <Layout>
-        <h1>
-            Termino de uso jjjij
-        </h1>
+          <RichText render={title}/>
+         <RichText render = {content}/>   
         </Layout>
     )}
     export default Footerpage;
