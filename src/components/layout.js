@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
 import "./layout.css"
 import styled  from 'styled-components';
+import RichText from "./richText"
 import { query } from "../templates/page";
 
 
@@ -144,6 +145,7 @@ font-size: 12px;
 `
 const Footer = styled.div `
 display: flex;
+flex-direction: column;
 box-sizing: border-box;
 max-width: 1920px;
 height: 200px;
@@ -155,22 +157,37 @@ justify-content: center;
 const FooterLinks = styled.div `
 display: flex;
 flex-direction: row;
-padding: 30px 0;
+padding: 35px 0;
 border-bottom: 1px solid #CACACA;
 
 `
 const FooterLink = styled.div `
 
 a{
+  display: inline-flex;
   text-decoration: none;
   color: #ffffff; 
   padding: 0 30px;
 }`
 
 const Aviso =styled.div `
-.aviso {
+color: white;
+margin: auto 0;
+p{
+  text-align:center;
+  color: white;
+  
+}
 
 }
+`
+const Copyright = styled.div ` 
+color: white;
+margin: auto 0;
+
+p{
+  text-align:center;
+  color: white;
 `
 
   
@@ -237,6 +254,16 @@ const Aviso =styled.div `
                       )
         })}
           </FooterLinks>
+          <Aviso>
+            <p>
+            Aviso Los redactores de eltop10 no están asociados con los fabricantes de los productos recomendados. Sin embargo, publicamos enlaces de diferentes tiendas online que nos aprovisionan.
+         </p>
+          </Aviso>
+          <Copyright>
+            <p>
+            Copyright © 2020 eltop10
+         </p>
+          </Copyright>
           
             
             
