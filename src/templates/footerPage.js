@@ -26,6 +26,13 @@ query FooterpageQuery($id: String){
 
   
 `
+const PageWrapper = styled.section `
+max-width: 1030px;
+margin: 60px auto;
+padding: 0 10px;
+.page-wrapper{
+  margin: 30px auto;
+  `
 
 
 
@@ -36,8 +43,10 @@ const Footerpage = (props) => {
     return(
       
         <Layout>
+          <PageWrapper>
           <RichText render={title}/>
-         <RichText render = {content}/>   
+         <RichText render = {content}/>
+         </PageWrapper>   
         </Layout>
     )}
     export default Footerpage;
