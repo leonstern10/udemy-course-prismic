@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import RichText from '../components/richText';
 import Layout from '../components/layout';
-import SliceZone from '../components/silceZone'
 import styled from 'styled-components';
 
 

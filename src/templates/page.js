@@ -104,7 +104,7 @@ const content = props.data.prismic.allPages.edges[0].node.content;
           </div>
           <RichText render= {authorName} />
           </div>
-          <img className="post-image" src={postImage} alt="Post Image"/>
+          <img className="post-image" src={postImage} alt="Post"/>
           </div>
           <div className="post-description">
           <RichText render= {content} />

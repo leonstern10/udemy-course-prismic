@@ -1,7 +1,7 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+
 
 const PostBoxWrapper = styled.section`
     padding: 40px 0;

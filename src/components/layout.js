@@ -10,8 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
 import "./layout.css"
 import styled  from 'styled-components';
-import RichText from "./richText"
-import { query } from "../templates/page";
+
 
 
 const MainWrapper =styled.main`
@@ -237,8 +236,7 @@ p{
           <MainWrapper>{children}</MainWrapper>
      
     <Footer>
-    <StaticQuery 
-        query = {`${navigationQuery}`} 
+    
         render = {(data) =>{
         console.log(data); 
         return (
@@ -267,7 +265,7 @@ p{
           
           </>
         )
-        }} />
+        }} 
 
   
     </Footer>
