@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql, Link } from "gatsby"
-import "./layout.css"
-import styled  from 'styled-components';
+import { graphql, Link, StaticQuery } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from 'styled-components';
+import "./layout.css";
 
 
 
@@ -233,10 +233,10 @@ p{
           }} />
          
           </Header>
-          <MainWrapper>{children}</MainWrapper>
+          
      
     <Footer>
-    
+          
         render = {(data) =>{
         console.log(data); 
         return (
@@ -269,7 +269,7 @@ p{
 
   
     </Footer>
-
+    <MainWrapper>{children}</MainWrapper>
       
     </>
   )
