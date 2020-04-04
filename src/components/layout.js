@@ -235,7 +235,7 @@ p{
           </Header>
           <MainWrapper>{children}</MainWrapper>
      
-    <Footer>
+    {/* <Footer>
           
         render = {(data) =>{
         console.log(data); 
@@ -268,7 +268,7 @@ p{
         }} />
 
   
-    </Footer>
+    </Footer> */}
     
       
     </>
