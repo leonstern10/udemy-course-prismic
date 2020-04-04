@@ -233,7 +233,7 @@ p{
           }} />
          
           </Header>
-          
+          <MainWrapper>{children}</MainWrapper>
      
     <Footer>
           
@@ -269,7 +269,7 @@ p{
 
   
     </Footer>
-    <MainWrapper>{children}</MainWrapper>
+    
       
     </>
   )
