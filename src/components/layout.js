@@ -191,28 +191,21 @@ p{
 
   
 
-  const Layout = ({ children }) => {
-
-
+const Layout = ({ children }) => {
   return (
-
-    <>
-      <Header>
-          
-          <StaticQuery 
-          query = {`${navigationQuery}`} 
-          render = {(data) =>{
-          console.log(data); 
-          return (
-            <>
-            <Logo>
-              <Link to= "/" > 
-              {data.prismic.allNavigations.edges[0].node.logo}
-              </Link>
-            </Logo>
-          
-            <NavLinks>
-              {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
+    <StaticQuery
+      query={`${navigationQuery}`}
+      render={(data) => {
+        return (
+          <>
+            <Header>
+              <Logo>
+                <Link to="/">
+                  {data.prismic.allNavigations.edges[0].node.logo}
+                </Link>
+              </Logo>
+              <NavLinks>
+                {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
             return (
               <NavLink key={link.link._meta.uid}>
                 <Link to={`/${link.link._meta.uid}`}>
@@ -221,57 +214,41 @@ p{
               </NavLink>
             )
           })} */}
-            </NavLinks>
-            <CTA>
-            <Link to ="/contact-us/">
-            {data.prismic.allNavigations.edges[0].node.contact_button.uid}
-            {data.prismic.allNavigations.edges[0].node.cta}
-            </Link>
-            </CTA>
-            </>
-          )
-          }} />
-         
-          </Header>
-          <MainWrapper>{children}</MainWrapper>
-     
-    {/* <Footer>
-          
-        render = {(data) =>{
-        console.log(data); 
-        return (
-          <>
-          <FooterLinks>
-            { data.prismic.allFooters.edges[0].node.footer.map((link) => {
-          return (
-            <FooterLink key={link.link._meta.uid}>
-              <Link to={`/${link.link._meta.uid}`}>
-              {link.label}
-              </Link>
-            </FooterLink>
-                      )
-        })}
-          </FooterLinks>
-          <Aviso>
-            <p>
-            Aviso Los redactores de eltop10 no están asociados con los fabricantes de los productos recomendados. Sin embargo, publicamos enlaces de diferentes tiendas online que nos aprovisionan.
-         </p>
-          </Aviso>
-          <Copyright>
-            <p>
-            Copyright © 2020 eltop10
-         </p>
-          </Copyright>
-          
+              </NavLinks>
+              <CTA>
+                <Link to="/contact-us/">
+                  {data.prismic.allNavigations.edges[0].node.contact_button.uid}
+                  {data.prismic.allNavigations.edges[0].node.cta}
+                </Link>
+              </CTA>
+            </Header>
+            <MainWrapper>{children}</MainWrapper>
+            <Footer>
+              <FooterLinks>
+                {data.prismic.allFooters.edges[0].node.footer.map((link) => {
+                  return (
+                    <FooterLink key={link.link._meta.uid}>
+                      <Link to={`/${link.link._meta.uid}`}>{link.label}</Link>
+                    </FooterLink>
+                  )
+                })}
+              </FooterLinks>
+              <Aviso>
+                <p>
+                  Aviso Los redactores de eltop10 no están asociados con los
+                  fabricantes de los productos recomendados. Sin embargo,
+                  publicamos enlaces de diferentes tiendas online que nos
+                  aprovisionan.
+                </p>
+              </Aviso>
+              <Copyright>
+                <p>Copyright © 2020 eltop10</p>
+              </Copyright>
+            </Footer>
           </>
         )
-        }} />
-
-  
-    </Footer> */}
-    
-      
-    </>
+      }}
+    />
   )
 }
 
