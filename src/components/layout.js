@@ -235,7 +235,7 @@ const Layout = ({ children }) => {
               </FooterLinks>
               <Aviso>
                 <p>
-                  Aviso Los redactores de eltop10 no están asociados con los
+                  Aviso: Los redactores de eltop10 no están asociados con los
                   fabricantes de los productos recomendados. Sin embargo,
                   publicamos enlaces de diferentes tiendas online que nos
                   aprovisionan.
