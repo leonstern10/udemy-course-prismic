@@ -102,6 +102,7 @@ const MainWrapper =styled.main`
   height: 109px;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 5px;
   box-sizing: border-box;
   border-bottom: 1px solid #CACACA;
 
@@ -119,8 +120,7 @@ const MainWrapper =styled.main`
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
   font-size: 36px;
-    margin-right: 35px;
-    text-decoration: none;
+  text-decoration: none;
 
  }
   `;
