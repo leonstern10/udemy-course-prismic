@@ -48,7 +48,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -56,9 +56,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
-/* <Helmet>
-      <title> elTop10.co | Compara y escoje los mejores productos </title>
-      <meta name= "descripcion" content = "Nuestros expertos de prueban y comparan los mejores productos en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision" />
-      <meta name ="keywords" content = "Los 10 mejores, Los mejores productos,"/>
-      <meta name = "robots" content ="index,follow"></meta>
-    </Helmet> */
+

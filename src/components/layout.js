@@ -112,11 +112,11 @@ const MainWrapper =styled.main`
   display: flex;
   `;
   const Logo = styled.div `
+  font-family: 'Raleway', sans-serif;
   margin: auto 0;
   
  a{ color: #8461C9;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+    font-weight: bold;
   font-size: 36px;
     margin-right: 35px;
     text-decoration: none;
