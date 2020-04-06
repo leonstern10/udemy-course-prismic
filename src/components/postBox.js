@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 
 const PostBoxWrapper = styled.section`
-    padding: 40px 0;
+     margin-top: 50px;
     .content-wrapper{
         max-width: 560px;
         margin: 0 auto;
+        
     }
     .description-wrapper{
         margin-bottom: 2rem;
@@ -23,6 +24,9 @@ const PostBoxWrapper = styled.section`
 
     const Button = styled.div` 
         max-width: 1000px;
+        
+       
+
         
         
     a {
@@ -40,9 +44,15 @@ const PostBoxWrapper = styled.section`
         text-align: center;
         justify-content: center;
     }
+        `
+        const Line =styled.div `
+        margin-top: 50px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 560px;
+        border-bottom: 1px solid #CACACA;
 
-
-      
         `
 
 
@@ -65,6 +75,9 @@ const PostBox =({  productImage, productName, productDescription, buttonLabel, p
            {buttonLabel}
          </a>
         </Button>
+        </div>
+        <div>
+            <Line></Line>
         </div>
         
         </PostBoxWrapper>
