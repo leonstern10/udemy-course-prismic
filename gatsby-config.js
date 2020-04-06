@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `elTop10.co | Compara y escoje los mejores productos`,
+    description: `Nuestros expertos prueban y comparan los mejores productos en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision.`,
+    author: `eltop10.co`,
+    siteLanguage: 'español',
+    keywords: 'Los 10 mejores, Los mejores productos',
+    image: './src/images/',
+    url: 'https://eltop10.co/',
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -52,3 +56,9 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+/* <Helmet>
+      <title> elTop10.co | Compara y escoje los mejores productos </title>
+      <meta name= "descripcion" content = "Nuestros expertos de prueban y comparan los mejores productos en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision" />
+      <meta name ="keywords" content = "Los 10 mejores, Los mejores productos,"/>
+      <meta name = "robots" content ="index,follow"></meta>
+    </Helmet> */

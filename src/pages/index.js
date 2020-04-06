@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SliceZone from "../components/silceZone"
-import {Helmet} from "react-helmet"
+
 
 export const query = graphql `
 query MyQuery {
@@ -53,12 +53,7 @@ const IndexPage = (props) => {
   return(
 
   <Layout>
-    <Helmet>
-      <title> elTop10.co | Compara y escoje los mejores productos </title>
-      <meta name= "descripcion" content = "Nuestros expertos de prueban y comparan los mejores productos en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision" />
-      <meta name ="keywords" content = "Los 10 mejores, Los mejores productos,"/>
-      <meta name = "robots" content ="index,follow"></meta>
-    </Helmet>
+    
     <SliceZone body={props.data.prismic.allHome_pages.edges[0].node.body}/>
   </Layout>
   )}

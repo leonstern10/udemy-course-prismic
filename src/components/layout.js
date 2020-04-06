@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from 'styled-components';
 import "./layout.css";
+import SEO from './seo'
 
 
 
@@ -198,6 +199,7 @@ const Layout = ({ children }) => {
       render={(data) => {
         return (
           <>
+          <SEO/>
             <Header>
               <Logo>
                 <Link to="/">
