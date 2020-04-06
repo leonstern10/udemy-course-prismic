@@ -117,6 +117,7 @@ const MainWrapper =styled.main`
   
  a{ color: #8461C9;
   font-weight: bold;
+  font-family: 'Raleway', sans-serif;
   font-size: 36px;
     margin-right: 35px;
     text-decoration: none;
