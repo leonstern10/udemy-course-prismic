@@ -116,7 +116,7 @@ const MainWrapper =styled.main`
   margin: auto 0;
   
  a{ color: #8461C9;
-    font-weight: bold;
+  font-weight: bold;
   font-size: 36px;
     margin-right: 35px;
     text-decoration: none;

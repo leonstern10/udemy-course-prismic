@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet"');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"');
+
 
 html {
  font-family: 'Lato', sans-serif;
@@ -285,7 +287,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
