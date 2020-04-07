@@ -73,29 +73,29 @@ const MainWrapper =styled.main`
   }
   `
   
-  const NavLink = styled.div `
-  margin: auto 0;
+  // const NavLink = styled.div `
+  // margin: auto 0;
   
 
-  a{
-    color:  #0C1C30;
-    padding: 0;
-    padding-right: 15px;
-    padding-left 40px;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
+  // a{
+  //   color:  #0C1C30;
+  //   padding: 0;
+  //   padding-right: 15px;
+  //   padding-left 40px;
+  //   text-decoration: none;
+  //   font-family: 'Raleway', sans-serif;
+  //   font-weight: bold;
+  //   font-size: 16px;
     
 
-    &:hover{
-      color: #8461C9; 
+  //   &:hover{
+  //     color: #8461C9; 
 
-    }
-  }
+  //   }
+  // }
   
   
-  `;
+  // `;
 
   const Header = styled.header `
   display: flex;
