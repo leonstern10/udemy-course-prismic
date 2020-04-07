@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic-graphql',
       options: {
-        repositoryName: 'Udemy-course-prismic',
+        repositoryName: 'Udemy-course',
         pages:[{
           type: 'Page',
           match: '/:uid',
