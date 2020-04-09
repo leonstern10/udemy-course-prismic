@@ -11,6 +11,8 @@ import React from "react";
 import styled from 'styled-components';
 import "./layout.css";
 import SEO from './seo'
+import CookieConsent from "react-cookie-consent";
+
 
 
 
@@ -191,7 +193,7 @@ p{
   color: white;
 `
 
-  
+
 
 const Layout = ({ children }) => {
   return (
@@ -200,6 +202,18 @@ const Layout = ({ children }) => {
       render={(data) => {
         return (
           <>
+          <CookieConsent
+          buttonStyle= {{ background: "#8461C9", color: "white" }}
+           declineButtonStyle={{ background: "none" }}
+          location="bottom"
+          buttonText="Aceptar"
+          acceptOnScroll={true}
+          acceptOnScrollPercentage={50}
+          cookieName="gatsby-gdpr-google-analytics">
+            <div style={{ fontSize: "14x" }}>
+Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al continuar navegando, aceptas su uso.
+</div>
+</CookieConsent>
           <SEO/>
             <Header>
               <Logo>
