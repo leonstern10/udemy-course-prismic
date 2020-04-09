@@ -52,8 +52,8 @@ const MainWrapper =styled.main`
                 }
               }
             }
-            logo
-            navigation_links {
+            logos
+              navigation_links {
               label
               link {
                 ... on PRISMIC_Contact_page {
@@ -114,18 +114,13 @@ const MainWrapper =styled.main`
   margin-right: auto;
   display: flex;
   `;
-  const Logo = styled.div `
-  font-family: 'Raleway', sans-serif;
-  margin: auto 0;
   
- a{ color: #8461C9;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-  font-size: 36px;
-  text-decoration: none;
-
- }
+  const Logos = styled.div `
+  margin: auto 0;
+  width: 195px;
+height: 42px;
   `;
+  
   const CTA = styled.div `
 margin: auto 0;
 a{
@@ -216,11 +211,12 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
 </CookieConsent>
           <SEO/>
             <Header>
-              <Logo>
-                <Link to="/">
-                  {data.prismic.allNavigations.edges[0].node.logo}
-                </Link>
-              </Logo>
+              <Logos>
+              <Link to="/">
+               <img src= {data.prismic.allNavigations.edges[0].node.logos.url} alt="eltop10 logo"/>
+             </Link>
+              </Logos>           
+              
               <NavLinks>
                 {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
             return (
