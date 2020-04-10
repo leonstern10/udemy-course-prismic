@@ -101,7 +101,7 @@ const MainWrapper =styled.main`
 
   const Header = styled.header `
   display: flex;
-  height: 109px;
+  height: 75px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 5px;
@@ -119,6 +119,9 @@ const MainWrapper =styled.main`
   margin: auto 0;
   width: 195px;
 height: 42px;
+@media (max-width: 400px) {
+  width: 145px;
+height: 26px;
   `;
   
   const CTA = styled.div `
