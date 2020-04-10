@@ -17,6 +17,26 @@ prismic {
           post_image
           content
           body {
+            ... on PRISMIC_PageBodyComparison_grid {
+              type
+              label
+              fields {
+                popular_tag
+                feature1
+                feature2
+                feature3
+                price
+                read_more
+                service_description
+                service_logo
+                web_label
+                web_link {
+                  ... on PRISMIC__ExternalLink {
+                    url
+                  }
+                }
+              }
+            }
             ... on PRISMIC_PageBodyPost_grid {
               type
               label

@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './hero';
 import ListsGrid from './listsGrid';
 import PostGrid  from './postGrid';
+import ComparisonGrid  from './comparisonGrid';
 
 
 const SliceZone = ({body}) => {
@@ -33,6 +34,13 @@ const SliceZone = ({body}) => {
                                     key={i}
                                     lists={bodyContent.fields}
                                     title={bodyContent.primary.list_title} />
+                        )
+                    }
+                    else if (bodyContent.type ==='comparison_grid'){
+                        return ( 
+                                    <ComparisonGrid 
+                                    key={i}
+                                    services={bodyContent.fields}/>
                         )
                     }
 
