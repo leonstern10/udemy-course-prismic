@@ -207,7 +207,7 @@ const Layout = ({ children }) => {
           buttonText="Aceptar"
           acceptOnScroll={true}
           acceptOnScrollPercentage={50}
-          debug={true}
+          // debug={true}
           cookieName="gatsby-gdpr-google-analytics">
             <div style={{ fontSize: "14x" }}>
 Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al continuar navegando, aceptas su uso.
