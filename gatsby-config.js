@@ -6,9 +6,10 @@ module.exports = {
     siteLanguage: 'español',
     keywords: 'Los 10 mejores, Los mejores productos',
     image: './src/images/',
-    url: 'https://eltop10.co/',
+    siteUrl: 'https://eltop10.co/',
   },
   plugins: [
+    `gatsby-plugin-advanced-sitemap`,
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-prismic-graphql',

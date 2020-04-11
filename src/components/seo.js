@@ -17,7 +17,7 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         defaultImge: image
-        url
+        siteUrl
         defaultKeywords: keywords
         siteLanguage
       }
@@ -35,7 +35,7 @@ const SEO = ({ title, description, keywords, image }) => (
           defaultTitle,
           defaultDescription,
           defaultImage,
-          url,
+          siteUrl,
           defaultKeywords,
           siteLanguage,
           
@@ -45,7 +45,7 @@ const SEO = ({ title, description, keywords, image }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: `${image ? image : url+defaultImage}`,
+        image: `${image ? image : siteUrl+defaultImage}`,
         keywords: keywords || defaultKeywords,
       }
 
