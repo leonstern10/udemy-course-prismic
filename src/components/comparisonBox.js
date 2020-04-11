@@ -1,6 +1,7 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 
 
@@ -32,34 +33,44 @@ border-bottom: 1px solid #CACACA;
 
 `;
 const PopularTag =styled.section`
-background:${p => p.popularTag ? '#D9B26F' : 'white'} ;
+background: #D9B26F;
 color: white;
 font-familiy: 'Raleway', sans-serif;
 width: 155px;
 height: 19px;
 `;
 
+const Button = styled.div` `
 
 
-const ComparisonBox = (popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink ) => {
+const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink }) => {
 return(
     <ComparisonBoxWrapper>
     <div className= "comparison-content">
-         
-    <div className="logo-wrapper">
+    <p>
+     <PopularTag>
+         {popularTag}
+         <div className="logo-wrapper">
      <img src={serviceLogo} alt="logo" />
      </div>
-     <RichText render={serviceDescription} />
-   
-
-     <PopularTag popularTag = {popularTag}>
-     <p>
-         #1 Mas popular
-     </p>
      </PopularTag>
-   
+     </p>
+     <RichText render={features} />  
+     <p>
+         {price}
+     </p>   
+     <p>
+         {readMore}
+     </p>
+     <Button>
+     <Link to={webLink}>
+        {webLabel}
+    </Link>
+     </Button>
+    
+     
+     <RichText render={serviceDescription} />    
 
-   
     
    </div>
    </ComparisonBoxWrapper>

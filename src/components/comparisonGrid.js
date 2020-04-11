@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import RichText from './richText';  
 import ComparisonBox from './comparisonBox';
 
 
@@ -9,21 +10,21 @@ margin: 0 auto;
 padding: 0 15px;
 `;
 
-const ComparisonGrid = ({services}) => {
+const ComparisonGrid = ({title, comparisons}) => {
     return (
         <ComparisonWrapper>
-
-                {services.map((service,i) => {
+                <RichText render={title}/>
+                {comparisons.map((comparison,i) => {
                 return (
                     <ComparisonBox 
-                    popularTag= {service.popular_tag==="#1 Mas Popular"}
-                    features={service.feature}
-                    price={service.price}
-                    readMore={service.read_more}
-                    serviceDescription={service.service_description}
-                    serviceLogo={service.service_logo.url}
-                    webLabel={service.web_label}
-                    webLink={service.web_link.url}
+                    popularTag= {comparison.popular_tag}
+                    features={comparison.feature}
+                    price={comparison.price}
+                    readMore={comparison.read_more}
+                    serviceDescription={comparison.service_description}
+                    serviceLogo={comparison.service_logo.url}
+                    webLabel={comparison.web_label}
+                    webLink={comparison.web_link.url}
                     key={i}/>
                         
                    
