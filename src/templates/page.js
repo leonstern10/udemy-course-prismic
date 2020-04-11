@@ -22,9 +22,7 @@ prismic {
               label
               fields {
                 popular_tag
-                feature1
-                feature2
-                feature3
+                feature
                 price
                 read_more
                 service_description
@@ -136,11 +134,11 @@ const content = props.data.prismic.allPages.edges[0].node.content;
           <RichText render= {content} />
           </div>
            
-          <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/>
+          {/* <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/> */}
 
-   {/* {!!props.data.prismic.allPages.edges[0].node.body &&
+   {!!props.data.prismic.allPages.edges[0].node.body &&
    <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/> //Need to check this because it was blocking the data from SliceZone
-   } */}
+   }
           </PageWrapper>
    
    
