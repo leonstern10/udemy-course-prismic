@@ -10,10 +10,10 @@ margin: 0 auto;
 padding: 0 15px;
 `;
 
-const ComparisonGrid = ({title, comparisons}) => {
+const ComparisonGrid = ({ comparisons}) => {
     return (
         <ComparisonWrapper>
-                <RichText render={title}/>
+                
                 {comparisons.map((comparison,i) => {
                 return (
                     <ComparisonBox 

@@ -40,8 +40,7 @@ const SliceZone = ({body}) => {
                         return ( 
                                     <ComparisonGrid 
                                     key={i}
-                                    comparisons={bodyContent.fields}
-                                    title={bodyContent.primary.comparison_title}/>
+                                    comparisons={bodyContent.fields}/>
                         )
                     }
 

@@ -20,9 +20,7 @@ prismic {
             ... on PRISMIC_PageBodyComparison_grid {
               type
               label
-              primary {
-                comparison_title
-              }
+              
               fields {
                 popular_tag
                 feature

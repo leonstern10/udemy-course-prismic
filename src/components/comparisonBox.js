@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-
+import {FaAngleDown} from 'react-icons/fa';
 
 
 const ComparisonBoxWrapper = styled.section`
+max-width: 1220px;
+box-sizing: border-box
 border-top: 1px solid #CACACA;
 border-bottom: 1px solid #CACACA;
 .comparison-content {
-    display: flex;       
+    display: flex; 
+    flex-direction: row;      
     margin: auto 0;
     padding: 0 15px;
+}
     .features{
-            align-self: center;
-            display: block;
-            flex-direction: column;
-            max-width: 760px;
+          
     }
     .logo-wrapper{
         display: block;
@@ -28,6 +29,13 @@ border-bottom: 1px solid #CACACA;
                 margin: auto 0; 
             }
     }
+    .readmore{
+        margin: auto 0;
+    }
+    .content{
+        margin: auto 0;
+    }
+   
 
 
 
@@ -40,11 +48,34 @@ width: 155px;
 height: 19px;
 `;
 
-const Button = styled.div` `
+const Button = styled.div`
+a {
+    background: #8461C9;
+    cursor: pointer;
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+        border-radius: 8px;
+        padding: 12px 24px;
+        color: white; 
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;   
+        &:hover{
+            background: #1D0276;
+        }
+    }
+`; 
 
 
 const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink }) => {
-return(
+
+const [showContent, setContent]= useState(false)
+const toggleContent = () => {
+    setContent(showContent => !showContent)
+}
+    return(
     <ComparisonBoxWrapper>
     <div className= "comparison-content">
     <p>
@@ -55,24 +86,30 @@ return(
      </div>
      </PopularTag>
      </p>
-     <RichText render={features} />  
+     <div className="features">
+     <RichText render={features} /> 
+     </div>
+     <div className= "price">
      <p>
          {price}
      </p>   
-     <p>
-         {readMore}
-     </p>
+     </div>
+     
      <Button>
      <Link to={webLink}>
         {webLabel}
     </Link>
      </Button>
-    
-     
+     </div>
+        <button className= "readmore" onClick={toggleContent} > 
+         {readMore}
+         <FaAngleDown/>
+         </button>
+     {showContent &&
+     <div className="content">
      <RichText render={serviceDescription} />    
-
+     </div>}
     
-   </div>
    </ComparisonBoxWrapper>
 )
 }
