@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import RichText from './richText';  
 import ComparisonBox from './comparisonBox';
 
 
