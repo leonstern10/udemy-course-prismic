@@ -71,7 +71,7 @@ const PostBox =({  productImage, productName, productDescription, buttonLabel, p
         <img src={productImage} alt="post" />
         </div>
         <Button>
-         <a href={productLink}>
+         <a href={productLink} target="_blank" >
            {buttonLabel}
          </a>
         </Button>

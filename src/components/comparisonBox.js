@@ -96,9 +96,9 @@ const toggleContent = () => {
      </div>
      
      <Button>
-     <Link to={webLink}>
+     <a href={webLink} target="_blank" >
         {webLabel}
-    </Link>
+    </a>
      </Button>
      </div>
         <button className= "readmore" onClick={toggleContent} > 
