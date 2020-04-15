@@ -1,48 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet"');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"');
 
-
-html {
- font-family: 'Lato', sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+:root {
+  --Main: #8461C9;
+  --Selected:#D9B26F;
+  --White: #fff;
+  --backGrey: #f7f7f7;
+  --mainGrey: #EEEEEE;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0%;
+  --mainShadow: 25px 35px 75px rgba(0, 0, 0, 0.15);
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
-body {
+* {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-progress {
-  vertical-align: baseline;
-}
-[hidden],
-template {
-  display: none;
-}
+
+  body {
+    font-family: "Lato", sans-serif;
+    color: var(--mainBlack);
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 1.25rem;
+    letter-spacing: var(--mainSpacing);
+  }
+  p {
+    margin-bottom: 1.25rem;
+  }
+  
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -54,23 +50,7 @@ a:hover {
   outline-width: 0;
   color: #8461C9;
 }
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -191,12 +171,8 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-html {
-  /* font: 112.5%/1.45em georgia, serif; */
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-* {
+
+/* * {
   box-sizing: inherit;
 }
 *:before {
@@ -204,18 +180,8 @@ html {
 }
 *:after {
   box-sizing: inherit;
-}
-body {
-  color: #0C1C30;
-  font-family: 'Lato', sans-serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  /* -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt"; */
-}
+} */
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -229,7 +195,7 @@ img {
   margin-bottom: 0;
   
 }
-h1 {
+/* h1 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -324,7 +290,7 @@ h6 {
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
-}
+} */
 hgroup {
   margin-left: 0;
   margin-right: 0;
@@ -512,9 +478,9 @@ dt {
 th {
   font-weight: bold;
 }
-li {
+/* li {
   margin-bottom: calc(1.45rem / 2);
-}
+} */
 ol li {
   padding-left: 0;
 }
@@ -620,60 +586,3 @@ pre tt:after {
   content: "";
 }
 
-.axis {
-  display: table; /* Default: child cells arranged in horisenatal order */  
-}
-
-.axis-cell {
-  float: left;
-  padding: 0 20px;
-  width: 100%; /* Default: each child cell fill half of the horisenatal space */  
-}
-
-  
-@media only screen and (max-width: 1000px) {
-  .axis {
-    display: grid; /* Arrange child cells in vertical order*/
-  }
-  .axis-cell {
-    width: 100%;  /* Let each child cell to fill the entire horisenatal space */
-  }
-  .list-text {
-    display: none; /* Hide the item's preview-text (i.e. show only its title) */
-  }
-}
-@media only screen and (max-width: 767px) {
-  .header-section{
-    margin: -97px auto;
-  }
-  .post-image{
-    display: none
-  }
- 
-  html{
-    font-size: 75%;
-  }
-  .title-author{
-    background-color:#fffff000 !important;
-    padding: 20px 0 30px 0 !important;
-    border-bottom: 1px solid #CACACA;;
-}
-  .post-description{
-    font-size: 16px;
-  }
-  
-}
-@media only screen and (max-width: 500px) {
-  html{
-    font-size: 65%;
-      }
-      @media only screen and (max-width:430px) {
-        h1{
-          font-size: 40px !important;
-        }
-        a{
-          font-size: 12px ;
-        }
-  }
-  
-}

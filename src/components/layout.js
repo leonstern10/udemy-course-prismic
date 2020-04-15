@@ -12,6 +12,7 @@ import styled from 'styled-components';
 import "./layout.css";
 import SEO from './seo'
 import CookieConsent from "react-cookie-consent";
+import Navbar from "./navBar";
 
 
 
@@ -214,15 +215,15 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
 </div>
 </CookieConsent>
           <SEO/>
-            <Header>
-              <Logos>
+          <Navbar></Navbar>
+            {/* <Header>
+               <Logos>
               <Link to="/">
                <img src= {data.prismic.allNavigations.edges[0].node.logos.url} alt="eltop10 logo"/>
              </Link>
-              </Logos>           
-              
-              <NavLinks>
-                {/* { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
+              </Logos>            
+               <NavLinks>
+                { data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
             return (
               <NavLink key={link.link._meta.uid}>
                 <Link to={`/${link.link._meta.uid}`}>
@@ -230,15 +231,15 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
                 </Link>
               </NavLink>
             )
-          })} */}
-              </NavLinks>
+          })}
+              </NavLinks> 
               <CTA>
                 <Link to="/contact-us/">
                   {data.prismic.allNavigations.edges[0].node.contact_button.uid}
                   {data.prismic.allNavigations.edges[0].node.cta}
                 </Link>
               </CTA>
-            </Header>
+            </Header> */}
             <MainWrapper>{children}</MainWrapper>
             <Footer>
               <FooterLinks>
