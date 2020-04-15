@@ -5,6 +5,7 @@
   --Selected:#D9B26F;
   --White: #fff;
   --backGrey: #f7f7f7;
+  --mainBlack:  #0C1C30;
   --mainGrey: #EEEEEE;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
@@ -42,7 +43,7 @@
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  color: #0C1C30
+  font-family: "Raleway", sans-serif;
   
 }
 a:active,

@@ -52,10 +52,10 @@ query MyQuery {
 const IndexPage = (props) => {
   return(
 
-  <Layout>
+  // <Layout>
     
     <SliceZone body={props.data.prismic.allHome_pages.edges[0].node.body}/>
-  </Layout>
+  // </Layout>
   )}
 
 export default IndexPage
