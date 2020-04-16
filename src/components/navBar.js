@@ -5,6 +5,8 @@ import { FaAlignRight } from "react-icons/fa"
 import links from "../utils/navLinks"
 import link from "../utils/navButton"
 import logo from "../images/logo.svg"
+import Dropdown from "./dropDown";
+
 const Navbar = () => {
   const [isOpen, setNav] = useState()
   const toggleNav = () => {
@@ -29,6 +31,8 @@ const Navbar = () => {
               : `${styles.navLinks}`
           }
         >
+            
+         <Dropdown></Dropdown>
           {links.map((item, index) => {
             return (
               <li key={index}>
@@ -36,6 +40,7 @@ const Navbar = () => {
               </li>
             )
           })}
+        
          <div className={styles.cta}>
          {link.map((item, index) => {
          return (
@@ -47,7 +52,7 @@ const Navbar = () => {
            
         </div>
         </ul>
-        
+       
         
       </div>
     </nav>
