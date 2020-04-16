@@ -20,9 +20,11 @@
     background: transparent;
     border: none;
     outline: none;
+    color: #6D538F;
   }
   .logo-btn:hover {
     cursor: pointer;
+    
   }
   .logo-icon {
     color: var(--primaryColor);

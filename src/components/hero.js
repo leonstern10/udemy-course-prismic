@@ -15,7 +15,7 @@ const HeroWrapper = styled.section `
     color: #FFFFFF;
     text-align: center;
     @media (min-width: 1024px ) {
-        height: 90vh;
+        height: 80vh;
     }
  
    .container{

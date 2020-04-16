@@ -13,6 +13,7 @@
     background: transparent;
     border: none;
     outline: none;
+    color: var(--White);
   }
   .logo-btn:hover {
     cursor: pointer;
