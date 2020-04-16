@@ -14,7 +14,9 @@ const HeroWrapper = styled.section `
     position: relative;
     color: #FFFFFF;
     text-align: center;
-   
+    @media (min-width: 1024px ) {
+        height: 90vh;
+    }
  
    .container{
     display: flex;
@@ -33,12 +35,36 @@ const HeroWrapper = styled.section `
     overflow: hidden; 
 }
 .title {
-    font-size: 26px;
-    margin-top: 40px;
+    font-size: 24px;
+    margin-top: 30px;
     @media (min-width: 425px ) {
+    margin-top: 40px;
+}
+@media (min-width: 590px ) {
+    font-size: 28px;
+    margin-top: 50px;
+}
+@media (min-width: 768px ) {
+    font-size: 28px;
+    margin-top: 60px;
+}
+@media (min-width: 800px ) {
+    font-size:32px;
     margin-top: 70px;
 }
+@media (min-width: 1024px ) {
+    font-size:42px;
+    margin-top: 160px;
 }
+@media (min-width: 1440px ) {
+    font-size:44px;
+    
+}
+}
+.subtitle {
+    font-size: 24px;
+}
+
 
 
 `
@@ -54,10 +80,11 @@ const Hero = ({title, content, heroImage}) => {
             </div>
           <div className="title">
           <RichText render={title}/>
-          <p>
+          </div>
+          <p className ="subtitle">
                {content}
            </p>
-          </div>
+          
           </div>        
         </HeroWrapper>
     );

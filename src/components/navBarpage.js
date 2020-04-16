@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import styles from "../css/navbar.module.css"
+import styles from "../css/navbarpage.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../utils/navLinks"
 import link from "../utils/navButton"
-import logo from "../images/logo.svg"
-const Navbar = () => {
+import logoColor from "../images/logoColor.svg"
+const Navbarpage = () => {
   const [isOpen, setNav] = useState()
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
         <Link to="/">
-          <img src={logo} alt="eltop10 logo" />
+          <img src={logoColor} alt="eltop10 logo" />
           </Link>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
@@ -54,4 +54,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbarpage

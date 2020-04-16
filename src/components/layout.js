@@ -12,7 +12,7 @@ import styled from 'styled-components';
 import "./layout.css";
 import SEO from './seo'
 import CookieConsent from "react-cookie-consent";
-import Navbar from "./navBar";
+import Navbarpage from "./navBarpage";
 
 
 
@@ -215,7 +215,7 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
 </div>
 </CookieConsent>
           <SEO/>
-          <Navbar></Navbar>
+          <Navbarpage></Navbarpage>
             {/* <Header>
                <Logos>
               <Link to="/">
