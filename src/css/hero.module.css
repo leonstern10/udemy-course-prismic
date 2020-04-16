@@ -1,0 +1,24 @@
+.container{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: auto;
+    margin: 20px;
+}
+
+.topnav{
+    overflow: hidden; 
+
+}
+@media screen and (min-width: 576px) {
+    .navbar {
+      padding: 0 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .nav-header {
+        display: flex;
+        min-width: 700px;
+    }
+}

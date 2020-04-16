@@ -2,6 +2,7 @@ import React from 'react';
 import RichText from './richText';
 import styled from 'styled-components';
 import Navbar from './navBar';
+import styles from "../css/hero.module.css"
 
 const HeroWrapper = styled.section `
     background: url('${props => props.heroImage}');
@@ -11,31 +12,34 @@ const HeroWrapper = styled.section `
     background-position: center;
     background-repeat: not repeat;
     position: relative;
-    align-items: center;
     color: #FFFFFF;
     text-align: center;
-        
-    }
+   
  
    .container{
-    
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    justify-content: center;
     width: auto;
-    margin: 20px;
+    @media (min-width: 576px ) {
+       width: 100%;
+   
+    }
     
 
    }
    .topnav {
     overflow: hidden; 
-   }0
-    .topnav a {
-
-    float: right;
-    }
-    
 }
+.title {
+    font-size: 26px;
+    margin-top: 40px;
+    @media (min-width: 425px ) {
+    margin-top: 70px;
+}
+}
+
 
 `
 
@@ -48,7 +52,7 @@ const Hero = ({title, content, heroImage}) => {
             <div class="topnav">
             <Navbar/>
             </div>
-          <div>
+          <div className="title">
           <RichText render={title}/>
           <p>
                {content}
