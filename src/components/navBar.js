@@ -6,6 +6,7 @@ import links from "../utils/navLinks"
 import link from "../utils/navButton"
 import logo from "../images/logo.svg"
 import {Dropdown,DropdownButton} from 'react-bootstrap';
+import {FaAngleDown} from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setNav] = useState()
@@ -26,15 +27,21 @@ const Navbar = () => {
         </div>
         <div  className={
             isOpen
-              ? `${styles.navLinks} ${styles.showNav}`
-              : `${styles.navLinks}`
+              ? `${styles.navLinks} ${styles.showNav} ${styles.dropdown}`
+              : `${styles.navLinks} ${styles.dropdown}`
           }
         >
-        <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+         <div className={styles.arrow}>  
+        <DropdownButton id="dropdown-basic-button"  title="Categorias">
+            <div className ={styles.linksBack}>
+  <Dropdown.Item href="#/action-1">Electronica</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Health</Dropdown.Item>
+  <Dropdown.Item href="#/action-3"> Deporte</Dropdown.Item>
+  </div>
 </DropdownButton>
+<FaAngleDown/> 
+</div> 
+
         <ul
           className={
             isOpen

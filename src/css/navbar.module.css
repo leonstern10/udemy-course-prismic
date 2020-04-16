@@ -22,6 +22,39 @@
     color: var(--primaryColor);
     font-size: 1.5rem;
   }
+  .dropdown button {
+    display: block;
+    padding: 0.6rem ;
+    padding-left: 1.25rem;
+    padding-right: 0.2rem;
+    text-decoration: none;
+    color: var(--White);
+    font-weight: bold;
+    font-size: 15px; 
+    font-family: 'Raleway', sans-serif;   
+    text-align: left;   
+    letter-spacing: var(--mainSpacing);
+    background-color: transparent;
+    border: none
+}
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.arrow:hover{
+    color: var(--mainBlack);
+    
+}
+.arrow button:hover{
+    color: var(--mainBlack);
+    }
+    .links-back{
+        box-sizing: border-box;
+        background-color: var(--Main) ;
+        height: 200px;
+    }
+
   
   .nav-links {
     list-style-type: none;
