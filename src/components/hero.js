@@ -53,11 +53,16 @@ const HeroWrapper = styled.section `
     margin-top: 70px;
 }
 @media (min-width: 1024px ) {
-    font-size:42px;
-    margin-top: 160px;
+    font-size:38px;
+    margin-top: 70px;
 }
 @media (min-width: 1440px ) {
     font-size:44px;
+    margin-top: 100px;
+}
+@media (min-width: 1920px ) {
+    font-size:44px;
+    margin-top: 120px;
     
 }
 }
