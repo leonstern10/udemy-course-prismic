@@ -13,6 +13,7 @@ import "./layout.css";
 import SEO from './seo'
 import CookieConsent from "react-cookie-consent";
 import Navbarpage from "./navBarpage";
+import Footer from "./footer";
 
 
 
@@ -241,7 +242,8 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
               </CTA>
             </Header> */}
             <MainWrapper>{children}</MainWrapper>
-            <Footer>
+            <Footer></Footer>
+            {/* <Footer>
               <FooterLinks>
                 {data.prismic.allFooters.edges[0].node.footer.map((link) => {
                   return (
@@ -262,7 +264,7 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
               <Copyright>
                 <p>Copyright © 2020 eltop10</p>
               </Copyright>
-            </Footer>
+            </Footer> */}
           </>
         )
       }}

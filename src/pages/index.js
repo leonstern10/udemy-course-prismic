@@ -37,7 +37,6 @@ query MyQuery {
                 }
                 button_label
                 article_title
-                content
                 list_image
               }
             }

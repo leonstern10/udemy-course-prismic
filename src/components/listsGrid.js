@@ -30,7 +30,6 @@ const ListsGrid = ({title, lists}) => {
                     <ListBox 
                     listImage= {list.list_image.url}
                     title={list.article_title}
-                    content={list.content}
                     buttonLabel={list.button_label}
                     buttonDestination={`/${list.button_destination._meta.uid}`}
                     key={i}/>
