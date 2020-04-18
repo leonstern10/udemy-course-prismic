@@ -2,7 +2,7 @@ import React from 'react';
 import RichText from './richText';
 import styled from 'styled-components';
 import Navbar from './navBar';
-import styles from "../css/hero.module.css"
+
 
 const HeroWrapper = styled.section `
     background: url('${props => props.heroImage}');

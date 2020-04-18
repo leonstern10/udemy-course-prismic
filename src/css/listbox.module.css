@@ -1,0 +1,25 @@
+.wrapper{
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+
+.card{
+display: flex;
+flex-direction: column;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 349px;
+height: 317px;
+margin: 10px 0;
+}
+
+.image{
+height: 100%;
+width: 100%;
+}
