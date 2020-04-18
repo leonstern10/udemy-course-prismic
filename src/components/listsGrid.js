@@ -6,9 +6,17 @@ import ListBox from './listBox';
 
 
 const ListsGridWrapper = styled.section `
-    max-width: 1220px;
+    max-width: 1248px;
     margin: 0 auto;
     padding: 0 15px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+
+    
+    
 
     h3{
     font-family: 'Raleway', sans-serif;
@@ -22,9 +30,11 @@ const ListsGridWrapper = styled.section `
 
 const ListsGrid = ({title, lists}) => {
     return (
+        <>
+        <RichText render={title}/>
         <ListsGridWrapper>
 
-            <RichText render={title}/>
+           
             {lists.map((list,i) => {
                 return (
                     <ListBox 
@@ -39,6 +49,7 @@ const ListsGrid = ({title, lists}) => {
             })}
         
         </ListsGridWrapper>
+        </>
 
     )
 
