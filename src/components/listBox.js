@@ -11,25 +11,25 @@ background-image: url('${props => props.img}');
 background-size: cover;
 background-position: center;
 
-`
+`;
 
-const ListBox = ({ title, buttonLabel, buttonDestination, listImage }) => {
+const ListBox = ({ title, buttonDestination, listImage, color }) => {
     return (
         
         <div className={styles.card}>
+            <div className={styles.container}>
+            <Link to={buttonDestination} > 
             <BackgroundImage img={listImage} className={styles.image}/>
-                            
-                <div className="container">
+            <div className={styles.text}>
                     <RichText render={title} />
-                     </div>
-                    <div>
-                        <button>
-                            <Link to={buttonDestination}>
-                                {buttonLabel}
-                            </Link>
-                        </button>
                     </div>
-        </div>
+                    </Link>
+                 
+                    </div>
+                     </div>
+                    
+                 
+        
       
     )
 }

@@ -35,9 +35,10 @@ query MyQuery {
                     }
                   }
                 }
-                button_label
+              
                 article_title
                 list_image
+                color
               }
             }
           }

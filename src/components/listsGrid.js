@@ -10,7 +10,10 @@ import ListBox from './listBox';
 const ListsGrid = ({title, lists}) => {
     return (
         <>
+        <div className={styles.gridTitle}>
+            <div className={styles.title}>
         <RichText render={title}/>
+        </div>
         <div  className={styles.wrapper}>
 
            
@@ -19,14 +22,14 @@ const ListsGrid = ({title, lists}) => {
                     <ListBox 
                     listImage= {list.list_image.url}
                     title={list.article_title}
-                    buttonLabel={list.button_label}
+                    color={list.color}
                     buttonDestination={`/${list.button_destination._meta.uid}`}
                     key={i}/>
                         
                    
                 )
             })}
-        
+           </div>
         </div>
         </>
 
