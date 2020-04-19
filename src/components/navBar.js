@@ -42,7 +42,7 @@ const Navbar = () => {
 <FaAngleDown/> 
 </div> 
 
-        <ul
+        <div
           className={
             isOpen
               ? `${styles.navLinks} ${styles.showNav}`
@@ -69,7 +69,7 @@ const Navbar = () => {
           })}
            
         </div>
-        </ul>
+        </div>
         </div>
         
        

@@ -2,38 +2,151 @@
 max-width: 1220px;
 box-sizing: border-box;
 border-bottom: 1px solid #CACACA;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 }
 .comparison-content {
     display: flex; 
     flex-direction: row;      
     margin: auto 0;
     padding: 0 15px;
-
-}
-.image{
-    max-width: ;
-    max-height: ;
-    background-repeat: not repeat;
-
-}
-
-.comparison-content {
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 30px rgba(213, 209, 223, 0.3);
     display: flex; 
     flex-direction: row;      
-    margin: auto 0;
+    margin: 0;
     padding: 0 15px;
+    align-items: center;
 }
+
+.popular-tag{
+display: flex;
+align-items: center;
+width: 240px;
+height: 32px;
+background: #FF9960;
+clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+color: white;
+padding: 0.6rem 1.25rem;
+font-family: "Raleway", sans-serif;
+font-size: 14px;
+font-weight: 600;
+margin-top: 33px;
+
+}
+
+
     .features{
-             
+           margin: 10px 5px;  
     }
-    .logo-wrapper{
+    .image-wrap{
         display: block;
-            height: auto;        
+            height: 60px;        
             
     }
-    .readmore{
+    .right-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .right-wrapper p{
+        margin-bottom: 0;
+    }
+    .cta a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 32px;
+        background-color: #5B418B;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
+        font-weight:   600 ;
+        width: 146px;
+        height: 30px;
+        margin: 0 10px;
+    }
+    .price{
+        color: #525151;
+        font-weight: 500;
+        margin-top: 3px;
+    }
+    .bestFor{
+        color: #646464
+    }
+    .read-more{
         margin: auto 0;
+        display: flex;
+        align-items: center;
+        padding: 0.3rem;
+        color: #575757;
+    }
+    .read-more button{
+        margin: auto 0;
+        display: flex;
+        align-items: center;
+        padding: 0.3rem;
+        color: #575757;
+        background-color: transparent;
+        border: none;
+    }
+    .arrow{
+        margin-top: 5px;
     }
     .content{
         margin: auto 0;
+        color: var(--mainBlack);
+        padding: 0.3rem;
     }
+    ul {
+        list-style: none;
+        margin-left: 15px;
+
+      }
+      
+      ul li::before {
+        content: "✓";
+        color:#8461C9;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+      }
+
+
+      @media screen and (max-width: 549px) {
+        .bestFor{
+            display: none;
+        }
+        .comparison-content {
+            height: 80px;
+        }
+        .popular-tag{
+            width: 185px;
+        }
+
+    }
+        @media screen and (max-width: 390px) {
+            .price{
+                display: none;
+            }
+            .cta a{
+                font-size: 14px;
+                width: 116px;
+            }
+            .popular-tag{
+                width: 165px;
+                font-size: 13px;
+            }
+            
+
+
+
+
+      }

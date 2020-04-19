@@ -10,22 +10,18 @@ const  BackgroundLogo= styled.img`
 background-image: url('${props => props.src}');
 background-size: cover;
 background-position: center;
-width: auto;
-height: 42px;
+background: no-repeat;
+max-width: 131px;
+max-height: 60px;
+margin: 14px 0;
+@media (max-width: 390px) {
+   width: 90px;
+}
+
 `;
-const ComparisonBoxWrapper = styled.section`
-max-width: 1220px;
-box-sizing: border-box
-border-bottom: 1px solid #CACACA;
-.comparison-content {
-    display: flex; 
-    flex-direction: row;      
-    margin: auto 0;
-    padding: 0 15px;
-}`
 
 
-const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink }) => {
+const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor }) => {
 
 const [showContent, setContent]= useState(false)
 const toggleContent = () => {
@@ -33,35 +29,54 @@ const toggleContent = () => {
 }
     return(
     <div className= {styles.wrapper}>
-    <div className= {styles.comparisonContent}>
-    <p>
-         {popularTag}
-     </p>
-     < BackgroundLogo src={serviceLogo} className={styles.image} />
     
-     <div className={styles.features}>
-     <RichText render={features} /> 
+    <div className={styles.popularTag}>
+         {popularTag}
+    </div>
+     
+     
+    <div className= {styles.comparisonContent}>
+    <div>
+    <div className={styles.imageWrap}>
+   
+     < BackgroundLogo src={serviceLogo}  />
      </div>
+     
+    <p className={styles.bestFor}>
+    {bestFor}
+    </p>
+    </div>
+    <div className={styles.rightWrapper}>
      <div className= {styles.price}>
      <p>
          {price}
      </p>   
      </div>
      
-     <div>
+     <div className={styles.cta}>
      <a href={webLink} target="_blank" >
         {webLabel}
     </a>
      </div>
      </div>
-        <button className= {styles.readMore} onClick={toggleContent} > 
+     </div>
+     <div>
+     <div className={styles.features}>
+     <RichText render={features} /> 
+     </div>
+     
+        <div className= {styles.readMore} onClick={toggleContent} > 
+        <button>
          {readMore}
-         <FaAngleDown/>
+         <FaAngleDown className={styles.arrow}/>
          </button>
+         </div>
+        
      {showContent &&
      <div className={styles.content}>
      <RichText render={serviceDescription} />    
      </div>}
+     </div>
     
    </div>
 )

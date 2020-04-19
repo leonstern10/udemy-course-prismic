@@ -22,7 +22,7 @@ const Navbarpage = () => {
             <FaAlignRight className={styles.logoIcon} />
           </button>
         </div>
-        <ul
+        <div
           className={
             isOpen
               ? `${styles.navLinks} ${styles.showNav}`
@@ -46,7 +46,7 @@ const Navbarpage = () => {
           })}
            
         </div>
-        </ul>
+        </div>
         
         
       </div>
