@@ -1,0 +1,39 @@
+.wrapper{
+max-width: 1220px;
+box-sizing: border-box;
+border-bottom: 1px solid #CACACA;
+}
+.comparison-content {
+    display: flex; 
+    flex-direction: row;      
+    margin: auto 0;
+    padding: 0 15px;
+
+}
+.image{
+    max-width: ;
+    max-height: ;
+    background-repeat: not repeat;
+
+}
+
+.comparison-content {
+    display: flex; 
+    flex-direction: row;      
+    margin: auto 0;
+    padding: 0 15px;
+}
+    .features{
+             
+    }
+    .logo-wrapper{
+        display: block;
+            height: auto;        
+            
+    }
+    .readmore{
+        margin: auto 0;
+    }
+    .content{
+        margin: auto 0;
+    }

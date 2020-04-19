@@ -23,6 +23,7 @@ prismic {
               
               fields {
                 popular_tag
+                best_for
                 feature
                 price
                 read_more

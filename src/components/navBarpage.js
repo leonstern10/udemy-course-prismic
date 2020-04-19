@@ -16,7 +16,7 @@ const Navbarpage = () => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
         <Link to="/">
-          <img src={logoColor} alt="eltop10 logo" />
+          <img src={logoColor} alt="eltop10 logo" className={styles.image} />
           </Link>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />

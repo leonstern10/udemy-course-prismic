@@ -5,7 +5,7 @@
     padding: 1.25rem 1.25rem;
     
   }
-  img{
+  image{
     width: auto;
     height: 38px;
   }
@@ -101,7 +101,7 @@
     .navbar {
         padding: 1rem 2rem;
       }
-      img{
+      image{
         width: auto;
         height: 50px;
     }
