@@ -5,9 +5,9 @@
     padding: 1.25rem 1.25rem;
     
   }
-  image{
+  .image{
     width: auto;
-    height: 38px;
+    height: 50px;
   }
   .logo-btn {
     background: transparent;
@@ -101,7 +101,7 @@
     .navbar {
         padding: 1rem 2rem;
       }
-      image{
+      .image{
         width: auto;
         height: 50px;
     }

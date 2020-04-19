@@ -132,6 +132,14 @@ margin-top: 33px;
         }
 
     }
+    @media screen and (max-width: 470px) {
+        .cta a{
+            font-size: 14px;
+    }
+    .price{
+        display: none;
+    }
+}
         @media screen and (max-width: 390px) {
             .price{
                 display: none;
