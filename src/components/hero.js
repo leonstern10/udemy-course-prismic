@@ -80,7 +80,7 @@ const Hero = ({title, content, heroImage}) => {
         
         <HeroWrapper heroImage={heroImage}>
             <div className ="container">
-            <div class="topnav">
+            <div className="topnav">
             <Navbar/>
             </div>
           <div className="title">

@@ -21,7 +21,11 @@ const ListBox = ({ title, buttonDestination, listImage, color }) => {
             <Link to={buttonDestination} > 
             <BackgroundImage img={listImage} className={styles.image}/>
             <div className={styles.text}>
-                    <RichText render={title} />
+               
+                    <RichText render={title}>
+                    <span className={styles.colorText} style= "color:#FF9960"/>
+                    </RichText>
+                    
                     </div>
                     </Link>
                  

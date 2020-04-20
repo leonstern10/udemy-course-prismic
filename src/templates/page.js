@@ -4,6 +4,8 @@ import RichText from '../components/richText';
 import Layout from '../components/layout';
 import SliceZone from '../components/silceZone'
 import styled from 'styled-components';
+import styles from "../css/page.module.css";
+
 import SEO from '../components/seo'
 
 export const query = graphql`
@@ -69,42 +71,13 @@ prismic {
 `
 
 const PageWrapper = styled.section `
-max-width: 1030px;
+max-width: 1220px;
 margin: 60px auto;
 padding: 0 10px;
 .page-wrapper{
   margin: 30px auto;
 }
 
-
-
-  
-}
-.title-author{
-  box-sizing: border-box;
-  background-color: #EEEEEE;
-  margin: 0 0 0;
-  padding: 50px 84px 50px 50px;
-  
-.post-image{
-  max-height: 
-
-}
-
-}
-
-.post-description{
-  max-width: 700px;
-  padding-top: 40px ;
-  line-height: 28px;
-  color: #0C1C30;
-  font-size: 18px;
- 
-}
-.header-section{
-  display: flex;
-height: 280px;
-align-items: center;
 
 `;
 
@@ -122,17 +95,19 @@ const content = props.data.prismic.allPages.edges[0].node.content;
             description = {props.content}
             image = {props.postImage}
           />
-          <PageWrapper className="page-wrapper"> 
-            <div className="header-section">
-            <div className="title-author">
-          <div className="page-title">
+          <PageWrapper className={styles.pageWrapper}> 
+            <div className={styles.headerSection}>
+              <div className={styles.titleWrapper}>
+            <div className={styles.author}>
+          <div className={styles.pageTitle}>
           <RichText render= {pageTitle} />
           </div>
           <RichText render= {authorName} />
           </div>
-          <img className="post-image" src={postImage} alt="Post"/>
           </div>
-          <div className="post-description">
+          <img className={styles.postImage} src={postImage} alt="Post"/>
+          </div>
+          <div className={styles.postDescription}>
           <RichText render= {content} />
           </div>
            

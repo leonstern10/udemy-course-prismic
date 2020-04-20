@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import styles from "../css/comparisonbox.module.css";
 import {FaAngleDown} from 'react-icons/fa';
 

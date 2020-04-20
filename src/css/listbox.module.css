@@ -43,7 +43,10 @@ margin: 50px 10px;
     width: 100%;
 }
 
-    
+ span{
+    color:#FF5C00;
+}
+
 
 .container a {
 text-decoration: none;
@@ -55,10 +58,12 @@ color: var(--mainBlack);
 .text{
     padding: 0.6rem 1.25rem;
 }
+
     .container a:hover{
         color: rgb(24, 58, 100)
       
     }
+    
     @media screen and (max-width: 1050px) {
         .wrapper{
         justify-content: space-evenly;
