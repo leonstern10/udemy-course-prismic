@@ -26,6 +26,7 @@ prismic {
               fields {
                 popular_tag
                 best_for
+                list_price
                 feature
                 price
                 read_more
@@ -98,10 +99,11 @@ const content = props.data.prismic.allPages.edges[0].node.content;
           <PageWrapper className={styles.pageWrapper}> 
             <div className={styles.headerSection}>
               <div className={styles.titleWrapper}>
-            <div className={styles.author}>
+           
           <div className={styles.pageTitle}>
           <RichText render= {pageTitle} />
           </div>
+          <div className={styles.author}>
           <RichText render= {authorName} />
           </div>
           </div>

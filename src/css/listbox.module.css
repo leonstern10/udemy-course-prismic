@@ -44,7 +44,7 @@ margin: 50px 10px;
 }
 
  span{
-    color:#FF5C00;
+    color:#F25C54;
 }
 
 
@@ -68,6 +68,9 @@ color: var(--mainBlack);
         .wrapper{
         justify-content: space-evenly;
         }
+        .card{
+            margin: 35px 10px;
+        }
 
     }
 
@@ -75,5 +78,17 @@ color: var(--mainBlack);
         .wrapper{
         justify-content: center;
         }
+        .card{
+            margin: 20px 10px;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .card{
+        width: 290px;
+        height: 290px;
+        }
+        .wrapper{
+            padding: 0;
+            }
 
     }

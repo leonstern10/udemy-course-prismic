@@ -20,7 +20,7 @@ margin: 14px 0;
 `;
 
 
-const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor }) => {
+const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor, listPrice }) => {
 
 const [showContent, setContent]= useState(false)
 const toggleContent = () => {
@@ -44,6 +44,9 @@ const toggleContent = () => {
     <p className={styles.bestFor}>
     {bestFor}
     </p>
+    </div>
+    <div className={styles.listPrice}>
+    <RichText render={listPrice}  />
     </div>
     <div className={styles.rightWrapper}>
      <div className= {styles.price}>

@@ -7,7 +7,7 @@
   }
   .image{
     width: auto;
-    height: 50px;
+    height: 35px;
   }
   .logo-btn {
     background: transparent;
@@ -91,6 +91,10 @@
   @media screen and (min-width: 576px) {
     .navbar {
       padding: 0 2rem;
+    }
+    .image{
+      width: auto;
+      height: 45px;
     }
   }
   

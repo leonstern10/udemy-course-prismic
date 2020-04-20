@@ -104,13 +104,13 @@ margin-top: 33px;
         color: var(--mainBlack);
         padding: 0.3rem;
     }
-    ul {
+    .features ul {
         list-style: none;
         margin-left: 15px;
 
       }
       
-      ul li::before {
+     .features ul li::before {
         content: "✓";
         color:#8461C9;
         font-weight: bold;
@@ -119,7 +119,12 @@ margin-top: 33px;
         margin-left: -1em;
       }
 
+      @media screen and (max-width: 767px) {
+        .list-price{
+            display: none
+        }
 
+      }
       @media screen and (max-width: 549px) {
         .bestFor{
             display: none;

@@ -23,7 +23,7 @@ const ListBox = ({ title, buttonDestination, listImage, color }) => {
             <div className={styles.text}>
                
                     <RichText render={title}>
-                    <span className={styles.colorText} style= "color:#FF9960"/>
+                    <span className={styles.colorText}/>
                     </RichText>
                     
                     </div>

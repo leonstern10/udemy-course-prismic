@@ -18,6 +18,7 @@ const ComparisonGrid = ({ comparisons}) => {
                     <ComparisonBox 
                     popularTag= {comparison.popular_tag}
                     bestFor={comparison.best_for}
+                    listPrice={comparison.list_price}
                     features={comparison.feature}
                     price={comparison.price}
                     readMore={comparison.read_more}
