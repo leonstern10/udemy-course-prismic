@@ -10,6 +10,25 @@ query MyQuery {
       edges {
         node {
           body {
+            ... on PRISMIC_Home_pageBodyAbout___contact {
+              type
+              label
+              primary {
+                about_content
+                about_title
+                button_label
+                contact_titulo
+                contact_content
+                contact_link {
+                  ... on PRISMIC_Contact_page {
+                    form_title
+                    _meta {
+                      uid
+                    }
+                  }
+                }
+              }
+            }
             ... on PRISMIC_Home_pageBodyHero {
               type
               label

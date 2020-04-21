@@ -3,6 +3,7 @@ import Hero from './hero';
 import ListsGrid from './listsGrid';
 import PostGrid  from './postGrid';
 import ComparisonGrid  from './comparisonGrid';
+import AboutContact from './aboutContact';
 
 
 const SliceZone = ({body}) => {
@@ -18,8 +19,21 @@ const SliceZone = ({body}) => {
                             content={bodyContent.primary.hero_content}
                             key={i}/>
                         )
+                    }    else if (bodyContent.type ==='about___contact'){
+                        return ( 
+                                    <AboutContact 
+                                    aboutTitle = {bodyContent.primary.about_title}
+                                    aboutContent={bodyContent.primary.about_content}
+                                    contacTitle={bodyContent.primary.contact_titulo}
+                                    contactContent={bodyContent.primary.contact_content}
+                                    buttonLabel={bodyContent.primary.button_label}
+                                    contactLink={bodyContent.primary.contact_link_uid}
+                                    key={i}/>
+                                   
+                        )
+                    }
                         
-                    }    else if (bodyContent.type ==='post_grid'){
+                        else if (bodyContent.type ==='post_grid'){
                         return ( 
                                     <PostGrid 
                                     key={i}
