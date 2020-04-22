@@ -25,24 +25,7 @@ const MainWrapper =styled.main`
   const navigationQuery = graphql `
    {
     prismic {
-            allFooters {
-            edges {
-              node {
-                aviso
-                copyright
-                footer {
-                  label
-                  link {
-                    ... on PRISMIC_Footerpages {
-                      _meta {
-                        uid
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+           
               allNavigations {
         edges {
           node {

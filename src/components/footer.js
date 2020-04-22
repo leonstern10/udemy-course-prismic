@@ -38,7 +38,7 @@ const Footer = () => {
                   )
                 })}
               </div>
-              <div className={styles.aviso}>
+              {/* <div className={styles.aviso}>
                 <p>
                   Aviso: Los redactores de eltop10 no están asociados con los
                   fabricantes de los productos recomendados. Sin embargo,
@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <div className={styles.copyright}>
                 <p>Copyright © 2020 eltop10</p>
-              </div>
+              </div> */}
   </div>
 }
 
