@@ -89,7 +89,7 @@ Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al co
           <Navbarpage></Navbarpage>
 
             <MainWrapper>{children}</MainWrapper>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
           
           </Container>
         )

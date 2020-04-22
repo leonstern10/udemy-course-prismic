@@ -74,7 +74,7 @@ const IndexPage = (props) => {
   <>
     
     <SliceZone body={props.data.prismic.allHome_pages.edges[0].node.body}/>
-  <Footer/>
+  {/* <Footer/> */}
   </>
   )}
 
