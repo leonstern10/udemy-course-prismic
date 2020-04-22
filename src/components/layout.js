@@ -146,52 +146,6 @@ const MainWrapper =styled.main`
 
 // }
 // `
-// const Footer = styled.div `
-// display: flex;
-// flex-direction: column;
-// box-sizing: border-box;
-// max-width: 1920px;
-// height: 200px;
-// background: #0C1C30;
-// align-items: center;
-// justify-content: center;
-
-// `
-// const FooterLinks = styled.div `
-// display: flex;
-// flex-direction: row;
-// padding: 35px 0;
-// border-bottom: 1px solid #CACACA;
-
-// `
-// const FooterLink = styled.div `
-
-// a{
-//   display: inline-flex;
-//   text-decoration: none;
-//   color: #ffffff; 
-//   padding: 0 30px;
-// }`
-
-// const Aviso =styled.div `
-// color: white;
-// margin: auto 0;
-// p{
-//   text-align:center;
-//   color: white;
-  
-// }
-
-// }
-// `
-// const Copyright = styled.div ` 
-// color: white;
-// margin: auto 0;
-
-// p{
-//   text-align:center;
-//   color: white;
-// `
 
 
 

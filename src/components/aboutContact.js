@@ -11,12 +11,12 @@ const AboutWrapper = styled.section `
 
 const AboutContact = ({aboutTitle, aboutContent, contacTitle, contactContent, buttonLabel, contactLink}) => {
     return(
-
-        
+        <>
+        <hr className={styles.line}/>
         <div className={styles.contain}>
-            <hr className={styles.line}/>
+            
         <div className={styles.aboutWrapper}>
-        <div>
+        <div className={styles.aboutTitle}>
         <RichText render={aboutTitle}/>
         </div>
         <div className={styles.aboutContent}>
@@ -25,24 +25,25 @@ const AboutContact = ({aboutTitle, aboutContent, contacTitle, contactContent, bu
         </div>
         <div>
         <div className= {styles.contactWrap}>
-            <div>
+            <div className= {styles.contentWrap}>
+            <div className={styles.contacTitle}>
         <RichText render={contacTitle}/>
         </div>
-        <div>
+        <div className={styles.contactContent}>
         <RichText render={contactContent}/>
         </div>
-        <div>
+        <div className={styles.contactButton}>
         <Link to ={contactLink}>
             {buttonLabel}
         </Link>
         </div>
         </div>
-        
+        </div>
          
         </div>
         
         </div>
-
+        </>
     )
 }
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SliceZone from "../components/silceZone"
+import Footer from "../components/footer";
 
 
 export const query = graphql `
@@ -70,10 +71,11 @@ query MyQuery {
 const IndexPage = (props) => {
   return(
 
-  // <Layout>
+  <>
     
     <SliceZone body={props.data.prismic.allHome_pages.edges[0].node.body}/>
-  // </Layout>
+  <Footer/>
+  </>
   )}
 
 export default IndexPage

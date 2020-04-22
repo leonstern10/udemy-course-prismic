@@ -3,18 +3,17 @@
     flex-direction: column;
     justify-content: center;
     text-align: center; 
-    max-width: 1920px;
     align-items: center;
 
     
 }
 .line{
     color: #000000;
-    margin-bottom:0px;
+    filter: blur(1px);
    border-top: 1px solid;
-
-    
-    
+   display:flex;
+   margin: 92px auto -94px;
+   max-width: 1070px;  
 }
 
 .about-wrapper{
@@ -24,17 +23,19 @@
     text-align: center;
     align-items: center;
     height: 670px;
-    padding: 65px 274px 314px 274px;
+    padding: 65px 68px 314px 68px;
     position: absolute;
-    
-
-    
+    width: 100%;
+        
+}
+.about-title h1{
+    font-size: 44px;
 }
 .about-content{
     max-width: 700px;
     display: flex;
     text-align: center;
-    
+    font-size: 18px;
 }
 
 .contact-wrap{
@@ -46,6 +47,114 @@
     box-shadow: 25px 35px 75px rgba(0, 0, 0, 0.15);
     width: 913px;
     height: 401px;
-    margin-top: 0px;
     position: relative;
+    background-color: white;
+    margin-top: 50%;
+}
+.content-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contac-title h1{
+    font-size: 44px;
+}
+.contact-content {
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-button a{
+    text-decoration: none;
+    background: #FF9960;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+flex-direction: row;
+padding: 14px 28px;
+
+}
+@media screen and (max-width: 934px) {
+    .contact-wrap{
+    margin-top: 26px;
+    width: 713px;
+    height: 401px;
+    position:unset;
+    padding: 0px 8px 0px 8px;
+    }
+    .content-wrap{
+        display: flex;
+        max-width: 600px;
+    }
+    .about-wrapper{
+        display: flex;
+        position: unset;
+        height: 370px;
+        padding: 36px 5px 0px 5px;
+    }
+    .line{
+        
+       margin: 40px auto 0px;
+       max-width: 1070px;  
+    }
+
+}
+@media screen and (max-width: 730px) {
+    .contact-wrap{
+        width: 513px;
+        height: 301px;
+        }
+        .contac-title h1{
+            font-size: 36px;
+        }
+        .about-title h1{
+            font-size: 36px;
+        }
+       
+}
+@media screen and (max-width: 550px) {
+    .line{
+         margin: 30px auto 0px;
+      
+    }
+    .contact-wrap{
+        width: 370px;
+        height: 230px;
+        margin-top: 16px;
+        
+        }
+        .contac-title h1{
+            font-size: 28px;
+        }
+        .contact-content {
+            font-size: 16px;
+            margin-bottom: 1rem;
+        }
+        .about-wrapper{
+           
+            height: 320px;
+            padding: 16px 5px 0px 5px;}
+            
+        .about-title h1{
+            font-size: 28px;
+        }
+        .about-content{
+            font-size: 16px;
+        }
+        .contact-button a{
+        padding: 10px 22px;
+        font-size: 14px;
+        }
+}
+@media screen and (max-width: 425px) {
+    
+    .contact-wrap{
+        width: 370px;
+        height: 290px;
+        margin-top: 26px;
+        }
+        .about-wrapper{
+            height: 400px;
+        }
+            
 }
