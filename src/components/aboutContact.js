@@ -1,12 +1,10 @@
 import React from 'react';
 import RichText from './richText';
-import styled from 'styled-components';
 import { Link } from "gatsby";
 import styles from "../css/aboutContact.module.css"
 
 
-const AboutWrapper = styled.section `
-`
+
 
 
 const AboutContact = ({aboutTitle, aboutContent, contacTitle, contactContent, buttonLabel, contactLink}) => {

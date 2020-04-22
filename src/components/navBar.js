@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
-import links from "../utils/navLinks"
+// import links from "../utils/navLinks"
 import link from "../utils/navButton"
 import logo from "../images/logo.svg"
-import {Dropdown,DropdownButton} from 'react-bootstrap';
-import {FaAngleDown} from 'react-icons/fa';
+// import {Dropdown,DropdownButton} from 'react-bootstrap';
+// import {FaAngleDown} from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setNav] = useState()
@@ -31,7 +31,7 @@ const Navbar = () => {
               : `${styles.navLinks} ${styles.dropdown}`
           }
         >
-         <div className={styles.arrow}>  
+         {/* <div className={styles.arrow}>  
         <DropdownButton id="dropdown-basic-button"  title="Categorias">
             <div className ={styles.linksBack}>
   <Dropdown.Item href="#/action-1">Electronica</Dropdown.Item>
@@ -40,24 +40,23 @@ const Navbar = () => {
   </div>
 </DropdownButton>
 <FaAngleDown/> 
-</div> 
+</div>  */}
 
         <div
           className={
             isOpen
               ? `${styles.navLinks} ${styles.showNav}`
               : `${styles.navLinks}`
-          }
-        >
+          }>
             
        
-          {links.map((item, index) => {
+          {/* {links.map((item, index) => {
             return (
               <li key={index}>
                 <Link to={item.path}>{item.text}</Link>
               </li>
             )
-          })}
+          })} */}
         
          <div className={styles.cta}>
          {link.map((item, index) => {

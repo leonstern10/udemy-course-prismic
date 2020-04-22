@@ -56,7 +56,7 @@ const toggleContent = () => {
      </div>
      
      <div className={styles.cta}>
-     <a href={webLink} target="_blank" >
+     <a href={webLink} target="_blank" rel="noopener noreferrer" >
         {webLabel}
     </a>
      </div>
