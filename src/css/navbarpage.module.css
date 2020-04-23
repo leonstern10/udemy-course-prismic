@@ -14,21 +14,8 @@
     width: auto;
     height: 35px;
   }
-  .logo-btn {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #6D538F;
-  }
-  .logo-btn:hover {
-    cursor: pointer;
-    
-  }
-  .logo-icon {
-    color: var(--primaryColor);
-    font-size: 1.5rem;
-  }
   
+
   .nav-links {
     list-style-type: none;
     transition: var(--mainTransition);
@@ -45,16 +32,16 @@
   }
   .nav-links a {
     display: block;
-    padding: 0.6rem 1.25rem;
+    padding: 0.7rem 1.25rem;
     text-decoration: none;
-    color: var(--mainBlack);
+    color: #5B418B;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: var(--mainSpacing);
     
   }
   .nav-links a:hover {
-    color: var(--mainBlack);
+    color: var(--White);
     
   }
   .nav-social-links {
@@ -99,7 +86,7 @@
     }
     .cta button{
       border-radius: 32px;
-      border: 1px solid var(--mainBlack);
+      border: 1px solid #5B418B;
       background-color: transparent;
       cursor: pointer;
       
@@ -107,7 +94,7 @@
 
     .cta button:hover {
       cursor: pointer;
-      background-color: var(--mainBlack);
+      background-color: #5B418B
    
 
     }

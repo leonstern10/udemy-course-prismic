@@ -7,9 +7,8 @@ import styled from 'styled-components';
 
 
 const  BackgroundImage= styled.img`
-background-image: url('${props => props.img}');
-background-size: cover;
-background-position: center;
+background-image: url('${props => props.src}');
+object-fit: cover;
 
 `;
 
@@ -19,7 +18,7 @@ const ListBox = ({ title, buttonDestination, listImage, color }) => {
         <div className={styles.card}>
             <div className={styles.container}>
             <Link to={buttonDestination} > 
-            <BackgroundImage img={listImage} className={styles.image}/>
+            <BackgroundImage src={listImage} className={styles.image}/>
             <div className={styles.text}>
                
                     <RichText render={title}>
