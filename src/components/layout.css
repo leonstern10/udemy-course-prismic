@@ -22,7 +22,7 @@
 }
 
   body {
-    font-family: "Lato", sans-serif;
+    
     color: var(--mainBlack);
     line-height: 1.4;
     font-size: 1rem;
@@ -39,6 +39,7 @@
   }
   p {
     margin-bottom: 1.25rem;
+   font-family: "Lato", sans-serif;
   }
   
 a {
@@ -101,6 +102,7 @@ select,
 textarea {
   font: inherit;
   margin: 0;
+  font-family: "Lato", sans-serif; 
 }
 optgroup {
   font-weight: 700;
@@ -314,6 +316,7 @@ ul {
   margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
+  font-family: "Lato", sans-serif; 
 }
 ol {
   margin-left: 1.45rem;
@@ -326,6 +329,7 @@ ol {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
+  font-family: "Lato", sans-serif; 
 }
 dl {
   margin-left: 0;
@@ -493,11 +497,13 @@ li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
+  font-family: "Lato", sans-serif; 
 }
 li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
+  font-family: "Lato", sans-serif; 
 }
 blockquote *:last-child {
   margin-bottom: 0;

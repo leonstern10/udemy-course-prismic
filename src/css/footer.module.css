@@ -20,14 +20,20 @@ border-bottom: 1px solid #CACACA;
 font-weight: 700;
 margin-top: 60px;
 margin-bottom: 10px;
+list-style-type: none;
 }
-
-.footer-link a{
-  
+.footer-links a{
   text-decoration: none;
   color: #F7F7F7; 
   padding: 0 30px;
 }
+.footer-links a:hover{
+
+  color: #C1C1C1; 
+ 
+}
+
+
 
 .aviso{
 
@@ -60,7 +66,7 @@ margin-top: 15px 0;
     .footer-wrap{
         background: #F7F7F7;
     }
-    .footer-link a{
+    .footer-links a{
         color: var(--mainBlack); 
         padding: 0 50px;
       }
