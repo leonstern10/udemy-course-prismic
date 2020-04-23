@@ -14,6 +14,19 @@
     width: auto;
     height: 35px;
   }
+  .logo-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color:  #5B418B;
+  }
+  .logo-btn:hover {
+    cursor: pointer;
+  }
+  .logo-icon {
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+  }
   
 
   .nav-links {
