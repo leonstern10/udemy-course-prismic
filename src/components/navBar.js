@@ -61,9 +61,9 @@ const Navbar = () => {
          <div className={styles.cta}>
          {link.map((item, index) => {
          return (
-              <li key={index}>
+              <button key={index}>
                 <Link to={item.path}>{item.text}</Link>
-              </li>
+              </button>
             )
           })}
            

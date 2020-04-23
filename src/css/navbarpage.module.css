@@ -89,28 +89,31 @@
     .logo-btn {
       display: none;
     }
-    .cta{
+    .cta {
         
-        display: flex;
-        float: right;
-        border-radius: 32px;
-        border: 1px solid var(--mainBlack);
-        background-color: transparent;
-        cursor: pointer;
-        font-family: 'Raleway', sans-serif;
-        padding: 6px, 12px;
-        transition: none;
-        margin: 0 10px;
-        
-      }
-      .cta a:hover {
-        background-color: var(--mainBlack);
-        border-radius: 32px;
-        color:var(--White) ;
-        transition: none;
-        
+      display: flex;
+      font-family: 'Raleway', sans-serif;
+      margin: 0 10px;
+     
+      
+    }
+    .cta button{
+      border-radius: 32px;
+      border: 1px solid var(--mainBlack);
+      background-color: transparent;
+      cursor: pointer;
+      
+    }
 
-      }
+    .cta button:hover {
+      cursor: pointer;
+      background-color: var(--mainBlack);
+   
+
+    }
+    .cta a:hover {
+      color: var(--White);
+    }
     
     .nav-center {
       
@@ -118,7 +121,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1220px;
+      max-width: 1520px;
       
 
     }

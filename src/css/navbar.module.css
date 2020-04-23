@@ -22,7 +22,7 @@
     color: var(--primaryColor);
     font-size: 1.5rem;
   }
-  .dropdown button {
+  .dropdown {
     display: block;
     padding: 0.6rem ;
     padding-left: 1.25rem;
@@ -101,6 +101,7 @@
   @media screen and (min-width: 848px) {
     .nav-header {
         display: flex;
+        
     }
     .navbar {
         padding: 1rem 2rem;
@@ -113,25 +114,27 @@
     .logo-btn {
       display: none;
     }
-    .cta{
+    .cta {
         
         display: flex;
-        float: right;
+        font-family: 'Raleway', sans-serif;
+        margin: 0 10px;
+       
+        
+      }
+      .cta button{
         border-radius: 32px;
         border: 1px solid var(--White);
         background-color: transparent;
         cursor: pointer;
-        font-family: 'Raleway', sans-serif;
-        padding: 6px, 12px;
-        transition: none;
-        margin: 0 10px;
         
       }
-      .cta a:hover {
+
+      .cta button:hover {
+        cursor: pointer;
         background-color: var(--White);
-        border-radius: 32px;
         color:var(--mainBlack) ;
-        transition: none;
+        
         
 
       }
@@ -140,8 +143,9 @@
       
       margin: 0 auto;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      max-width: 1520px;
     }
     .nav-links {
       height: auto;
