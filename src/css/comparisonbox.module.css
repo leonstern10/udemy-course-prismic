@@ -112,6 +112,12 @@ margin-top: 33px;
         margin: auto 0;
         color: var(--mainBlack);
         padding: 0.3rem;
+        max-width: 860px;
+
+    }
+    .content p{
+        font-size: 18px;
+        line-height: 1.6em;
     }
     .features ul {
         list-style: none;
