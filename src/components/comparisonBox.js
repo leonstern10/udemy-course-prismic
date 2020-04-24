@@ -10,11 +10,11 @@ background-image: url('${props => props.src}');
 background-size: cover;
 background-position: center;
 background: no-repeat;
-max-width: 131px;
-max-height: 60px;
-margin: 14px 0;
+max-width: 151px;
+max-height: 70px;
+margin: auto 0;
 @media (max-width: 390px) {
-   width: 90px;
+   width: 110px;
 }
 
 `;
@@ -35,7 +35,7 @@ const toggleContent = () => {
      
      
     <div className= {styles.comparisonContent}>
-    <div>
+    <div className= {styles.imageBox}>
     <div className={styles.imageWrap}>
    
      < BackgroundLogo src={serviceLogo}  />

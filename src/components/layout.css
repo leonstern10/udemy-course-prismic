@@ -38,7 +38,7 @@
     letter-spacing: var(--mainSpacing);
   }
   p {
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
    font-family: "Lato", sans-serif;
   }
   
@@ -359,7 +359,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   
 }
 figure {
