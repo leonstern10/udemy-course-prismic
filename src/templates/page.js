@@ -78,6 +78,9 @@ padding: 0 10px;
 .page-wrapper{
   margin: 30px auto;
 }
+@media (max-width: 350px) {
+ padding:0 5px;
+}
 
 
 `;
