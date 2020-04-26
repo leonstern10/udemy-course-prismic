@@ -69,8 +69,8 @@ export default SEO
 //   article: PropTypes.bool,
 // }
 // SEO.defaultProps = {
-//   title: null,
-//   description: null,
+//   title: "",
+//   description: "",
 //   image: null,
 // }
 
