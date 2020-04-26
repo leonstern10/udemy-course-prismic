@@ -9,6 +9,7 @@ module.exports = {
     image: './src/images/hero.png',
     siteUrl: 'https://eltop10.co',
   },
+  
   plugins: [
     `gatsby-plugin-advanced-sitemap`,
     'gatsby-plugin-styled-components',

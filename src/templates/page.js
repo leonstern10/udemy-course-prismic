@@ -94,10 +94,12 @@ const content = props.data.prismic.allPages.edges[0].node.content;
 
     return (
         <Layout>
-          <SEO
+          <SEO 
           title = {pageTitle}
-            description = {content}
+            description = {props.data.prismic.allPages.edges[0].node.content}
             image = {postImage}
+            pathname={props.data.prismic.allPages.edges[0].node._meta.id}
+
           />
           <PageWrapper className={styles.pageWrapper}> 
             <div className={styles.headerSection}>
