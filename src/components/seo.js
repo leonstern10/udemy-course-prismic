@@ -42,12 +42,20 @@ const SEO = ({ title, description, keywords, image }) => {
       <meta name="url" content={`${siteUrl}${pathname}`} />
       <meta name="keywords" content={ keywords || defaultKeywords} />
       <meta name="robots" content="index,follow" />
+      {/* facebook cards */}
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={defaultTitle} />
+      <meta property="og:description" content={defaultDescription} />
+      <meta property="og:image" content={`${siteUrl}${image}`} />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="300" />
       {/* twitter card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={defaultTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}${defaultImage}`} />
+      <meta name="twitter:description" content={defaultDescription} />
+      <meta name="twitter:image" content={`${siteUrl}${image}`} />
     </Helmet>
   )
 }
