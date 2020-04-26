@@ -92,6 +92,7 @@ const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
 const content = props.data.prismic.allPages.edges[0].node.content;
 
 
+  console.log('sggasasga',content)
     return (
         <Layout>
           <SEO 

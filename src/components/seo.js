@@ -19,13 +19,16 @@ const query = graphql`
     }
   }
 `
-const SEO = ({ title, description, keywords, image }) => (
+const SEO = ({ title, description, keywords, image }) => {
+const { pathname } = useLocation()
+  return (
+
   <StaticQuery
     query={query}
     render={({
       site: {
-  // const { pathname } = useLocation()
-  // const { site } = useStaticQuery(getData)
+  // 
+  
  
   siteMetadata: {
     defaultTitle,
@@ -42,7 +45,7 @@ const SEO = ({ title, description, keywords, image }) => (
     <Helmet htmlAttributes={{ lang: "es" }} title={`${title} | ${defaultTitle}`}>
       <meta name="description" content={description || defaultDescription} />
       <meta name="image" content={`${image ? image : siteUrl + defaultImage}`} />
-      {/* <meta name="url" content={`${siteUrl}${pathname}`} /> */}
+      <meta name="url" content={`${siteUrl}${pathname}`} />
       <meta name="keywords" content={keywords || defaultKeywords} />
       <meta name="robots" content="index,follow" />
       {/* facebook cards */}
@@ -63,24 +66,24 @@ const SEO = ({ title, description, keywords, image }) => (
   )
   }}
   />
-)
+)}
 
     
 
 
 export default SEO
 
-// SEO.propTypes = {
-//   title: PropTypes.string,
-//   description: PropTypes.string,
-//   image: PropTypes.string,
-//   article: PropTypes.bool,
-// }
-// SEO.defaultProps = {
-//   title: "",
-//   description: "",
-//   image: null,
-// }
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.bool,
+}
+SEO.defaultProps = {
+  title: "",
+  description: "",
+  image: null,
+}
 
 
 
