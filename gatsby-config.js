@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `elTop10.co | Compara y escoje los mejores productos`,
+    title: `elTop10.co | Compara y escoge los mejores productos`,
     description: `Nuestros expertos prueban y comparan los mejores productos en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision.`,
     author: `eltop10.co`,
-    siteLanguage: 'español',
+    siteLanguage: 'es',
     keywords: 'Los 10 mejores, Los mejores productos',
-    image: './src/images/',
-    siteUrl: 'https://eltop10.co/',
+    twitterUsername: "@Eltop10C",
+    image: './src/images/logo.svg',
+    siteUrl: 'https://eltop10.co',
   },
   plugins: [
     `gatsby-plugin-advanced-sitemap`,

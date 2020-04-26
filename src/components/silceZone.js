@@ -27,7 +27,7 @@ const SliceZone = ({body}) => {
                                     contacTitle={bodyContent.primary.contact_titulo}
                                     contactContent={bodyContent.primary.contact_content}
                                     buttonLabel={bodyContent.primary.button_label}
-                                    contactLink={bodyContent.primary.contact_link_uid}
+                                    contactLink={bodyContent.primary.contact_link._meta.uid}
                                     key={i}/>
                                    
                         )
