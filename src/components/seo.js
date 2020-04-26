@@ -24,7 +24,7 @@ const getData  = graphql`
 
 const SEO = ({ title, description, keywords, image }) => {
   const { pathname } = useLocation()
-  const { site } = useStaticQuery(getData )
+  const { site } = useStaticQuery(getData)
 console.log("ds", site)
   const {
     defaultTitle,

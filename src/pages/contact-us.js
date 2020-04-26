@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout';
 import styled from 'styled-components';
 import RichText from '../components/richText'
-import SEO from '../components/seo'
+
 
 export const  query = graphql `
 {
