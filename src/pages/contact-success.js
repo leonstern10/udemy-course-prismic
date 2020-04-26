@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import styled from 'styled-components'
 
 
-const WrapSuccess = styled.section `
+const WrapSuccess = styled.section`
      margin: 60px auto;
      max-width: 1000px;
      min-height: 100%
@@ -11,14 +11,14 @@ const WrapSuccess = styled.section `
 
 const ContactSuccess = () => {
 
-    return(
-    <Layout>
-        <WrapSuccess>
-        <h1>
-            Gracias por contactarnos
-        </h1>
-        </WrapSuccess>
-    </Layout>
+    return (
+        <Layout>
+            <WrapSuccess>
+                <h1>
+                    Gracias por contactarnos
+                </h1>
+            </WrapSuccess>
+        </Layout>
     )
 };
 

@@ -1,11 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { useLocation } from "@reach/router";
 
 
-const getData  = graphql`
+const query = graphql`
   query {
     site {
       siteMetadata {
@@ -19,28 +19,31 @@ const getData  = graphql`
     }
   }
 `
-
-
-
-const SEO = ({ title, description, keywords, image }) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(getData)
-console.log("ds", site)
-  const {
+const SEO = ({ title, description, keywords, image }) => (
+  <StaticQuery
+    query={query}
+    render={({
+      site: {
+  // const { pathname } = useLocation()
+  // const { site } = useStaticQuery(getData)
+ 
+  siteMetadata: {
     defaultTitle,
     defaultDescription,
     defaultImage,
     siteUrl,
     defaultKeywords,
     twitterUsername,
-  } = site.siteMetadata
-
+  },
+},
+}) => {
+  
   return (
     <Helmet htmlAttributes={{ lang: "es" }} title={`${title} | ${defaultTitle}`}>
       <meta name="description" content={description || defaultDescription} />
-      <meta name="image" content={`${image ? image : siteUrl+defaultImage}`} />
-      <meta name="url" content={`${siteUrl}${pathname}`} />
-      <meta name="keywords" content={ keywords || defaultKeywords} />
+      <meta name="image" content={`${image ? image : siteUrl + defaultImage}`} />
+      {/* <meta name="url" content={`${siteUrl}${pathname}`} /> */}
+      <meta name="keywords" content={keywords || defaultKeywords} />
       <meta name="robots" content="index,follow" />
       {/* facebook cards */}
       <meta property="og:url" content={siteUrl} />
@@ -58,21 +61,26 @@ console.log("ds", site)
       <meta name="twitter:image" content={`${siteUrl}${image}`} />
     </Helmet>
   )
-}
+  }}
+  />
+)
+
+    
+
 
 export default SEO
 
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
-}
-SEO.defaultProps = {
-  title: "",
-  description: "",
-  image: null,
-}
+// SEO.propTypes = {
+//   title: PropTypes.string,
+//   description: PropTypes.string,
+//   image: PropTypes.string,
+//   article: PropTypes.bool,
+// }
+// SEO.defaultProps = {
+//   title: "",
+//   description: "",
+//   image: null,
+// }
 
 
 
