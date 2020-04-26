@@ -67,7 +67,7 @@ const toggleContent = () => {
      <RichText render={features} /> 
      </div>
      
-        <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}> > 
+        <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}> 
         <button>
          {readMore}
          <FaAngleDown className={styles.arrow}/>

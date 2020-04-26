@@ -34,7 +34,7 @@ const SEO = ({ title, description, keywords, image }) => {
     defaultKeywords,
     twitterUsername,
   } = site.siteMetadata
-  
+ console.log("blavla", title) 
   return (
     <Helmet htmlAttributes={{ lang: "es" }} title={`${title} | ${defaultTitle}`}>
       <meta name="description" content={description || defaultDescription} />
