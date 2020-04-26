@@ -34,7 +34,7 @@ const SEO = ({ title, description, keywords, image }) => {
     defaultKeywords,
     twitterUsername,
   } = site.siteMetadata
- console.log("blavla", title) 
+
   return (
     <Helmet htmlAttributes={{ lang: "es" }} title={`${title} | ${defaultTitle}`}>
       <meta name="description" content={description || defaultDescription} />
@@ -62,17 +62,17 @@ const SEO = ({ title, description, keywords, image }) => {
 
 export default SEO
 
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
-}
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-}
+// SEO.propTypes = {
+//   title: PropTypes.string,
+//   description: PropTypes.string,
+//   image: PropTypes.string,
+//   article: PropTypes.bool,
+// }
+// SEO.defaultProps = {
+//   title: null,
+//   description: null,
+//   image: null,
+// }
 
 
 
