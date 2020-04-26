@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import { useLocation } from "@reach/router";
 
 
-const query = graphql`
-  {
+const getData  = graphql`
+  query {
     site {
       siteMetadata {
         defaultTitle: title
@@ -24,7 +24,7 @@ const query = graphql`
 
 const SEO = ({ title, description, keywords, image }) => {
   const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+  const { site } = useStaticQuery(getData )
 console.log("ds", site)
   const {
     defaultTitle,
