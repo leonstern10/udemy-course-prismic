@@ -95,7 +95,7 @@ const content = props.data.prismic.allPages.edges[0].node.content;
     return (
         <Layout>
           <SEO 
-          title = {pageTitle ? '' : pageTitle[0].text}
+          title = {pageTitle[0].text}
             description = {content ? '' : content[1].text}
             image = {postImage}
             pathname={props.data.prismic.allPages.edges[0].node._meta.id}
