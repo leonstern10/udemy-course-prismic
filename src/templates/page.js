@@ -5,8 +5,8 @@ import Layout from '../components/layout';
 import SliceZone from '../components/silceZone'
 import styled from 'styled-components';
 import styles from "../css/page.module.css";
-
 import SEO from '../components/seo'
+
 
 export const query = graphql`
 query PageQuery($id: String){
@@ -95,9 +95,9 @@ const content = props.data.prismic.allPages.edges[0].node.content;
     return (
         <Layout>
           <SEO
-            title = {props.pageTitle}
-            description = {props.content}
-            image = {props.postImage}
+          title = {pageTitle}
+            description = {content}
+            image = {postImage}
           />
           <PageWrapper className={styles.pageWrapper}> 
             <div className={styles.headerSection}>
