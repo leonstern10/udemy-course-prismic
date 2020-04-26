@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `elTop10.co | Compara y escoge los mejores productos`,
-    description: `Nuestros expertos prueban y comparan los mejores productos en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision.`,
+    description: `Nuestros expertos prueban y comparan los mejores servicios en diferentes categorías. Hacemos recomendaciones para ayudarte a tomar la mejor decision.`,
     author: `eltop10.co`,
     siteLanguage: 'es',
     keywords: 'Los 10 mejores, Los mejores productos',
