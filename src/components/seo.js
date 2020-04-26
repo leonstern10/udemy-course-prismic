@@ -25,7 +25,7 @@ const query = graphql`
 const SEO = ({ title, description, keywords, image }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
-
+console.log("ds", site)
   const {
     defaultTitle,
     defaultDescription,
@@ -62,17 +62,17 @@ const SEO = ({ title, description, keywords, image }) => {
 
 export default SEO
 
-// SEO.propTypes = {
-//   title: PropTypes.string,
-//   description: PropTypes.string,
-//   image: PropTypes.string,
-//   article: PropTypes.bool,
-// }
-// SEO.defaultProps = {
-//   title: "",
-//   description: "",
-//   image: null,
-// }
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.bool,
+}
+SEO.defaultProps = {
+  title: "",
+  description: "",
+  image: null,
+}
 
 
 
