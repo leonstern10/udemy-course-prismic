@@ -19,7 +19,7 @@ const query = graphql`
     }
   }
 `
-const SEO = ({ title, description, keywords, image }) => {
+const SEO = ({ title, description, keywords, image}) => {
 const { pathname } = useLocation()
   return (
 
