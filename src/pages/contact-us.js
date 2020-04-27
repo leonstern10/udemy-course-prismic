@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout';
 import styled from 'styled-components';
 import RichText from '../components/richText'
-
+import SEO from "../components/seo"
 export const query = graphql`
 {
     prismic {
@@ -79,7 +79,8 @@ const ContactUs = (props) => {
     return (
         <Layout>
             <ContactWrapper>
-
+            <SEO title="Compara tu Producto" description="¿Quieres ser parte de nuestras listas de comparacion y atraer nuevos clientes?
+Llena el formulario y cuentanos de tu producto."/>
                 <RichText render={props.data.prismic.allContact_pages.edges[0].node.form_title} />
                 <RichText render={props.data.prismic.allContact_pages.edges[0].node.form_description} />
 

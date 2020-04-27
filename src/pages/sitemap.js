@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby"
 import styled from 'styled-components';
 import Layout from '../components/layout';
-
+import SEO from "../components/seo"
 
 export const  query = graphql `
 {
@@ -53,6 +53,7 @@ export const  query = graphql `
          console.log(props);
          return(
             <Layout>
+              <SEO title="Sitemap"/>
              <SitemapWrapper>
             {props.data.prismic.allSitemaps.edges[0].node.sitemap.map((link) => {
             return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import styled from 'styled-components'
-
+import SEO from "../components/seo"
 
 const WrapSuccess = styled.section`
      margin: 60px auto;
@@ -13,9 +13,10 @@ const ContactSuccess = () => {
 
     return (
         <Layout>
+            <SEO title="Gracias por contactarnos"/>
             <WrapSuccess>
                 <h1>
-                    Gracias por contactarnos
+                Gracias por contactarnos
                 </h1>
             </WrapSuccess>
         </Layout>
