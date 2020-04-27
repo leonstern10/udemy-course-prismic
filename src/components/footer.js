@@ -27,7 +27,7 @@ const Footer = () => {
                 <p className ={styles.pia}>PIA is the best!</p>
               </div>
               <div className={styles.copyright}>
-                <p>Copyright © 2020 Dynamic Intent</p>
+                <p>Copyright ©2020 Dynamic Intent</p>
               </div>
   
   </div>
