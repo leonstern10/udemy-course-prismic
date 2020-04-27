@@ -6,7 +6,7 @@ module.exports = {
     siteLanguage: 'es',
     keywords: 'Los 10 mejores, Los mejores productos',
     twitterUsername: "@Eltop10C",
-    image: './src/images/hero.png',
+    image: './src/images/eltop10 hero.png',
     siteUrl: 'https://eltop10.co',
   },
   
