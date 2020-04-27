@@ -91,13 +91,17 @@ const authorName = props.data.prismic.allPages.edges[0].node.author_name;
 const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
 const content = props.data.prismic.allPages.edges[0].node.content;
 
-
-  console.log('sggasasga',content)
+let description =  '';
+          if (typeof content === 'string') {
+            description = content
+          } else { // content is an object 
+            description = content[1].text
+          }
     return (
         <Layout>
           <SEO 
           title = {pageTitle[0].text}
-            description = {content[1].text} 
+          description ={description}
             image = {postImage}
             pathname={props.data.prismic.allPages.edges[0].node._meta.id}
 
