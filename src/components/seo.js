@@ -43,7 +43,7 @@ const { pathname } = useLocation()
   
   return (
     <Helmet htmlAttributes={{ lang: "es" }} title={`${title} | ${defaultTitle}`}>
-      <meta name="description" content={description || defaultDescription} />
+      <meta name="description" content={`${description} || ${defaultDescription}`} />
       <meta name="image" content={`${image ? image : siteUrl + defaultImage}`} />
       <meta name="url" content={`${siteUrl}${pathname}`} />
       <meta name="keywords" content={keywords || defaultKeywords} />
