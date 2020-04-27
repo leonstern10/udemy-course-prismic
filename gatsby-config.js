@@ -16,6 +16,10 @@ module.exports = {
       options: {
        
         trackingId: "UA-163219293-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
       },
     },
     `gatsby-plugin-advanced-sitemap`,
