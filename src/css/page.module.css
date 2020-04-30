@@ -14,7 +14,7 @@
    padding-right: 11px   
 }
   .page-title h2{
-   font-size: 48px;
+   font-size: 45px;
   }
 
   .post-image{
@@ -49,13 +49,13 @@ width: 590px;
 max-height: 300px;
 }
 
-@media screen and (max-width: 1193px) {
+@media screen and (max-width: 1223px) {
 .post-image{
     width: 510px;
 }     
 }
 
-@media screen and (max-width: 1056px) {
+@media screen and (max-width: 1105px) {
     .post-image{
         width: 410px;
         
@@ -80,7 +80,7 @@ max-height: 300px;
         }
         .post-description{
             font-size: 16px;
-          
+            padding: 50px 30px 30px 40px;
         }
 
 }
@@ -110,7 +110,7 @@ max-height: 300px;
         padding: 15px 5px 0px 5px; 
 }
 .page-title h2{
-    font-size: 42px;
+    font-size: 36px;
    }
    .post-description{
        background-color: transparent;
@@ -121,7 +121,7 @@ max-height: 300px;
 @media screen and (max-width: 450px) {
 
     .page-title h2{
-        font-size: 34px
+        font-size: 32px
     }
     
     
