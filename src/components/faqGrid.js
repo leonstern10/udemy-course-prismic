@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import RichText from './richText';
 import styles from "../css/faqGrid.module.css";
 import FaqBox from './faqBox';

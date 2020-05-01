@@ -1,9 +1,12 @@
 .wrapper{
     max-width: 854px;
     margin: 70px 0;
+    padding: 0 15px;
 }
 
-
+.title {
+    max-width: 95%;
+}
 .title h1{
     border-bottom: 8px solid #FF9960;
     font-size: 32px;
@@ -13,6 +16,13 @@
 
     box-sizing: border-box;
     border: 1px solid #C0C0C0;
-    padding: 0 15px;
-    padding-bottom: 22px;
+    padding: 22px 15px;
+
+    max-width: 854px;
+}
+
+@media screen and (max-width: 470px) {
+    .title h1{
+        font-size: 26px;
+    }
 }

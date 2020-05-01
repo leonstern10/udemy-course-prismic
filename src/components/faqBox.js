@@ -7,7 +7,7 @@ return(
     <div className = {styles.sections}>
 
     
-<div>
+<div className={styles.question}>
     <RichText render = {question}/>
 </div>
 <div>
