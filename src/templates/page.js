@@ -19,6 +19,17 @@ prismic {
           post_image
           content
           body {
+            ... on PRISMIC_PageBodyFaq {
+              type
+              label
+              primary {
+                faq_title
+              }
+              fields {
+                answer
+                question
+              }
+            }
             ... on PRISMIC_PageBodyComparison_grid {
               type
               label

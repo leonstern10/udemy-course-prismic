@@ -4,6 +4,7 @@ import ListsGrid from './listsGrid';
 import PostGrid  from './postGrid';
 import ComparisonGrid  from './comparisonGrid';
 import AboutContact from './aboutContact';
+import FaqGrid  from './faqGrid';
 
 
 const SliceZone = ({body}) => {
@@ -55,6 +56,14 @@ const SliceZone = ({body}) => {
                                     <ComparisonGrid 
                                     key={i}
                                     comparisons={bodyContent.fields}/>
+                        )
+                    }
+                    else if (bodyContent.type ==='faq'){
+                        return ( 
+                                    <FaqGrid 
+                                    key={i}
+                                    faqs={bodyContent.fields}
+                                    title={bodyContent.primary.faq_title} />
                         )
                     }
 
