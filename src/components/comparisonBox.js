@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import styles from "../css/comparisonbox.module.css";
 import {FaAngleDown} from 'react-icons/fa';
 import { trackCustomEvent, OutboundLink  } from 'gatsby-plugin-google-analytics'
+import Rater from 'react-rater'
+import "../css/star.scss"
+
 
 
 
@@ -22,7 +25,7 @@ margin: auto 0;
 `;
 
 
-const ComparisonBox = ({popularTag, features, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor, listPrice }) => {
+const ComparisonBox = ({popularTag, features, ratingNumber,ratingStar, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor, listPrice }) => {
 
 const [showContent, setContent]= useState(false)
 const toggleContent = () => {
@@ -65,8 +68,18 @@ const toggleContent = () => {
      </div>
      </div>
      <div>
+    <div className ={styles.middleSection}>
      <div className={styles.features}>
      <RichText render={features} /> 
+     </div>
+     <div className={styles.ratingWrap}>
+     <div className ={styles.ratingNumber}>
+     {ratingNumber}
+     </div>
+     <div className={styles.reactRaterStar}>
+     <Rater rating={ratingStar} total={5}/>
+     </div>
+     </div>
      </div>
      
         <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}> 
@@ -96,6 +109,7 @@ const toggleContent = () => {
      <RichText render={serviceDescription} />    
      </div>}
      </div>
+    
     
    </div>
 )

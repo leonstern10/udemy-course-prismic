@@ -40,7 +40,34 @@ margin-top: 33px;
 
 
     .features{
-           margin: 10px 15px;  
+           margin: 10px 15px;
+           padding-right: 1px;  
+    }
+    .middle-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 56px;
+
+    }
+    .rating-number{
+        font-size: 38px;
+        font-weight: 900;
+        font-family: 'Lato', sans-serif;
+        align-self: center;
+    }
+    .rating-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80px
+    }
+    .react-rater-star {
+       
+        font-size: 1.2rem;
+    }
+    .react-rater-star.is-active{
+        color: #fc6;
     }
     .image-box{
         display: flex;
@@ -150,7 +177,10 @@ margin-top: 33px;
         .popular-tag{
             width: 185px;
         }
-
+        .middle-section{
+            padding-right: 0px;
+        }
+    
     }
     @media screen and (max-width: 470px) {
         .cta a{
@@ -159,6 +189,11 @@ margin-top: 33px;
     .price{
         display: none;
     }
+    .rating-number{
+        font-size: 32px;
+        padding: 0 10px
+    }
+
 }
         @media screen and (max-width: 390px) {
             .price{

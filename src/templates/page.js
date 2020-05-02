@@ -39,6 +39,8 @@ prismic {
                 best_for
                 list_price
                 feature
+                rating_number
+                rating_star
                 price
                 read_more
                 service_description

@@ -20,6 +20,8 @@ const ComparisonGrid = ({ comparisons}) => {
                     bestFor={comparison.best_for}
                     listPrice={comparison.list_price}
                     features={comparison.feature}
+                    ratingNumber={comparison.rating_number}
+                    ratingStar={comparison.rating_star}
                     price={comparison.price}
                     readMore={comparison.read_more}
                     serviceDescription={comparison.service_description}
