@@ -106,7 +106,12 @@ const toggleContent = () => {
         
      {showContent &&
      <div className={styles.content}>
-     <RichText render={serviceDescription} />    
+     <RichText render={serviceDescription} />  
+     <div className={styles.longCta}>
+     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" >
+        {webLabel}
+    </OutboundLink>
+    </div>
      </div>}
      </div>
     

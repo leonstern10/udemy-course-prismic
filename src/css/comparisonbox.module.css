@@ -96,13 +96,29 @@ margin-top: 33px;
         align-items: center;
         text-decoration: none;
         color: white;
-        border-radius: 32px;
+        border-radius: 8px;
+        background-color: #5B418B;
+        cursor: pointer;
+        font-family:'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+        width: 146px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    .long-cta a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
         background-color: #5B418B;
         cursor: pointer;
         font-family: 'Raleway', sans-serif;
         font-weight:   600 ;
         font-size: 17px;
-        width: 146px;
+        min-width: 300px;
         height: 50px;
         margin: 0 10px;
     }
@@ -214,7 +230,7 @@ margin-top: 33px;
             }
             .cta a{
                 font-size: 16px;
-                width: 116px;
+                width: 130px;
             }
             .popular-tag{
                 width: 165px;
