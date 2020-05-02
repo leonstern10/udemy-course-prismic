@@ -61,11 +61,11 @@ margin-top: 33px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 80px
+        min-width: 80px;
     }
     .react-rater-star {
        
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
    
     .image-box{
@@ -171,6 +171,9 @@ margin-top: 33px;
         .rating-wrap{
             width: 70px
         }
+        .features{
+            margin: 10px 0px;
+        }
 
       }
       @media screen and (max-width: 549px) {
@@ -185,6 +188,10 @@ margin-top: 33px;
         }
         .middle-section{
             padding-right: 0px;
+        }
+        .react-rater-star {
+            min-width: 70px;
+            font-size: 1rem;
         }
     
     }
@@ -218,6 +225,9 @@ margin-top: 33px;
             }
             .react-rater-star {
        
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
+            .features li{
+                font-size: 15px;
+         }
       }

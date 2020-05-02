@@ -6,7 +6,7 @@ import ComparisonBox from './comparisonBox';
 const ComparisonWrapper = styled.section `
 max-width: 1220px;
 margin: 0 auto;
-padding: 0 15px;
+padding: 0 10px;
 `;
 
 const ComparisonGrid = ({ comparisons}) => {
