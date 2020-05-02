@@ -60,15 +60,14 @@ margin-top: 33px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         width: 80px
     }
     .react-rater-star {
        
         font-size: 1.2rem;
     }
-    .react-rater-star.is-active{
-        color: #fc6;
-    }
+   
     .image-box{
         display: flex;
         flex-direction: column;
@@ -165,6 +164,13 @@ margin-top: 33px;
         .list-price{
             display: none
         }
+        .react-rater-star {
+       
+            font-size: 1rem;
+        }
+        .rating-wrap{
+            width: 70px
+        }
 
       }
       @media screen and (max-width: 549px) {
@@ -210,9 +216,8 @@ margin-top: 33px;
             .comparison-content{
                 padding: 0 5px;
             }
-            
-
-
-
-
+            .react-rater-star {
+       
+                font-size: 0.9rem;
+            }
       }
