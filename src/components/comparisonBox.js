@@ -43,7 +43,7 @@ const toggleContent = () => {
     <div className= {styles.imageBox}>
     <div className={styles.imageWrap}>
    
-     < BackgroundLogo src={serviceLogo}  />
+     <BackgroundLogo src={serviceLogo}  />
      </div>
      
     <p className={styles.bestFor}>
@@ -107,10 +107,15 @@ const toggleContent = () => {
      {showContent &&
      <div className={styles.content}>
      <RichText render={serviceDescription} />  
+     <div className={styles.bottomBox}>
+     <div className={styles.bottomLogo}>
+     <BackgroundLogo src={serviceLogo}  />
+     </div>
      <div className={styles.longCta}>
      <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" >
         {webLabel}
     </OutboundLink>
+    </div>
     </div>
      </div>}
      </div>
