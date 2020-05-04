@@ -55,15 +55,25 @@ box-sizing: border-box;
 background-color: #F0F0F0;
 max-width: 800px;
 box-shadow: inset 6px 0px 15px rgba(0, 0, 0, 0.25);
+flex-wrap: wrap;
+@media (max-width: 1031px ) {
+    box-shadow: none;
+    display:flex;
+    flex-direction: row;
+    width: 479px;
+    justify-content: center;
+    
+}
 
 input {
     height: 52px;
     border: none;
     padding: 0 4px;
-    width: 100%;
+    width: 100% ;
     text-color: #0C1C30;
     font-family: "Raleway", sans-serif;
-    
+    @media (max-width: 1032px ) {}
+
     }
 textarea{
     font-family: "Raleway", sans-serif;
@@ -120,11 +130,13 @@ const ContactUs = (props) => {
                 </div>
                 </HeroWrapper>
                 <div className={styles.bodyWrap}>
+                   
                 <div className={styles.textWrap}>
+                
                     
                 {props.data.prismic.allContact_pages.edges[0].node.text_box.map((box, i) => {
         return (
-            <div key={i}>      
+            <div className={styles.boxWrap} key={i}>      
                 <div className={styles.textBox}>
                 <RichText render={box.box_title}/>
                 <RichText render = {box.box_content}/>

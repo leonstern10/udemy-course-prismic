@@ -36,12 +36,18 @@
 .text-box h1{
     font-size: 48px;
     color: #FF9960;
+    
+}
+.boxWrap{
+    margin-bottom: 30px;
 }
 
 .text-wrap{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    
 
 }
 
@@ -80,11 +86,12 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+   
 }
 
 .cartoon-title h1{
     color: #FF9960;
-    font-size: 64px;
+    font-size: 58px;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 40px;
@@ -107,7 +114,7 @@ padding: 0 20px;
 }
 .cartoon-wrap p{
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 74px;
 }
 
@@ -115,16 +122,33 @@ padding: 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 100px;
 }
 
 .text-field{
     padding: 18px 41px 0px 0px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .text-area{
-    padding: 18px 41px 0px 0px; 
-    
+    padding: 18px 41px 0px 0px;    
+}
+@media screen and (max-width: 1031px) {
+    .text-field{
+        padding: 18px 0px 0px 0px;
+        display: flex;
+        justify-content: center ;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 1024px) {
+
 }
