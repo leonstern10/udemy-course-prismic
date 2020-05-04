@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components';
 import RichText from '../components/richText'
 import SEO from "../components/seo"
-import styles from "../css/contactus.module.css";
+import styles from "../css/contactUs.module.css";
 import Navbar from "../components/navBar"
 import Footer from "../components/footer";
 
