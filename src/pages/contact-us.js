@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components';
 import RichText from '../components/richText'
 import SEO from "../components/seo"
-import styles from "../css/ContactUs.module.css";
+import styles from "../css/contactus.module.css";
 import Navbar from "../components/navBar"
 import Footer from "../components/footer";
 
@@ -102,7 +102,7 @@ margin-left: 170px;
 `
 
 const ContactUs = (props) => {
-    console.log(props);
+  
 
     const heroImage= props.data.prismic.allContact_pages.edges[0].node.hero_image.url;
     const formTitle = props.data.prismic.allContact_pages.edges[0].node.form_title;
@@ -164,10 +164,7 @@ const ContactUs = (props) => {
                 <img src={cartoonImage} alt="eltop10"></img>
                 </div>
                 </div>
-                
-                
-               
-
+  
                 <Form name="contact-us"
                     method="POST"
                     data-netlify="true"
