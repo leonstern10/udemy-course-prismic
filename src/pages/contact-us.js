@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from "gatsby"
-import Layout from '../components/layout';
 import styled from 'styled-components';
 import RichText from '../components/richText'
 import SEO from "../components/seo"
 import styles from "../css/ContactUs.module.css";
 import Navbar from "../components/navBar"
+import Footer from "../components/footer";
 
 export const query = graphql`
 {
@@ -13,14 +13,15 @@ export const query = graphql`
     allContact_pages {
       edges {
         node {
-            cartoon_content
+          cartoon_content
           cartoon_image
           cartoon_title
           form_description
           form_title
           hero_image
           result_content
-            result_title
+          result_title
+          title_contact
           text_box {
             box_content
             box_title
@@ -47,55 +48,49 @@ const HeroWrapper = styled.section `
     `
     
 const Form = styled.form`
-padding: 10px;
-background-color: rgba(0, 0, 0, 0.025);
-border-radius: 4px;
-padding: 50px;
-margin-top: 20px;
+padding: 20px;
+height: 799px;
+width: 479px;
+box-sizing: border-box;
+background-color: #F0F0F0;
 max-width: 800px;
-margin-left: auto ;
-margin-right: auto ;
+box-shadow: inset 6px 0px 15px rgba(0, 0, 0, 0.25);
+
 input {
-    margin-bottom: 10px; 
-    border-radius: 4px;
-    height: 40px;
+    height: 52px;
     border: none;
     padding: 0 4px;
     width: 100%;
     text-color: #0C1C30;
-    box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.05);
+    font-family: "Raleway", sans-serif;
+    
     }
 textarea{
-    margin-bottom: 10px; 
-    border-radius: 4px;
-    height: 100px;
+    font-family: "Raleway", sans-serif;
+    height: 80px;
     border: none;
-    padding: 0 4px;
+    padding: 4px 4px;
     width: 100%;
     resize: none;
-    box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.05);
     color: #0C1C30
     }
 `
 const Button = styled.button`
 box-shadow: none; 
-background: #ffffff;
-color: #0C1C30;
-border: 1px solid #eee;
+background: #F98937;
+color: #FFFFFF;
+border: none;    
 display: flex;
-padding: 12px 16px; 
-border-radius: 8px;
+padding: 16px 30px; 
+border-radius: 4px;
 cursor: pointer;
 font-family: 'Raleway', sans-serif;
 font-weight: bold;
-box-shadow: 6px 24px 58px 0px rgba(85, 85, 85, 0.2);
+margin-left: 170px;
+    margin-top: 26px;
 
 `
-const ContactWrapper = styled.section`
-max-width: 800px;
-margin: 40px auto; 
-padding: 0 20px;
-`
+
 const ContactUs = (props) => {
     console.log(props);
 
@@ -106,6 +101,8 @@ const ContactUs = (props) => {
     const ResultContent= props.data.prismic.allContact_pages.edges[0].node.result_content;
     const cartoonImage= props.data.prismic.allContact_pages.edges[0].node.cartoon_image.url;
     const cartoonTitle= props.data.prismic.allContact_pages.edges[0].node.cartoon_title;
+    const cartoonContent= props.data.prismic.allContact_pages.edges[0].node.cartoon_content;
+    const titleContact= props.data.prismic.allContact_pages.edges[0].node.title_contact;
    
     return (
         <div>
@@ -124,6 +121,7 @@ const ContactUs = (props) => {
                 </HeroWrapper>
                 <div className={styles.bodyWrap}>
                 <div className={styles.textWrap}>
+                    
                 {props.data.prismic.allContact_pages.edges[0].node.text_box.map((box, i) => {
         return (
             <div key={i}>      
@@ -141,22 +139,33 @@ const ContactUs = (props) => {
                     <RichText render={ResultContent} />
                 </div>
                 </div>
+                
+                <div className={styles.contactForm}>
+               
+                <div className={styles.cartoonWrap}>
+                
+                <div className={styles.cartoonTitle}>
+                <RichText render = {cartoonTitle}></RichText>
                 </div>
-                <div>
+                <RichText render = {cartoonContent}></RichText>
+                <div className={styles.cartoonImage}>
+                <img src={cartoonImage}></img>
                 </div>
-                    
-                <ContactWrapper>
+                </div>
+                
+                
                
 
                 <Form name="contact-us"
                     method="POST"
                     data-netlify="true"
                     action="/contact-success">
+                        <RichText render={titleContact}/>
                     <input type="hidden" name="form-name" value="contact-us" />
                     {props.data.prismic.allContact_pages.edges[0].node.form_fields.map((field, i) => {
                         if (field.field_type === 'textarea') {
                             return (
-                                <div key={i}>
+                                <div className={styles.textArea} key={i}>
                                     <textarea
                                         name={field.field_name}
                                         required={field.required === 'Yes'}
@@ -166,7 +175,7 @@ const ContactUs = (props) => {
 
                         } else {
                             return (
-                                <div key={i}>
+                                <div className={styles.textField} key={i}>
                                     <input
                                         name={field.field_name}
                                         placeholder={field.field_name}
@@ -182,12 +191,13 @@ const ContactUs = (props) => {
 
                 </Form>
 
-            </ContactWrapper>
-
-
+                </div>
             </div>
 
+            </div>
+            <Footer/>
             </div> 
+            
     )
 }
 
