@@ -149,7 +149,7 @@ const ContactUs = (props) => {
                 </div>
                 <RichText render = {cartoonContent}></RichText>
                 <div className={styles.cartoonImage}>
-                <img src={cartoonImage}></img>
+                <img src={cartoonImage} alt="eltop10"></img>
                 </div>
                 </div>
                 
