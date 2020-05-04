@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 8% auto;
+    margin: 4% auto;
 }
 .titleContainer h1{
     font-size: 64px;
@@ -34,7 +34,7 @@
     border-top: 17px solid #FF9960;
 }
 .text-box h1{
-    font-size: 48px;
+    font-size: 42px;
     color: #FF9960;
     
 }

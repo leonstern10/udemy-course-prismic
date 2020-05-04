@@ -39,7 +39,7 @@ export const query = graphql`
 `
 const HeroWrapper = styled.section `
     background: url('${props => props.heroImage}');
-    height: 80vh;
+    height: 60vh;
     background-size: cover;
     background-position: center;
     display: flex;
