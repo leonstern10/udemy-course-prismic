@@ -62,7 +62,7 @@ const HeroWrapper = styled.section `
     margin-top: 30px;
 }
 @media (min-width: 1024px ) {
-    font-size:38px;
+    font-size: 32px;
     margin-top: 30px;
 }
 @media (min-width: 1330px ) {
