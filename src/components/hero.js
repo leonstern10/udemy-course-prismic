@@ -40,13 +40,18 @@ const HeroWrapper = styled.section `
    .topnav {
     overflow: hidden; 
 }
+.text-container{
+    text-align: center;
+    padding:  0 30px;
+}
 .title {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0 3px;
 
     @media (min-width: 425px ) {
     margin-top: 0px;
     padding: 0 3px;
+    text-align: center;
 
 }
 @media (min-width: 590px ) {
@@ -58,7 +63,7 @@ const HeroWrapper = styled.section `
     margin-top: 30px;
 }
 @media (min-width: 800px ) {
-    font-size:32px;
+    font-size:28px;
     margin-top: 30px;
 }
 @media (min-width: 1024px ) {
@@ -76,7 +81,10 @@ const HeroWrapper = styled.section `
 }
 }
 .subtitle {
-    font-size: 24px;
+    font-size: 20px;
+    @media (min-width: 800px ) {
+        font-size: 25px; 
+    }
 }
 
 
@@ -92,12 +100,14 @@ const Hero = ({title, content, heroImage}) => {
             <div className="topnav">
             <Navbar/>
             </div>
+            <div className="text-container">
           <div className="title">
           <RichText render={title}/>
           </div>
           <p className ="subtitle">
                {content}
            </p>
+           </div>
           
           </div>        
         </HeroWrapper>

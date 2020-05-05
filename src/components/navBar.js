@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
-// import links from "../utils/navLinks"
+import links from "../utils/navLinks"
 import link from "../utils/navButton"
 import logo from "../images/logo.svg"
 // import {Dropdown,DropdownButton} from 'react-bootstrap';
@@ -51,13 +51,13 @@ const Navbar = () => {
           }>
             
        
-          {/* {links.map((item, index) => {
+          {links.map((item, index) => {
             return (
               <li key={index}>
                 <Link to={item.path}>{item.text}</Link>
               </li>
             )
-          })} */}
+          })}
         
          <div className={styles.cta}>
          {link.map((item, index) => {

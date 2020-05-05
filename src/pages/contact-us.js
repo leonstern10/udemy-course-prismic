@@ -90,8 +90,8 @@ const ContactUs = (props) => {
     const heroImage= props.data.prismic.allContact_pages.edges[0].node.hero_image.url;
     const formTitle = props.data.prismic.allContact_pages.edges[0].node.form_title;
     const formDescription= props.data.prismic.allContact_pages.edges[0].node.form_description;
-    const ResultTitle= props.data.prismic.allContact_pages.edges[0].node.result_title;
-    const ResultContent= props.data.prismic.allContact_pages.edges[0].node.result_content;
+    // const ResultTitle= props.data.prismic.allContact_pages.edges[0].node.result_title;
+    // const ResultContent= props.data.prismic.allContact_pages.edges[0].node.result_content;
     const cartoonImage= props.data.prismic.allContact_pages.edges[0].node.cartoon_image.url;
     const cartoonTitle= props.data.prismic.allContact_pages.edges[0].node.cartoon_title;
     const cartoonContent= props.data.prismic.allContact_pages.edges[0].node.cartoon_content;
@@ -129,12 +129,12 @@ const ContactUs = (props) => {
             )
         })}
      </div>     
-        <div className ={styles.resultWrap}>
+        {/* <div className ={styles.resultWrap}>
                 <div className ={styles.resultBox}>
                     <RichText render={ResultTitle} />
                     <RichText render={ResultContent} />
                 </div>
-                </div>
+                </div> */}
                 
                 <div className={styles.contactForm}>
                

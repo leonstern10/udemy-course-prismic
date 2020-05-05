@@ -62,7 +62,9 @@
     height: 0;
     overflow: hidden;
     
+    
   }
+  
   .cta {
     display: none;
 }
@@ -110,6 +112,9 @@
     }
 
     .logo-btn {
+      display: none;
+    }
+    .nav-links li{
       display: none;
     }
     .cta {

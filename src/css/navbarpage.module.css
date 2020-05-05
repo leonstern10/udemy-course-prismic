@@ -72,14 +72,13 @@
   
   @media screen and (min-width: 848px) {
     .nav-header {
-        display: flex;
-        
+        display: flex;   
     }
-    
+    .nav-links li{
+      display: none;
+    }
     .navbar {
         padding: 0.2rem 2rem;
-        
-
       }
       image{
         width: auto;

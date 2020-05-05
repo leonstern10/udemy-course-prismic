@@ -2,7 +2,7 @@ export default [
     
     
     {
-      path: "/Sobre-Nosotros",
+      path: "/contact-us",
       text: "Sobre Nosotros",
     },
     
