@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
   
 }
 .titleContainer h1{
@@ -32,6 +33,7 @@
     text-align: center;
     margin: auto 30px;
     border-top: 17px solid #FF9960;
+    padding: 0 20px;
 }
 .text-box h1{
     font-size: 42px;
@@ -66,6 +68,7 @@
     margin: auto 30px;
     border-top: 17px solid white;
     margin-top: 50px;
+    padding: 0 20px
 }  
 .result-box h1{
     color: white;
@@ -168,7 +171,23 @@ margin-left: 220px;
 margin-top: 26px;
 }
     @media screen and (max-width: 1031px) {
-    .text-field{
+    
+        .titleContainer h1{
+            font-size: 48px;
+            color: white;
+            text-align: center;
+        
+        }
+        .titleContainer p{
+            font-size: 18px;
+            color: white;
+            text-align: center;
+         }
+         .result-box{
+             margin-top: 20px;
+         }
+
+       .text-field{
         padding: 18px 0px 0px 0px;
         display: flex;
         justify-content: center;
@@ -200,4 +219,72 @@ margin-top: 26px;
         margin-top: 50px;
     }
 
+}
+@media screen and (max-width: 580px) {
+    .text-box{
+    width: 330px;
+    height: 280px;
+    }
+    .text-box h1{
+      font-size: 32px;
+        }
+    .text-box p{
+        font-size: 16px;
+            }
+    .result-box{
+        width: 330px;
+        height: 280px;
+        margin-top: 0px;
+    }
+    .result-box h1{
+        font-size: 32px;
+    }
+    .result-box p{
+        font-size: 16px;
+    }
+    .cartoon-wrap{
+        height: 499px;
+        width: 370px;
+    }
+    .cartoon-wrap p{
+       margin-bottom: 10px;
+       font-size: 16px;
+    }
+    .text-field{
+       
+        margin: auto 10px;
+        width: 304px;
+    }
+    .messageInput{
+        width: 304px;
+    }
+    @media screen and (max-width: 380px) {
+        .cartoon-wrap{
+            height: 499px;
+            width: 310px;
+        }
+        .text-field{
+            margin: auto 10px;
+            width: 304px;
+        }
+        .messageInput{
+            width: 240px;
+    }
+        .result-box{
+         width: 300px;
+    }
+    .text-box{
+        width: 300px;
+        }
+        .titleContainer h1{
+            font-size: 42px;
+         
+        
+        }
+        .titleContainer p{
+            font-size: 16px;
+            color: white;
+            text-align: center;
+         }
+}
 }

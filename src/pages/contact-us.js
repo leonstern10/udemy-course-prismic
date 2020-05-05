@@ -69,6 +69,17 @@ flex-wrap: wrap;
         margin-left:10px;
     }
 }
+@media (max-width: 580px ) {
+    width: 370px;
+    height: 769px;
+    margin-top: 40px;
+}
+@media (max-width: 380px ) {
+    width: 300px;
+    height: 769px;
+    margin-top: 40px;
+}
+
 `
 
 
