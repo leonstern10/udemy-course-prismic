@@ -10,9 +10,11 @@ const Footer = () => {
 
         {links.map((item, index) => {
             return (
+              <ul>
               <li key={index}>
                 <Link to={item.path}>{item.text}</Link>
               </li>
+              </ul>
             )
           })}
         </div>

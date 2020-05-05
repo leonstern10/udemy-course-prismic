@@ -15,12 +15,15 @@ margin-top: 100px;
 .footer-links{
 display: flex;
 flex-direction: row;
-padding-bottom:45px  ;
+padding-bottom: 45px  ;
 border-bottom: 1px solid #CACACA;
 font-weight: 700;
 margin-top: 60px;
 margin-bottom: 10px;
 list-style-type: none;
+}
+.footer-links ul{
+  list-style-type: none;
 }
 .footer-links a{
   text-decoration: none;
@@ -68,13 +71,17 @@ margin-top: 15px 0;
     }
     .footer-links a{
         color: var(--mainBlack); 
-        padding: 0 50px;
+        padding: 10px 50px;
+        
       }
       .footer-links{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 25px;      
+}
+.footer-links li{
+margin: 10px;      
 }
 .aviso {
     text-align:center;
