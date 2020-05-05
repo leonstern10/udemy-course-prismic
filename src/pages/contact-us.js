@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import RichText from '../components/richText'
 import SEO from "../components/seo"
 import styles from "../css/contactUs.module.css";
-import Navbar from "../components/navBar"
-import Footer from "../components/footer";
+import Layout from "../components/layout"
 
 export const query = graphql`
 {
@@ -44,7 +43,8 @@ const HeroWrapper = styled.section `
     background-position: center;
     display: flex;
     flex-direction: column
-    
+    align-items: center;
+    justify-content: center;
     `
     
 const Form = styled.form`
@@ -61,45 +61,17 @@ flex-wrap: wrap;
     display:flex;
     flex-direction: row;
     width: 479px;
-    justify-content: center;
-    
+    justify-content: flex-start;
+    height: 549px;
+    margin-top: 50px;
+
+    h1{
+        margin-left:10px;
+    }
 }
-
-input {
-    height: 52px;
-    border: none;
-    padding: 0 4px;
-    width: 100% ;
-    text-color: #0C1C30;
-    font-family: "Raleway", sans-serif;
-    @media (max-width: 1032px ) {}
-
-    }
-textarea{
-    font-family: "Raleway", sans-serif;
-    height: 80px;
-    border: none;
-    padding: 4px 4px;
-    width: 100%;
-    resize: none;
-    color: #0C1C30
-    }
 `
-const Button = styled.button`
-box-shadow: none; 
-background: #F98937;
-color: #FFFFFF;
-border: none;    
-display: flex;
-padding: 16px 30px; 
-border-radius: 4px;
-cursor: pointer;
-font-family: 'Raleway', sans-serif;
-font-weight: bold;
-margin-left: 170px;
-    margin-top: 26px;
 
-`
+
 
 const ContactUs = (props) => {
   
@@ -115,15 +87,16 @@ const ContactUs = (props) => {
     const titleContact= props.data.prismic.allContact_pages.edges[0].node.title_contact;
    
     return (
+        <Layout>
         <div>
-        <div>
+            
             <SEO title="Compara tu Producto" description="¿Quieres ser parte de nuestras listas de comparacion y atraer nuevos clientes?
                                                             Llena el formulario y cuentanos de tu producto."
             />
               
                
                 <HeroWrapper heroImage={heroImage} >
-                <Navbar/>
+             
                     <div className={styles.titleContainer}>
                 <RichText render={formTitle} />
                 <RichText render={formDescription} />
@@ -175,7 +148,7 @@ const ContactUs = (props) => {
                         if (field.field_type === 'textarea') {
                             return (
                                 <div className={styles.textArea} key={i}>
-                                    <textarea
+                                    <textarea className={styles.messageInput}
                                         name={field.field_name}
                                         required={field.required === 'Yes'}
                                         placeholder={field.field_name} />
@@ -185,7 +158,7 @@ const ContactUs = (props) => {
                         } else {
                             return (
                                 <div className={styles.textField} key={i}>
-                                    <input
+                                    <input className={styles.textInput}
                                         name={field.field_name}
                                         placeholder={field.field_name}
                                         required={field.required === 'Yes'}
@@ -194,9 +167,9 @@ const ContactUs = (props) => {
                             )
                         }
                     })}
-                    <Button type="submit">
-                        Asóciate con nosotros
-                </Button>
+                    <button className={styles.cta} type="submit">
+                        Enviar
+                </button>
 
                 </Form>
 
@@ -204,8 +177,8 @@ const ContactUs = (props) => {
             </div>
 
             </div>
-            <Footer/>
-            </div> 
+           
+            </Layout>
             
     )
 }

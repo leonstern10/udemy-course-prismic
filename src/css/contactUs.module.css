@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4% auto;
+  
 }
 .titleContainer h1{
     font-size: 64px;
@@ -131,16 +131,73 @@ padding: 0 20px;
     display: flex;
     justify-content: flex-start;
 }
+.messageInput {
+    font-family: "Raleway", sans-serif;
+    height: 80px;
+    border: none;
+    padding: 4px 10px;
+    width: 100%;
+    resize: none;
+    color: #0C1C30;
+}
+.textInput {
+    height: 52px;
+    border: none;
+    padding: 0 8px;
+    width: 100% ;
+    color: #0C1C30;
+    font-family: "Raleway", sans-serif;
+}
 
 .text-area{
     padding: 18px 41px 0px 0px;    
+    
 }
-@media screen and (max-width: 1031px) {
+.cta{
+box-shadow: none; 
+background: #F98937;
+color: #FFFFFF;
+border: none;    
+display: flex;
+padding: 16px 66px; 
+border-radius: 4px;
+cursor: pointer;
+font-family: 'Raleway', sans-serif;
+font-weight: bold;
+margin-left: 220px;
+margin-top: 26px;
+}
+    @media screen and (max-width: 1031px) {
     .text-field{
         padding: 18px 0px 0px 0px;
         display: flex;
         justify-content: center;
         margin: auto 10px;
+    }
+    .messageInput{
+        width: 404px;
+    }
+    .cta{
+        margin-left: 10px;
+    }
+    .text-area{
+        margin: auto 10px;
+    }
+    .cartoon-wrap{
+        height: 499px;
+    }
+    .cartoon-wrap h1{
+        font-size: 42px;
+    }
+    .cartoon-wrap p{
+        font-size: 18px;
+    }
+    .cartoonImage{
+        width: 292.32px;
+        height: 144.35;
+    }
+    .contactForm{
+        margin-top: 50px;
     }
 
 }
