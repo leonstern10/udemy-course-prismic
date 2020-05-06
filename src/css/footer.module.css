@@ -4,7 +4,7 @@
 flex-direction: column;
 box-sizing: border-box;
 width: 100%;
-height: 280px;
+height: 310px;
 background: #281D3D;
 align-items: center;
 justify-content: center;
@@ -64,21 +64,23 @@ margin-top: 15px 0;
     color:#281D3D ;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 485px) {
 
     .footer-wrap{
         background: #F7F7F7;
+        justify-content: start;
+        height: 375px;
     }
     .footer-links a{
         color: var(--mainBlack); 
-        padding: 10px 50px;
+        padding: 10px 40px;
         
       }
       .footer-links{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 25px;      
+        padding-bottom: 40px;      
 }
 .footer-links li{
 margin: 10px;      
