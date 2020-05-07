@@ -12,15 +12,20 @@ module.exports = {
   
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
        
-        trackingId: "UA-163219293-1",
+        trackingIds: [
+        "UA-163219293-1",// Google Analytics / GA
+        "AW-656248674", // Google Ads / Adwords / AW
+      ],
+      pluginConfig: {
         head: true,
         anonymize: true,
         respectDNT: true,
         pageTransitionDelay: 0,
       },
+    }
     },
     `gatsby-plugin-advanced-sitemap`,
     'gatsby-plugin-styled-components',

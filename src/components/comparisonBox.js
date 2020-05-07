@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
 import styles from "../css/comparisonbox.module.css";
 import {FaAngleDown} from 'react-icons/fa';
-import { trackCustomEvent, OutboundLink  } from 'gatsby-plugin-google-analytics'
+import { trackCustomEvent, OutboundLink  } from 'gatsby-plugin-google-gtag'
 import Rater from 'react-rater'
 import "../css/star.scss"
 
@@ -26,26 +26,23 @@ margin: auto 0;
 
 
 const ComparisonBox = ({popularTag, features, ratingNumber,ratingStar, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor, listPrice }) => {
-
+  
 const [showContent, setContent]= useState(false)
 const toggleContent = () => {
     setContent(showContent => !showContent)
 }
+
     return(
     <div className= {styles.wrapper}>
     
     <div className={styles.popularTag}>
          {popularTag}
     </div>
-     
-     
     <div className= {styles.comparisonContent}>
     <div className= {styles.imageBox}>
     <div className={styles.imageWrap}>
-   
      <BackgroundLogo src={serviceLogo}  />
      </div>
-     
     <p className={styles.bestFor}>
     {bestFor}
     </p>
@@ -59,9 +56,8 @@ const toggleContent = () => {
          {price}
      </p>   
      </div>
-     
      <div className={styles.cta}>
-     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" >
+     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
         {webLabel}
     </OutboundLink>
      </div>
