@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
 import styles from "../css/comparisonbox.module.css";
 import {FaAngleDown} from 'react-icons/fa';
-import { trackCustomEvent, OutboundLink  } from 'gatsby-plugin-google-gtag'
+import { OutboundLink  } from 'gatsby-plugin-google-gtag'
 import Rater from 'react-rater'
 import "../css/star.scss"
 
@@ -79,22 +79,7 @@ const toggleContent = () => {
      </div>
      
         <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}> 
-        <button onClick={e => {
-        // To stop the page reloading
-        e.preventDefault()
-        // Lets track that custom click
-        trackCustomEvent({
-          // string - required - The object that was interacted with (e.g.video)
-          category: "Leer Mas",
-          // string - required - Type of interaction (e.g. 'play')
-          action: "Click",
-          // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
-        //   label: "Gatsby Plugin Example Campaign",
-          // number - optional - Numeric value associated with the event. (e.g. A product ID)
-        //   value: 43
-        })
-        
-      }}>
+        <button>
          {readMore}
          <FaAngleDown className={styles.arrow}/>
          </button>
