@@ -4,9 +4,11 @@ import ComparisonBox from './comparisonBox';
 
 
 const ComparisonWrapper = styled.section `
-max-width: 1220px;
+max-width: 1139px;
 margin: 0 auto;
 padding: 0 10px;
+
+
 `;
 
 const ComparisonGrid = ({ comparisons}) => {
@@ -16,7 +18,9 @@ const ComparisonGrid = ({ comparisons}) => {
                 {comparisons.map((comparison,i) => {
                 return (
                     <ComparisonBox 
-                    popularTag= {comparison.popular_tag}
+                    name={comparison.name}
+                    popularTag= {comparison.tag ==='Más Popular'}
+                    numberRank={comparison.number_rank}
                     bestFor={comparison.best_for}
                     listPrice={comparison.list_price}
                     features={comparison.feature}

@@ -73,7 +73,7 @@ const IndexPage = (props) => {
   return(
 
   <>
-     <SEO title="Inicio" description= " tu mejor aliado al momento de buscar un producto o servicio en internet ya que te permite conocer y comparar a los mejores proveedores en una amplia variedad de industrias y categorías."/>
+     <SEO title="Compara y escoge los mejores productos" description= " tu mejor aliado al momento de buscar un producto o servicio en internet ya que te permite conocer y comparar a los mejores proveedores en una amplia variedad de industrias y categorías."/>
     <SliceZone body={props.data.prismic.allHome_pages.edges[0].node.body}/>
   <Footer/>
   </>

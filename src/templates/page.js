@@ -35,7 +35,9 @@ prismic {
               label
               
               fields {
-                popular_tag
+                name
+                tag
+                number_rank
                 best_for
                 list_price
                 feature
@@ -116,7 +118,7 @@ let description =  '';
     return (
         <Layout>
           <SEO 
-          title = {pageTitle[0].text}
+          title = {pageTitle[0].text} 
           description ={description}
             image = {postImage}
             pathname={props.data.prismic.allPages.edges[0].node._meta.id}
