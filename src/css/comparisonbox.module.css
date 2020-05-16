@@ -360,6 +360,7 @@ align-items: center;
     
         .left-content{
             padding: 5px;
+            
         }
         .leftMiddle{
             flex-wrap: wrap;
@@ -407,12 +408,19 @@ align-items: center;
         .line{
             margin-top: 10px;
         }
+        .titleWrap{
+            display: none;
+        }
+        .left-content{
+            min-height: 0px;
+        }
         
             }
 
     @media screen and (max-width: 460px) {
        .rightSection{
            margin: 0px;
+           margin-top: 20px;
        }
        .numberRank{
            display: none;
@@ -425,6 +433,7 @@ align-items: center;
     }
     .title-box {
         padding-left: 0px;
+        display: none;
     }
     .leftMiddle{
         justify-content: center;
@@ -439,6 +448,10 @@ align-items: center;
         display: flex;
         justify-content: center;
     }
+    .rating-wrap{
+        display: none;
+    }
+
     
 }
 @media screen and (max-width: 425px) {
