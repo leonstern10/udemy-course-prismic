@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
 import styles from "../css/comparisonbox.module.css";
-import {IoIosArrowDown} from 'react-icons/io';
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 import { OutboundLink  } from 'gatsby-plugin-google-gtag'
 import Rater from 'react-rater'
 import "../css/star.scss"
@@ -46,15 +46,17 @@ justify-content: center;
 
 
 const ComparisonBox = ({name, popularTag, numberRank, features, ratingNumber,ratingStar, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor, listPrice }) => {
- 
-const [showContent, setContent]= useState(false)
+    let arrowClass = '';
+const [showContent, setContent]= useState()
 const toggleContent = () => {
     setContent(showContent => !showContent)
 }
 
     return(
         <div className={styles.allcontent}>
+            <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
     <div className= {styles.wrapper}>
+    
      <div className= {styles.leftMiddle}>  
     <div className= {styles.leftContent}>
         <div className= {styles.tagwrap}>
@@ -120,31 +122,30 @@ const toggleContent = () => {
      </div>
      </div>
      </div> 
-     
+
      </div>
+      </OutboundLink> 
      {showContent &&
      <div className={styles.content}>
      <RichText render={serviceDescription} />  
-     <div className={styles.bottomBox}>
+     
      
      <div className={styles.longCta}>
      <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" >
         {webLabel}
     </OutboundLink>
     </div>
-    </div>
+    
      </div>}
     
-        <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}> 
-        <button>
-         <IoIosArrowDown className={styles.arrow}/>
+        <button className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}>
+         <IoIosArrowDown className={styles.arrowDown} />
          </button>
-         </div>
         
      
         
     
-    
+           
    </div>
 )
 }

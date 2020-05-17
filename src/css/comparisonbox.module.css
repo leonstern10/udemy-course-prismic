@@ -8,16 +8,41 @@
     background: #FFFFFF;
     box-shadow: 2px 2px 20px rgba(213, 209, 223, 0.5);
     margin-bottom: 20px;
+    
+}
+.allcontent a{
+    text-decoration: none;
+    color: var(--mainBlack);
+    background-color: transparent;
+    
+}
+.allcontent .read-more :hover{
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(180deg,hsla(0,0%,90.9%,0),#f5f5f5dc);
+    
+}
+.allcontent :hover{
+    text-decoration: none;
+    color: #515151;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);;
+    
+    
+}
+.allcontent .numberRank:hover{
+    text-decoration: none;
+    color: #FFAD80;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);;
+    
 }
 .wrapper{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-
-
-
 }
+
+
 .left-content {
     display: flex; 
     flex-direction: column;      
@@ -33,6 +58,7 @@ align-items: center;
     display: flex;
     width: 1133px;
 }
+
 .tagwrap{
     margin-left: -25px;
     margin-top: 15px;
@@ -200,6 +226,15 @@ align-items: center;
     .read-more{
         margin: 0 auto;
         color: #575757;
+        display: flex;
+        margin: 0 auto;
+        color: #575757;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 100%;
+        background: linear-gradient(180deg,hsla(0,0%,94.9%,0),#f5f5f5);
+        transition: var(--mainTransition);
     }
     .read-more button{
         margin: auto 0;
@@ -207,21 +242,23 @@ align-items: center;
         align-items: center;
         padding: 0.3rem;
         color: #575757;
-        background-color: transparent;
         border: none;
+        transform: rotate(180deg);
     }
-    .arrow {
+    .arrow-down {
         margin-top: 5px;
         height: 1.6em;
         width: 1.6em;
     }
-    .arrow:after {
-    transform: rotate(90deg);
-}
+    
+
     .content{
         margin: 10px 93px;
         color: var(--mainBlack);
         max-width: 616px;
+        overflow: hidden;
+        transition: var(--mainTransition);
+        
 
     }
     .content p{
