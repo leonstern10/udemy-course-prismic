@@ -10,7 +10,7 @@ import SideBox from './sideBox';
 const Sidebar = ({title, sides}) => {
     return (
         <div className={styles.grid}>
-        <div className={styles.top-title}>
+        <div className={styles.wrap}>
             <div className={styles.Maintitle}>
         <RichText render={title}/>
         </div>
