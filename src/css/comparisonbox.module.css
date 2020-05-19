@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1220px;
+    max-width: 1020px;
     max-height: 1500px;
     box-sizing: border-box;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px rgba(213, 209, 223, 0.5);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     
 }
 .allcontent a{
@@ -49,18 +49,18 @@ align-items: center;
     margin: auto 0;
     padding: 0 15px;  
     margin: 0px;
-    padding: 0 25px;
+    padding: 0 40px;
     max-width: 510px;
     min-height: 98px;
     
 }
 .leftMiddle{
     display: flex;
-    width: 1133px;
+    
 }
 
 .tagwrap{
-    margin-left: -25px;
+    margin-left: -40px;
     margin-top: 15px;
 }
 
@@ -154,7 +154,7 @@ align-items: center;
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
-        padding: 40px 0px 40px 40px;
+        padding: 40px 40px 40px 40px;
     }
 
     .right-wrapper p{
@@ -210,18 +210,20 @@ align-items: center;
         color: #525151;
         font-weight: 500;
         margin-top: 3px;
+        max-width: 176px;
+        text-align: center;
     }
     .bestFor{
         color: #646464;
         padding-bottom: 0;
-        width: 380px;
+        width: 320px;
     }
     .line{
         height: 2px;
         background-color: #FFAD80;
         border-width:0;
         margin-top: 16px;
-        max-width: 500px;
+        max-width: 284px;
     }
     .read-more{
         margin: 0 auto;
@@ -286,9 +288,10 @@ align-items: center;
           }
          
     }
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 1079px) {
         .allcontent{
             max-height: 890px;
+            
         }
     .rating-wrap{
         padding: 10px;

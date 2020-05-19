@@ -9,7 +9,7 @@ import styles from "../css/aboutContact.module.css"
 
 const AboutContact = ({aboutTitle, aboutContent, contacTitle, contactContent, buttonLabel, contactLink}) => {
     return(
-        <>
+        <div className={styles.allWrap}>
         <hr className={styles.line}/>
         <div className={styles.contain}>
             
@@ -41,7 +41,7 @@ const AboutContact = ({aboutTitle, aboutContent, contacTitle, contactContent, bu
         </div>
         
         </div>
-        </>
+        </div>
     )
 }
 

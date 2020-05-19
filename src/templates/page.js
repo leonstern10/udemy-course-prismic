@@ -19,6 +19,24 @@ prismic {
           post_image
           content
           body {
+            ... on PRISMIC_PageBodySidebar {
+              type
+              label
+              primary {
+              sidebar_title
+              }
+              fields {
+                article_image
+                article_title
+                page_link {
+                  ... on PRISMIC_Page {
+                    _meta {
+                      uid
+                    }
+                  }
+                }
+              }
+            }
             ... on PRISMIC_PageBodyFaq {
               type
               label
@@ -87,7 +105,7 @@ prismic {
 `
 
 const PageWrapper = styled.section `
-max-width: 1220px;
+max-width: 1420px;
 margin: 60px auto;
 padding: 0 10px;
 .page-wrapper{
@@ -142,10 +160,11 @@ let description =  '';
           </div>
            
           {/* <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/> */}
-
+     
    {!!props.data.prismic.allPages.edges[0].node.body &&
    <SliceZone body={props.data.prismic.allPages.edges[0].node.body}/> //Need to check this because it was blocking the data from SliceZone
    }
+  
           </PageWrapper>
    
    

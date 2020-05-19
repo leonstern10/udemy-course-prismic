@@ -5,22 +5,37 @@ import PostGrid  from './postGrid';
 import ComparisonGrid  from './comparisonGrid';
 import AboutContact from './aboutContact';
 import FaqGrid  from './faqGrid';
+import Sidebar  from './sidebar';
+import styles from "../css/sliceZone.module.css";
 
 
 const SliceZone = ({body}) => {
     console.log(body);
         return (
-            <div>
+            <div className={styles.SliceZone}>
                 {body.map((bodyContent, i ) => {
-                    if(bodyContent.type === 'hero'){
-                        return (
-                            <Hero
-                            heroImage = {bodyContent.primary.hero_image.url}
-                            title = {bodyContent.primary.hero_title}
-                            content={bodyContent.primary.hero_content}
-                            key={i}/>
+                    if(bodyContent.type ==='comparison_grid'){
+                        return ( 
+                            
+                                    <ComparisonGrid 
+                                    key={i}
+                                    comparisons={bodyContent.fields}/>
                         )
-                    }    else if (bodyContent.type ==='about___contact'){
+                    }else if (bodyContent.type ==='sidebar'){
+                        return ( 
+                                    <Sidebar 
+                                    key={i}
+                                    sides={bodyContent.fields}
+                                    title={bodyContent.primary.sidebar_title} />
+                        )
+                    }else if (bodyContent.type ==='faq'){
+                        return ( 
+                                    <FaqGrid 
+                                    key={i}
+                                    faqs={bodyContent.fields}
+                                    title={bodyContent.primary.faq_title} />
+                        )
+                    }else if (bodyContent.type ==='about___contact'){
                         return ( 
                                     <AboutContact 
                                     aboutTitle = {bodyContent.primary.about_title}
@@ -30,20 +45,15 @@ const SliceZone = ({body}) => {
                                     buttonLabel={bodyContent.primary.button_label}
                                     contactLink={bodyContent.primary.contact_link._meta.uid}
                                     key={i}/>
-                                   
                         )
-                    }
-                        
-                        else if (bodyContent.type ==='post_grid'){
+                    } else if (bodyContent.type ==='post_grid'){
                         return ( 
                                     <PostGrid 
                                     key={i}
                                     posts={bodyContent.fields} 
                                     title={bodyContent.primary.products_title}/>
-                                   
                         )
-                    }
-                                else if (bodyContent.type ==='lists_grid'){
+                    }else if (bodyContent.type ==='lists_grid'){
                         return ( 
                                     <ListsGrid 
                                     key={i}
@@ -51,22 +61,15 @@ const SliceZone = ({body}) => {
                                     title={bodyContent.primary.list_title} />
                         )
                     }
-                    else if (bodyContent.type ==='comparison_grid'){
-                        return ( 
-                                    <ComparisonGrid 
-                                    key={i}
-                                    comparisons={bodyContent.fields}/>
+                    else if (bodyContent.type === 'hero'){
+                        return (
+                            <Hero
+                            heroImage = {bodyContent.primary.hero_image.url}
+                            title = {bodyContent.primary.hero_title}
+                            content={bodyContent.primary.hero_content}
+                            key={i}/>
                         )
                     }
-                    else if (bodyContent.type ==='faq'){
-                        return ( 
-                                    <FaqGrid 
-                                    key={i}
-                                    faqs={bodyContent.fields}
-                                    title={bodyContent.primary.faq_title} />
-                        )
-                    }
-
                      else {
                         return null
                     }

@@ -5,8 +5,11 @@ import ComparisonBox from './comparisonBox';
 
 const ComparisonWrapper = styled.section `
 max-width: 1139px;
-margin: 0 auto;
-padding: 0 10px;
+margin-right: 50px;
+@media (max-width: 1079px) {
+    margin-right: 0px;
+}
+
 
 
 `;

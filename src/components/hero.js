@@ -2,18 +2,19 @@ import React from 'react';
 import RichText from './richText';
 import styled from 'styled-components';
 import Navbar from './navBar';
+import styles from "../css/hero.module.css";
 
 
 const HeroWrapper = styled.section `
     background: url('${props => props.heroImage}');
     height: 50vh;
-    display: flex;
     background-size: cover;
     background-position: center;
     background-repeat: not repeat;
-    position: relative;
-    color: #FFFFFF;
-    text-align: center;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @media (min-width: 1024px ) {
         height: 60vh;
     }
@@ -23,72 +24,7 @@ const HeroWrapper = styled.section `
     @media (min-width: 1730px ) {
         height: 80vh;
     }
- 
-   .container{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-    width: auto;
-    @media (min-width: 576px ) {
-       width: 100%;
    
-    }
-    
-
-   }
-   .topnav {
-    overflow: hidden; 
-}
-.text-container{
-    text-align: center;
-    padding:  0 30px;
-}
-.title {
-    font-size: 20px;
-    padding: 0 3px;
-
-    @media (min-width: 425px ) {
-    margin-top: 0px;
-    padding: 0 3px;
-    text-align: center;
-
-}
-@media (min-width: 590px ) {
-    font-size: 28px;
-    margin-top: 15px;
-}
-@media (min-width: 768px ) {
-    font-size: 28px;
-    margin-top: 30px;
-}
-@media (min-width: 800px ) {
-    font-size:28px;
-    margin-top: 30px;
-}
-@media (min-width: 1024px ) {
-    font-size: 32px;
-    margin-top: 30px;
-}
-@media (min-width: 1330px ) {
-    font-size:44px;
-    margin-top: 60px;
-}
-@media (min-width: 1920px ) {
-    font-size:44px;
-    margin-top: 120px;
-    
-}
-}
-.subtitle {
-    font-size: 20px;
-    @media (min-width: 800px ) {
-        font-size: 25px; 
-    }
-}
-
-
-
 `
 
 
@@ -96,20 +32,22 @@ const Hero = ({title, content, heroImage}) => {
     return(
         
         <HeroWrapper heroImage={heroImage}>
-            <div className ="container">
-            <div className="topnav">
+            
+            <div className={styles.navbar}>
             <Navbar/>
             </div>
-            <div className="text-container">
-          <div className="title">
+            <div className={styles.textContainer}>
+          <div className={styles.title}>
           <RichText render={title}/>
           </div>
-          <p className ="subtitle">
+          <p className ={styles.subtitle}>
                {content}
            </p>
            </div>
+           <div className={styles.bottom}></div>
           
-          </div>        
+         
+              
         </HeroWrapper>
     );
 }

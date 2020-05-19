@@ -1,3 +1,7 @@
+.all-wrap{
+    max-width: 1920px;
+    width: 100%;
+}
 .contain{
     display: flex;
     flex-direction: column;

@@ -19,7 +19,7 @@ import Footer from "./footer";
 
 
 const MainWrapper =styled.main`
- 
+
   margin: 0 auto;  `
 
   const navigationQuery = graphql `

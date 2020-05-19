@@ -9,7 +9,7 @@ import ListBox from './listBox';
 
 const ListsGrid = ({title, lists}) => {
     return (
-        <>
+        <div className={styles.listWrap}>
         <div className={styles.gridTitle}>
             <div className={styles.title}>
         <RichText render={title}/>
@@ -31,7 +31,7 @@ const ListsGrid = ({title, lists}) => {
             })}
            </div>
         </div>
-        </>
+        </div>
 
     )
 
