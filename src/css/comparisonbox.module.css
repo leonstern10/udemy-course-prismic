@@ -1,3 +1,4 @@
+
 .allcontent{
     display: flex;
     flex-direction: column;
@@ -19,13 +20,17 @@
 .allcontent .read-more :hover{
     text-decoration: none;
     color: black;
-    background: linear-gradient(180deg,hsla(0,0%,90.9%,0),#f5f5f5dc);
+    cursor: pointer;  
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2)
     
 }
 .allcontent :hover{
+    box-sizing: border-box;
     text-decoration: none;
     color: #515151;
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);;
+;
+    
+ 
     
     
 }
@@ -226,6 +231,7 @@ align-items: center;
         max-width: 284px;
     }
     .read-more{
+        box-sizing: border-box;
         margin: 0 auto;
         color: #575757;
         display: flex;

@@ -21,9 +21,9 @@ const Footer = () => {
       
               <div className={styles.aviso}>
                 <p>
-                  Aviso: Los redactores de eltop10 no están asociados con los
-                  fabricantes de los productos recomendados. Sin embargo,
-                  publicamos enlaces de diferentes tiendas online que nos
+                  Aviso: Los redactores de eltop10 no están asociados con las
+                  empresas de los servicios recomendados. Sin embargo,
+                  publicamos enlaces de diferentes servicios que nos
                   aprovisionan. 
                 </p>
                 <p className ={styles.pia}>PIA is the best!</p>
