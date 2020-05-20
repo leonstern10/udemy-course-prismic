@@ -114,7 +114,7 @@ const toggleContent = () => {
      </div>
      
      <div className={styles.cta}>
-     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
+     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => typeof window !== "undefined" && window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
         {webLabel}
     </OutboundLink>
      </div>
@@ -133,7 +133,7 @@ const toggleContent = () => {
      
      
      <div className={styles.longCta}>
-     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" >
+     <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => typeof window !== "undefined" && window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
         {webLabel}
     </OutboundLink>
     </div>
@@ -141,7 +141,7 @@ const toggleContent = () => {
      </div>}
      </OutboundLink> 
 
-        <button className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}>
+        <button className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent} onClick= {() => typeof window !== "undefined" && window.gtag("event", "click", { send_to: ["UA-163219293-1"]})}>
          <IoIosArrowDown className={styles.arrowDown} />
          </button>
         
