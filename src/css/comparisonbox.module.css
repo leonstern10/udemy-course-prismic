@@ -17,10 +17,10 @@
     background-color: transparent;
     
 }
-.allcontent .read-more :hover{
+.read-more button :hover{
     text-decoration: none;
     color: black;
-    cursor: pointer;  
+      
     
     
 }
@@ -233,10 +233,8 @@ align-items: center;
     .read-more{
         box-sizing: border-box;
         margin: 0 auto;
-        color: #575757;
         display: flex;
         margin: 0 auto;
-        color: #575757;
         align-items: center;
         justify-content: center;
         border: none;
@@ -249,14 +247,17 @@ align-items: center;
         display: flex;
         align-items: center;
         padding: 0.3rem;
-        color: #575757;
         border: none;
-        transform: rotate(180deg);
+        background-color: transparent;
+        cursor: pointer;
+        
     }
     .arrow-down {
         margin-top: 5px;
         height: 1.6em;
         width: 1.6em;
+        color: #515151;
+        
     }
     
 
