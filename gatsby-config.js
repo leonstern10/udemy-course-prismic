@@ -30,6 +30,19 @@ module.exports = {
     `gatsby-plugin-advanced-sitemap`,
     'gatsby-plugin-styled-components',
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            variants: [`400`, '600', '700'],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
       resolve: 'gatsby-source-prismic-graphql',
       options: {
         repositoryName: 'Udemy-course',
