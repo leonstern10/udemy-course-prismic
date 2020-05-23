@@ -19,8 +19,11 @@ max-width: 151px;
 max-height: 70px;
 margin: auto 0;
 @media (max-width: 390px) {
-   width: 110px;
+   width: 140px;
 }
+@media (max-width: 360px) {
+    width: 130px;
+ }
 
 `;
 
@@ -56,12 +59,7 @@ const toggleContent = () => {
         <div className={styles.allcontent}>
          
             <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
-            
-    <div className= {styles.wrapper}>
-    
-     <div className= {styles.leftMiddle}>  
-    <div className= {styles.leftContent}>
-        <div className= {styles.tagwrap}>
+            <div className= {styles.tagwrap}>
     <Populartag popularTag={popularTag}>
         {!!popularTag &&
         <div className="popular-tag">
@@ -70,16 +68,25 @@ const toggleContent = () => {
             }
         </Populartag>
         </div>
+    <div className= {styles.wrapper}>
+    
+     <div className= {styles.leftMiddle}>  
+    <div className= {styles.leftContent}>
+       
         
     <div className= {styles.titleWrap}>
     <p className={styles.numberRank}>
     {numberRank} 
+    <div className={styles.logoMobile}>
+     <BackgroundLogo src={serviceLogo}  />
+     </div> 
     </p>
-    <div className= {styles.titleFeatues}>
+    <div className= {styles.titleFeatures}>
     <div className= {styles.titleBox}>
     <div className={styles.name}>
     <RichText render={name} /> 
     </div>
+    
     <p className={styles.bestFor}>
     {bestFor}
     <hr className={styles.line}></hr>
@@ -93,7 +100,7 @@ const toggleContent = () => {
     </div>
      </div>
      </div>
-     <div className ={styles.rightSection}> 
+     <div className ={styles.rightSection}>
      <div className={styles.ratingWrap}>
      <div className ={styles.ratingNumber}>
      {ratingNumber}
@@ -105,13 +112,21 @@ const toggleContent = () => {
     <RichText render={listPrice}  />
     </div>
      </div>
-     
+     <div className ={styles.bestMobile}>
+     {bestFor}
+     </div>
     <div className={styles.rightWrapper}>
      <div className= {styles.price}>
      <p>
          {price}
      </p>   
      </div>
+     <div className={styles.featuresMobile}>
+     <RichText render={features} /> 
+     </div>
+ 
+     <hr className={styles.lineMobile}></hr>
+     
      
      <div className={styles.cta}>
      <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => typeof window !== "undefined" && window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} >
