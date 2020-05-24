@@ -11,7 +11,7 @@ import React from "react";
 import styled from 'styled-components';
 import "./layout.css";
 import SEO from './seo'
-// import CookieConsent from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 import Navbarpage from "./navBarpage";
 import Footer from "./footer";
 
@@ -72,7 +72,8 @@ const Layout = ({ children }) => {
       render={(data) => {
         return (
           <Container>
-          {/* <CookieConsent
+            
+          <CookieConsent
           buttonStyle= {{ background: "#8461C9", color: "white" }}
            declineButtonStyle={{ background: "none" }}
           location="bottom"
@@ -84,7 +85,7 @@ const Layout = ({ children }) => {
             <div style={{ fontSize: "14x" }}>
 Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al continuar navegando, aceptas su uso.
 </div>
-</CookieConsent> */}
+</CookieConsent>
           <SEO/>
           <Navbarpage></Navbarpage>
 
