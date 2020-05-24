@@ -157,9 +157,9 @@ const toggleContent = () => {
      </OutboundLink> 
 
         <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}>
-            <button onClick= {() => window.gtag("event", "click", {send_to: ["UA-163219293-1"]})}>
+            <div onClick= {() => window.gtag("event", "click", {send_to: ["UA-163219293-1"]})}>
          <IoIosArrowDown className={styles.arrowDown} />
-         </button>
+         </div>
          </div>
         
    </div>

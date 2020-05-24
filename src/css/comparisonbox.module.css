@@ -17,13 +17,7 @@
     background-color: transparent;
     
 }
-.read-more button :hover{
-    text-decoration: none;
-    color: black;
-      
-    
-    
-}
+
 .allcontent :hover{
     box-sizing: border-box;
     text-decoration: none;
@@ -236,25 +230,17 @@ align-items: center;
         width: 100%;
         background: linear-gradient(180deg,hsla(0,0%,94.9%,0),#f5f5f5);
         transition: var(--mainTransition);
-    }
-    .read-more button{
-        margin: auto 0;
-        display: flex;
-        align-items: center;
-        padding: 0.3rem;
-        border: none;
-        background-color: transparent;
         cursor: pointer;
-        
     }
     .arrow-down {
         margin-top: 5px;
         height: 1.6em;
         width: 1.6em;
         color: #515151;
-        
     }
-    
+    .arrow-down :hover{
+        color: black;
+    }
 
     .content{
         margin: 10px 93px;
