@@ -82,7 +82,7 @@ const Layout = ({ children }) => {
           acceptOnScrollPercentage={50}
           // debug={true}
           cookieName="gatsby-gdpr-google-analytics">
-            <div style={{ fontSize: "14x" }}>
+            <div style={{ fontSize: "14x", fontFamily: "Open-Sans" }}>
 Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al continuar navegando, aceptas su uso.
 </div>
 </CookieConsent>

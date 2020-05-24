@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import SliceZone from "../components/silceZone"
 import Footer from "../components/footer";
 import SEO from "../components/seo"
+import CookieConsent from "react-cookie-consent";
 
 
 export const query = graphql `
@@ -74,6 +75,19 @@ const IndexPage = (props) => {
 
   <>
      <SEO title="Compara y escoge los mejores productos" description= " tu mejor aliado al momento de buscar un producto o servicio en internet ya que te permite conocer y comparar a los mejores proveedores en una amplia variedad de industrias y categorías."/>
+     <CookieConsent
+          buttonStyle= {{ background: "#8461C9", color: "white" }}
+           declineButtonStyle={{ background: "none" }}
+          location="bottom"
+          buttonText="Aceptar"
+          acceptOnScroll={true}
+          acceptOnScrollPercentage={50}
+          // debug={true}
+          cookieName="gatsby-gdpr-google-analytics">
+            <div style={{ fontSize: "14x", fontFamily: "Open-Sans" }}>
+Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al continuar navegando, aceptas su uso.
+</div>
+</CookieConsent>
     <SliceZone body={props.data.prismic.allHome_pages.edges[0].node.body}/>
   <Footer/>
   </>
