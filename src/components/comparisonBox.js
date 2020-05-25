@@ -61,8 +61,7 @@ let arrowstyle = classnames(
     {[styles.Up] : !showContent
     });
 
-console.log(arrowstyle)
-console.log("sasas",showContent)
+
     return(
         <div className={styles.allcontent}>
          
