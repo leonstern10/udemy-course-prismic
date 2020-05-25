@@ -7,7 +7,7 @@ import { OutboundLink  } from 'gatsby-plugin-google-gtag'
 import Rater from 'react-rater'
 import "../css/star.scss"
 import classnames from "classnames";
-import Fade from "react-reveal";
+import Slide from "react-reveal";
 
 
 
@@ -149,7 +149,7 @@ console.log("sasas",showContent)
      </div> 
 
      </div>
-    <Fade  when={showContent} collapse>
+    <Slide collapse when={showContent} >
 
      <div className={styles.content}>
      <RichText render={serviceDescription} />  
@@ -163,7 +163,7 @@ console.log("sasas",showContent)
     </div>
     
      </div>
-     </Fade>
+     </Slide>
 
      </OutboundLink> 
 
@@ -172,7 +172,7 @@ console.log("sasas",showContent)
          <IoIosArrowDown className={`${styles.arrow} ${showContent && styles.up}`} />
          </div>
          </div>
-         </div>
+        </div>
 )}
 
 export default ComparisonBox;
