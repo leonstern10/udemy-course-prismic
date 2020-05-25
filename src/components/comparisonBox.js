@@ -168,11 +168,11 @@ console.log("sasas",showContent)
      </OutboundLink> 
 
         <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}>
-        
+        <div onClick= {() => window.gtag("event", "click", {send_to: ["UA-163219293-1"]})}>
          <IoIosArrowDown className={`${styles.arrow} ${showContent && styles.up}`} />
          </div>
          </div>
-        
+         </div>
 )}
 
 export default ComparisonBox;
