@@ -6,6 +6,8 @@ import {IoIosArrowDown} from 'react-icons/io';
 import { OutboundLink  } from 'gatsby-plugin-google-gtag'
 import Rater from 'react-rater'
 import "../css/star.scss"
+import classnames from "classnames";
+import Fade from "react-reveal";
 
 
 
@@ -50,11 +52,17 @@ justify-content: center;
 
 const ComparisonBox = ({name, popularTag, numberRank, features, ratingNumber,ratingStar, price, readMore, serviceDescription, serviceLogo, webLabel, webLink, bestFor, listPrice }) => {
     
-const [showContent, setContent]= useState()
+const [showContent, setContent]= useState(false)
 const toggleContent = () => {
     setContent(showContent => !showContent)
 }
+let arrowstyle = classnames(
+    styles.arrow,
+    {[styles.Up] : !showContent
+    });
 
+console.log(arrowstyle)
+console.log("sasas",showContent)
     return(
         <div className={styles.allcontent}>
          
@@ -141,10 +149,11 @@ const toggleContent = () => {
      </div> 
 
      </div>
-     
-     {showContent &&
+    <Fade  when={showContent} collapse>
+
      <div className={styles.content}>
      <RichText render={serviceDescription} />  
+     
      
      
      <div className={styles.longCta}>
@@ -153,18 +162,17 @@ const toggleContent = () => {
     </OutboundLink>
     </div>
     
-     </div>}
+     </div>
+     </Fade>
+
      </OutboundLink> 
 
         <div className= {styles.readMore} onClick={toggleContent}  onKeyDown={toggleContent}>
-            <div onClick= {() => window.gtag("event", "click", {send_to: ["UA-163219293-1"]})}>
-         <IoIosArrowDown className={styles.arrowDown} />
+        
+         <IoIosArrowDown className={`${styles.arrow} ${showContent && styles.up}`} />
          </div>
          </div>
         
-   </div>
-  
-)
-}
+)}
 
 export default ComparisonBox;

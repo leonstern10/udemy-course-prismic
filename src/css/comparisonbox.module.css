@@ -232,14 +232,19 @@ align-items: center;
         transition: var(--mainTransition);
         cursor: pointer;
     }
-    .arrow-down {
+    .arrow{
         margin-top: 5px;
         height: 1.6em;
         width: 1.6em;
         color: #515151;
     }
-    .arrow-down :hover{
+    .arrow :hover{
         color: black;
+    }
+    
+    .arrow.up{
+        transform: rotate(180deg); 
+        
     }
 
     .content{
