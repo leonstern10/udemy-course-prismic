@@ -14,7 +14,7 @@ import SEO from './seo'
 import CookieConsent from "react-cookie-consent";
 import Navbarpage from "./navBarpage";
 import Footer from "./footer";
-import { Helmet } from "react-helmet";
+
 
 
 
@@ -73,19 +73,7 @@ const Layout = ({ children }) => {
       render={(data) => {
         return (
           <Container>
-            <Helmet>
-             <script>{ (function () {
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = 'https://app.termly.io/embed.min.js';
-          s.id = '0df7f874-b0fe-4ca8-ab39-66bf74176100';
-          s.setAttribute("data-name", "termly-embed-banner");
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-  })()}</script> 
-            </Helmet>
-          {/* <CookieConsent
+          <CookieConsent
           buttonStyle= {{ background: "#8461C9", color: "white" }}
            declineButtonStyle={{ background: "none" }}
           location="bottom"
@@ -97,7 +85,7 @@ const Layout = ({ children }) => {
             <div style={{ fontSize: "14x", fontFamily: "Open-Sans" }}>
 Utilizamos cookies para analizar el tráfico de este sitio web, por lo que al continuar navegando, aceptas su uso.
 </div>
-</CookieConsent> */}
+</CookieConsent>
           <SEO/>
           <Navbarpage></Navbarpage>
 
