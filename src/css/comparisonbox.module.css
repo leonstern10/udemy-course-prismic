@@ -252,7 +252,7 @@ align-items: center;
         color: var(--mainBlack);
         max-width: 616px;
         overflow: hidden;
-        transition: var(--mainTransition);
+        
         
 
     }
