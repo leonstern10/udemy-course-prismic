@@ -5,8 +5,7 @@ import styles from "../css/comparisonbox.module.css";
 import {IoIosArrowDown} from 'react-icons/io';
 import { OutboundLink  } from 'gatsby-plugin-google-gtag'
 import Rater from 'react-rater'
-import "../css/star.scss"
-import classnames from "classnames";
+import "../css/star.scss";
 import Slide from "react-reveal";
 
 
@@ -21,10 +20,10 @@ max-width: 151px;
 max-height: 70px;
 margin: auto 0;
 @media (max-width: 390px) {
-   width: 140px;
+   max-width: 140px;
 }
 @media (max-width: 360px) {
-    width: 130px;
+    max-width: 130px;
  }
 
 `;
