@@ -72,7 +72,7 @@ module.exports = {
           },
           production: {
             policy: [
-              { userAgent: '*', allow: '/' }, {allow: '/ads/preferences/'}, {allow: '/gpt/'}, {allow: '/pagead/show_ads.js'}, {allow: '/pagead/js/adsbygoogle.js'}, {allow: '/pagead/js/*/show_ads_impl.js'}, {allow: '/static/glade.js'}, {allow: '/static/glade/'},
+              { userAgent: '*', allow: '/' }, 
               { userAgent: 'Googlebot',  disallow: ['']  }
               
             ]

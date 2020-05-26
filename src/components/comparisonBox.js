@@ -56,10 +56,7 @@ const [showContent, setContent]= useState(false)
 const toggleContent = () => {
     setContent(showContent => !showContent)
 }
-let arrowstyle = classnames(
-    styles.arrow,
-    {[styles.Up] : !showContent
-    });
+
 
 
     return(
@@ -141,7 +138,7 @@ let arrowstyle = classnames(
     </OutboundLink>
      </div>
      <div className={styles.imageWrap}>
-     <BackgroundLogo src={serviceLogo}  />
+     <BackgroundLogo src={serviceLogo}/>
      </div>
      </div>
      </div>
