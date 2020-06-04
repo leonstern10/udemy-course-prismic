@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.4.1",
     "classnames": "^2.2.6",
