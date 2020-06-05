@@ -40,7 +40,6 @@ const ComparisonGrid = ({ comparisons}) => {
                    
                 )
             })}
-        
         </ComparisonWrapper>
 
     )
