@@ -247,14 +247,15 @@ align-items: center;
         
     }
 
+    .list-price p{
+        text-align: center;
+       
+   }
     .content{
         margin: 10px 93px;
         color: var(--mainBlack);
         max-width: 616px;
         overflow: hidden;
-        
-        
-
     }
     .content p{
         font-size: 17px;
@@ -318,7 +319,8 @@ align-items: center;
     }
     .list-price{
         display: none;
-    }
+       
+   }
     .features{
        
         font-size: 14px;
