@@ -7,6 +7,10 @@ import AboutContact from './aboutContact';
 import FaqGrid  from './faqGrid';
 import Sidebar  from './sidebar';
 import styles from "../css/sliceZone.module.css";
+import BlogGrid  from './blogGrid';
+import SmallTable  from './smallTable';
+
+
 
 
 const SliceZone = ({body}) => {
@@ -34,6 +38,20 @@ const SliceZone = ({body}) => {
                                     key={i}
                                     faqs={bodyContent.fields}
                                     title={bodyContent.primary.faq_title} />
+                        )
+                    }else if (bodyContent.type ==='blog_content'){
+                        return ( 
+                                    <BlogGrid 
+                                    key={i}
+                                    sections={bodyContent.fields}
+                                    title={bodyContent.primary.intro_title} />
+                        )
+                    }else if (bodyContent.type ==='small_table'){
+                        return ( 
+                                    <SmallTable 
+                                    key={i}
+                                    smalltables={bodyContent.fields}
+                                    />
                         )
                     }else if (bodyContent.type ==='about___contact'){
                         return ( 

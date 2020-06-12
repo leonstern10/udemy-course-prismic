@@ -9,12 +9,9 @@ margin-right: 50px;
 @media (max-width: 1079px) {
     margin-right: 0px;
 }
-
-
-
 `;
 
-const ComparisonGrid = ({ comparisons}) => {
+const ComparisonGrid = ({comparisons}) => {
     return (
         <ComparisonWrapper>
                 
