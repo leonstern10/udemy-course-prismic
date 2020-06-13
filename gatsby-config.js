@@ -57,14 +57,16 @@ module.exports = {
           path: '/',
           component: require.resolve('./src/templates/footerPage.js')
         
-        },
-        {
-          type: 'Blogpage',
-          match: '/blog/:uid',
-          path: '/blog/',
-          component: require.resolve('./src/templates/blogPage.js')
+        }
+        // ,
+        // {
+        //   type: 'Blogpage',
+        //   match: '/blog/:uid',
+        //   path: '/blog',
+        //   component: require.resolve('./src/templates/blogPage.js')
         
-        }]
+        // }
+      ]
         
       }
     },
