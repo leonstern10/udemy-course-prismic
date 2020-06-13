@@ -72,7 +72,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://eltop10.co',
-        sitemap: 'https://eltop10.co/sitemap-pages.xml',
+        sitemap: 'https://eltop10.co/sitemap.xml',
         env: {
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }]
