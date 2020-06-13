@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { RichText } from 'prismic-reactjs';
-import Rater from 'react-rater'
+import React from 'react';
+// import { RichText } from 'prismic-reactjs';
+// import Rater from 'react-rater'
 import styled from 'styled-components';
 
 
