@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 1.25rem;
+    padding: 1.25rem 1rem;
 }
     
   .image{
@@ -66,7 +66,7 @@
     }
     .image{
       width: auto;
-      height: 45px;
+      height: 40px;
     }
   }
   
@@ -78,11 +78,11 @@
       display: none;
     }
     .navbar {
-        padding: 0.2rem 2rem;
+        padding: 0.2rem 1.25rem;
       }
       image{
         width: auto;
-        height: 50px;
+        height: 40px;
     }
 
     .logo-btn {
@@ -129,6 +129,13 @@
       display: flex;
       margin: auto 0;
     }
+    @media screen and (min-width: 1244px) {
+      
+      .navbar {
+          padding: 0.25rem 2rem;
+        }
+      }
+    
     
     
   }
