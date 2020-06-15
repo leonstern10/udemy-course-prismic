@@ -160,7 +160,7 @@ let description =  '';
           <RichText render= {authorName} />
           </div>
           </div>
-          <img className={styles.postImage} src={postImage} alt={AltImage}/>
+          <img className={styles.postImage} src={postImage} alt="Post"/>
           </div>
           <div className={styles.postDescription}>
           <RichText render= {content} />
