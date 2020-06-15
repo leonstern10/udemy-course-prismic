@@ -1,0 +1,134 @@
+.author{
+    box-sizing: border-box;
+    margin: 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+     
+      }
+      .author img{    
+        width: 39px;
+          height: 39px;   
+  }
+  .author p{    
+   padding-right: 11px   
+}
+  .page-title h1{
+   font-size: 45px;
+  }
+
+  .post-image{
+      object-fit: cover;
+      height: 325px;
+      width: 647px;
+      
+
+  }
+  
+  .post-description{
+    max-width: 748px;
+    background-color: #F9f9f9;
+    padding: 15px 59px 34px 40px;
+    line-height: 28px;
+    color: #0C1C30;
+    font-size: 18px;
+    margin-bottom: 40px;
+   
+  }
+  .header-section{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  max-width: 1220px;
+  
+}
+.title-wrapper{
+padding: 30px 45px 60px 40px;
+background: #F9f9f9;
+width: 590px;
+max-height: 300px;
+}
+
+@media screen and (max-width: 1223px) {
+.post-image{
+    width: 510px;
+}     
+}
+
+@media screen and (max-width: 1105px) {
+    .post-image{
+        width: 410px;
+        
+    }     
+    .page-title h2{
+        font-size: 38px;
+       }
+
+}
+@media screen and (max-width: 855px) {
+    .post-image{
+        height: 260px;
+        width: 350px;
+        
+    }     
+    .page-title h2{
+        font-size: 32px;
+       }
+       .title-wrapper{
+        max-height: 230px;
+        
+        }
+        .post-description{
+            font-size: 16px;
+            padding: 50px 30px 30px 40px;
+        }
+
+}
+@media screen and (max-width: 767px) {
+           .title-wrapper{
+        padding: 30px 30px 30px 40px;
+        }
+        .post-description{
+          
+            padding: 50px 30px 30px 40px;
+        }
+
+
+}
+@media screen and (max-width: 700px) {
+    .header-section{
+        display: flex;
+        flex-direction: row;
+       flex-wrap: wrap-reverse;
+}
+.post-image{
+    width: 700px;
+    height: auto;
+    }
+    .title-wrapper{
+        background:transparent;  
+        padding: 15px 5px 0px 5px; 
+}
+.page-title h2{
+    font-size: 36px;
+   }
+   .post-description{
+       background-color: transparent;
+       padding: 45px 5px 0px 5px; 
+   }
+}
+
+@media screen and (max-width: 450px) {
+
+    .page-title h2{
+        font-size: 32px
+    }
+    
+    
+}
+@media screen and (max-width: 342px) {
+
+    .page-title h2{
+        font-size: 30px
+    }
+}

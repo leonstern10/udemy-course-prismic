@@ -8,7 +8,7 @@ import FaqBox from './faqBox';
 const FaqGrid = ({faqs, title}) => {
     return (
         <div className={styles.wrapper}>
-            <div className ={styles.title}>
+        <div className ={styles.title}>
          <RichText render={title}/>
          </div>
          <div className={styles.container}>

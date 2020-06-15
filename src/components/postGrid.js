@@ -12,7 +12,7 @@ margin: 70px auto;
     padding-bottom: 0;
     border-bottom: 1px solid #CACACA;
 }
-`
+`;
 const PostGrid = ({title, posts}) => {
 return (
     <PostGridWrapper>

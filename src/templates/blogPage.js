@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import SliceZone from '../components/silceZone'
 import SEO from '../components/seo'
 import styled from 'styled-components';
-import styles from "../css/page.module.css";
+import styles from "../css/blogPage.module.css";
 
 
 export const query = graphql`
@@ -52,6 +52,22 @@ query BlogQuery($id: String) {
     }
   }
 `;
+const BlogPageWrapper = styled.section `
+max-width: 1420px;
+margin: 60px auto;
+padding: 0 100px;
+.page-wrapper{
+  margin: 30px auto;
+}
+@media (max-width: 700px) {
+  margin: 20px auto;
+ }
+@media (max-width: 350px) {
+ padding:0 5px;
+}
+
+
+`;
 
 
 const BlogPage = (props) => {
@@ -61,22 +77,27 @@ const BlogPage = (props) => {
     const blogImage = props.data.prismic.allBlogpages.edges[0].node.blog_image.url;
     const blogDescription = props.data.prismic.allBlogpages.edges[0].node.blog_description;
     return (
-        <div>
-        <div>
+      <Layout>
+      <BlogPageWrapper className={styles.pageWrapper}> 
+      <div className={styles.headerSection}>
+        <div className={styles.titleWrapper}>
+        <div className={styles.pageTitle}>
         <RichText render= {blogTitle} />
         </div>
-         <div>
+         <div className={styles.author}>
          <RichText render= {author} />
          </div>
+         </div>
          <img className={styles.postImage} src={blogImage} alt="blog"/>
-         <div>
+         </div>
+         <div className={styles.postDescription}>
          <RichText render= {blogDescription} />
          </div>
          {!!props.data.prismic.allBlogpages.edges[0].node.body &&
    <SliceZone body={props.data.prismic.allBlogpages.edges[0].node.body}/> //Need to check this because it was blocking the data from SliceZone
    }
-         </div>
-         
+         </BlogPageWrapper>
+         </Layout>
     )
 }
 

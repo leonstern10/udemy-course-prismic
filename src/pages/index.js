@@ -74,7 +74,7 @@ const IndexPage = (props) => {
   return(
 
   <>
-     <SEO title="Compara y escoge los mejores productos" description= " tu mejor aliado al momento de buscar un producto o servicio en internet ya que te permite conocer y comparar a los mejores proveedores en una amplia variedad de industrias y categorías."/>
+     <SEO title="Compara y escoge los mejores productos" description= "eltop10.co es tu mejor aliado al momento de buscar un servicio en Internet, compara a los mejores proveedores para tomar las mejores decisiones."/>
      <CookieConsent
           buttonStyle= {{ background: "#8461C9", color: "white" }}
            declineButtonStyle={{ background: "none" }}

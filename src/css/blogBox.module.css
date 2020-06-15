@@ -1,0 +1,9 @@
+.wrraper{
+    max-width: 908px;
+ 
+}
+.box{
+    border-bottom: 2px solid #FFAD80;
+    margin: 40px 0;
+    padding-bottom: 40px;
+}

@@ -3,13 +3,13 @@ import RichText from './richText';
 import SmallTableBox from './smalltableBox';
 import styled from 'styled-components';
 
+const SmallTableWrapper = styled.section `
 
+`;
 
 const SmallTable = ({smalltables}) => {
     return (
-        <div>
-
-
+ <SmallTableWrapper>
 {smalltables.map((smalltable,i) => {
                 return (
                     <SmallTableBox 
@@ -21,7 +21,7 @@ const SmallTable = ({smalltables}) => {
                     key={i}/>
                     )
                 })}
-        </div>
+        </SmallTableWrapper>
     )
 }
 

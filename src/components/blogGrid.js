@@ -1,13 +1,13 @@
 import React from 'react';
 import RichText from './richText';
 import BlogBox from './blogBox';
-
+import styles from "../css/blogGrid.module.css";
 
 
 const BlogGrid = ({sections, title}) => {
     return (
-        <div>
-            <div>
+        <div className={styles.wrapper}>
+        <div className ={styles.title}>
          <RichText render={title}/>
          </div>
          <div>
