@@ -27,23 +27,20 @@ const { pathname } = useLocation()
     query={query}
     render={({
       site: {
-  // 
-  
- 
-  siteMetadata: {
-    defaultTitle,
-    defaultDescription,
-    defaultImage,
-    siteUrl,
-    defaultKeywords,
-    twitterUsername,
+      siteMetadata: {
+      defaultTitle,
+      defaultDescription,
+      defaultImage,
+      siteUrl,
+      defaultKeywords,
+      twitterUsername,
   },
 },
 }) => {
   
   return (
     <Helmet htmlAttributes={{ lang: "es" }} title={`${title} | ${defaultTitle}`}>
-      <meta name="description" content={`${description} || ${defaultDescription}`} />
+      <meta name="description" content={`${description}`} />
       <meta name="image" content={`${image ? image : siteUrl + defaultImage}`} />
       <meta name="url" content={`${siteUrl}${pathname}`} />
       <meta name="keywords" content={keywords || defaultKeywords} />

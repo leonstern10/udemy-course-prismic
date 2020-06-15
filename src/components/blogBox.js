@@ -11,6 +11,7 @@ return(
 <div>
     <RichText render = {sectionContent}/>
 </div>
+
 </div>
 )
 

@@ -14,6 +14,8 @@ prismic {
     allPages(id: $id) {
       edges {
         node {
+          meta_description
+          meta_title
           page_title
           author_name
           post_image
@@ -126,6 +128,10 @@ const pageTitle = props.data.prismic.allPages.edges[0].node.page_title;
 const authorName = props.data.prismic.allPages.edges[0].node.author_name;
 const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
 const content = props.data.prismic.allPages.edges[0].node.content;
+const metaTitle = props.data.prismic.allPages.edges[0].node.meta_title;
+const metaDecription = props.data.prismic.allPages.edges[0].node.meta_description;
+
+
 
 let description =  '';
           if (typeof content === 'string') {
@@ -136,8 +142,8 @@ let description =  '';
     return (
         <Layout>
           <SEO 
-          title = {pageTitle[0].text} 
-          description ={description}
+          title = {metaTitle} 
+          description ={metaDecription}
             image = {postImage}
             pathname={props.data.prismic.allPages.edges[0].node._meta.id}
 
