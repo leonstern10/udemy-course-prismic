@@ -83,6 +83,7 @@ const SliceZone = ({body}) => {
                         return (
                             <Hero
                             heroImage = {bodyContent.primary.hero_image.url}
+                            Alt = {bodyContent.primary.hero_image.alt}
                             title = {bodyContent.primary.hero_title}
                             content={bodyContent.primary.hero_content}
                             key={i}/>

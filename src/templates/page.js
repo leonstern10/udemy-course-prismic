@@ -16,7 +16,6 @@ prismic {
         node {
           meta_description
           meta_title
-          image_alt_text
           page_title
           author_name
           post_image
@@ -131,7 +130,7 @@ const postImage = props.data.prismic.allPages.edges[0].node.post_image.url;
 const content = props.data.prismic.allPages.edges[0].node.content;
 const metaTitle = props.data.prismic.allPages.edges[0].node.meta_title;
 const metaDecription = props.data.prismic.allPages.edges[0].node.meta_description;
-const AltImage = props.data.prismic.allPages.edges[0].node.image_alt_text;
+const AltImage = props.data.prismic.allPages.edges[0].node.post_image.alt;
 
 
 let description =  '';
@@ -160,7 +159,7 @@ let description =  '';
           <RichText render= {authorName} />
           </div>
           </div>
-          <img className={styles.postImage} src={postImage} alt="Post"/>
+          <img className={styles.postImage} src={postImage} alt={AltImage}/>
           </div>
           <div className={styles.postDescription}>
           <RichText render= {content} />

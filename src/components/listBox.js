@@ -12,13 +12,13 @@ object-fit: cover;
 
 `;
 
-const ListBox = ({ title, buttonDestination, listImage, color }) => {
+const ListBox = ({ title, buttonDestination, listImage, color, Alt }) => {
     return (
         
         <div className={styles.card}>
             <div className={styles.container}>
             <Link to={buttonDestination} > 
-            <BackgroundImage src={listImage} className={styles.image}/>
+            <BackgroundImage src={listImage} alt ={Alt} className={styles.image}/>
             <div className={styles.text}>
                
                     <RichText render={title}>

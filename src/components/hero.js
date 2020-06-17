@@ -28,10 +28,10 @@ const HeroWrapper = styled.section `
 `
 
 
-const Hero = ({title, content, heroImage}) => {
+const Hero = ({title, content, heroImage, Alt}) => {
     return(
         
-        <HeroWrapper heroImage={heroImage}>
+        <HeroWrapper heroImage={heroImage} alt={Alt}>
             
             <div className={styles.navbar}>
             <Navbar/>

@@ -10,7 +10,7 @@ return(
     <div>
     <RichText render = {sectionTitle}/>
 </div>
-<div>
+<div className={styles.content}>
     <RichText render = {sectionContent}/>
 </div>
 </div>

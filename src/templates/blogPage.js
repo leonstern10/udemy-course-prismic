@@ -37,6 +37,7 @@ query BlogQuery($id: String) {
                   button_text
                   logo_image
                   number_rating
+                  rank_number
                   rating_stars
                   web_link {
                     ... on PRISMIC__ExternalLink {
@@ -76,6 +77,8 @@ const BlogPage = (props) => {
     const author = props.data.prismic.allBlogpages.edges[0].node.author;
     const blogImage = props.data.prismic.allBlogpages.edges[0].node.blog_image.url;
     const blogDescription = props.data.prismic.allBlogpages.edges[0].node.blog_description;
+    const Alt = props.data.prismic.allBlogpages.edges[0].node.blog_image.alt;
+
     return (
       <Layout>
       <BlogPageWrapper className={styles.pageWrapper}> 
@@ -88,7 +91,7 @@ const BlogPage = (props) => {
          <RichText render= {author} />
          </div>
          </div>
-         <img className={styles.postImage} src={blogImage} alt="blog"/>
+         <img className={styles.postImage} src={blogImage} alt={Alt}/>
          </div>
          <div className={styles.postDescription}>
          <RichText render= {blogDescription} />

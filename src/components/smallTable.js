@@ -2,14 +2,13 @@ import React from 'react';
 import RichText from './richText';
 import SmallTableBox from './smalltableBox';
 import styled from 'styled-components';
+import styles from "../css/smalltable.module.css";
 
-const SmallTableWrapper = styled.section `
 
-`;
 
 const SmallTable = ({smalltables}) => {
     return (
- <SmallTableWrapper>
+ <div className={styles.wrapper}>
 {smalltables.map((smalltable,i) => {
                 return (
                     <SmallTableBox 
@@ -18,10 +17,11 @@ const SmallTable = ({smalltables}) => {
                     ratingStars={smalltable.rating_stars}
                     buttonText={smalltable.button_text}
                     webLink={smalltable.web_link.url}
+                    rankNumber={smalltable.rank_number}
                     key={i}/>
                     )
                 })}
-        </SmallTableWrapper>
+        </div>
     )
 }
 

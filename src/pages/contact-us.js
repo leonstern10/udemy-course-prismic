@@ -93,6 +93,7 @@ const ContactUs = (props) => {
     // const ResultTitle= props.data.prismic.allContact_pages.edges[0].node.result_title;
     // const ResultContent= props.data.prismic.allContact_pages.edges[0].node.result_content;
     const cartoonImage= props.data.prismic.allContact_pages.edges[0].node.cartoon_image.url;
+    const Alt= props.data.prismic.allContact_pages.edges[0].node.cartoon_image.alt;
     const cartoonTitle= props.data.prismic.allContact_pages.edges[0].node.cartoon_title;
     const cartoonContent= props.data.prismic.allContact_pages.edges[0].node.cartoon_content;
     const titleContact= props.data.prismic.allContact_pages.edges[0].node.title_contact;
@@ -145,7 +146,7 @@ const ContactUs = (props) => {
                 </div>
                 <RichText render = {cartoonContent}></RichText>
                 <div className={styles.cartoonImage}>
-                <img src={cartoonImage} alt="eltop10"></img>
+                <img src={cartoonImage} alt={Alt}></img>
                 </div>
                 </div>
   

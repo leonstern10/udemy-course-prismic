@@ -1,0 +1,10 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 908px;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #FFAD80;
+    padding-bottom: 60px;
+
+
+}

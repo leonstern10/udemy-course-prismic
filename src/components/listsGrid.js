@@ -21,6 +21,7 @@ const ListsGrid = ({title, lists}) => {
                 return (
                     <ListBox 
                     listImage= {list.list_image.url}
+                    Alt= {list.list_image.alt}
                     title={list.article_title}
                     color={list.color}
                     buttonDestination={`/${list.button_destination._meta.uid}`}
