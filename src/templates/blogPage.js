@@ -19,6 +19,31 @@ query BlogQuery($id: String) {
             blog_description
             blog_image
             body {
+              ... on PRISMIC_BlogpageBodySidetable {
+                type
+                label
+                primary {
+                  button_label
+                  sidetable_title
+                  compare_all {
+                    ... on PRISMIC_Page {
+                      _meta {
+                        uid
+                      }
+                    }
+                  }
+                }
+                fields {
+                  logo
+                  ranking
+                  rating_number
+                  web_link {
+                    ... on PRISMIC__ExternalLink {
+                      url
+                    }
+                  }
+                }
+              }
               ... on PRISMIC_BlogpageBodyBlog_content {
                 type
                 label

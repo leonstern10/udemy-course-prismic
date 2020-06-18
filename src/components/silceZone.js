@@ -9,6 +9,8 @@ import Sidebar  from './sidebar';
 import styles from "../css/sliceZone.module.css";
 import BlogGrid  from './blogGrid';
 import SmallTable  from './smallTable';
+import SideTable  from './sideTable';
+
 
 
 
@@ -46,6 +48,15 @@ const SliceZone = ({body}) => {
                                     sections={bodyContent.fields}
                                     title={bodyContent.primary.intro_title} />
                         )
+                    }else if (bodyContent.type ==='sidetable'){
+                        return ( 
+                                    <SideTable 
+                                    key={i}
+                                    sidetables={bodyContent.fields}
+                                    title={bodyContent.primary.sidetable_title}
+                                    buttonLabel={bodyContent.primary.button_label}
+                                    compareAll={bodyContent.primary.compare_all._meta.uid} />
+                        )
                     }else if (bodyContent.type ==='small_table'){
                         return ( 
                                     <SmallTable 
@@ -53,6 +64,7 @@ const SliceZone = ({body}) => {
                                     smalltables={bodyContent.fields}
                                     />
                         )
+                    
                     }else if (bodyContent.type ==='about___contact'){
                         return ( 
                                     <AboutContact 
