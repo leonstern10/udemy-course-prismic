@@ -28,9 +28,9 @@ const SideTable = ({title, sidetables, buttonLabel, compareAll}) => {
             )}
            </div>
         </div>
-        <Link to={compareAll}>
+        <a href={compareAll}>
         {buttonLabel}
-        </Link> 
+        </a> 
         </div>
     )
 
