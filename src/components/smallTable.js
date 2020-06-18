@@ -2,7 +2,7 @@ import React from 'react';
 import RichText from './richText';
 import SmallTableBox from './smalltableBox';
 import styled from 'styled-components';
-import styles from "../css/smalltable.module.css";
+import styles from "../css/smallTable.module.css";
 
 
 
