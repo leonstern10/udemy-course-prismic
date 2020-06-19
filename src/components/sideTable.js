@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../css/sidebox.module.css"
+import styles from "../css/sidetable.module.css"
 import RichText from './richText';
 import SideTableBox from './sideTableBox';
 import { Link } from 'gatsby';
@@ -8,7 +8,7 @@ import { Link } from 'gatsby';
 const SideTable = ({title, sidetables, buttonLabel, compareAll}) => {
     return (
         <div className={styles.grid}>
-        <div className={styles.wrap}>
+            
         <div className={styles.Maintitle}>
         <RichText render={title}/>
         </div>
@@ -27,8 +27,8 @@ const SideTable = ({title, sidetables, buttonLabel, compareAll}) => {
             }
             )}
            </div>
-        </div>
-        <a href={compareAll}>
+     
+        <a href={compareAll} className={styles.cta}>
         {buttonLabel}
         </a> 
         </div>

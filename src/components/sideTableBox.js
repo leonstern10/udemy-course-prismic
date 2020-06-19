@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs';
 import styles from "../css/sidetablebox.module.css"
 import styled from 'styled-components';
 import { OutboundLink  } from 'gatsby-plugin-google-gtag'
+import {AiFillRightCircle} from 'react-icons/ai';
 
 
 
@@ -12,7 +13,7 @@ background-image: url('${props => props.src}');
 background-size: cover;
 background-position: center;
 background: no-repeat;
-max-width: 111px;
+max-width: 80px;
 max-height: 70px;
 margin: auto 0;
 @media (max-width: 390px) {
@@ -26,20 +27,24 @@ margin: auto 0;
 
 const SideTableBox = ({logoImage, ratingNumber, ranking, webLink}) => {
     return (
-        <div className={styles.box}>
-            <div className={styles.wrap}>
-            <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => typeof window !== "undefined" && window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} className={styles.boxLink}>   
-            <LogoImage src={logoImage} className={styles.logoImage}/>
-             <div>
-             <RichText render={ratingNumber}/>                    
-             </div>
-             <div className={styles.rankNumber}>
+         <OutboundLink href={webLink} target="_blank" rel="noopener noreferrer" onClick= {() => typeof window !== "undefined" && window.gtag("event", "conversion", { send_to: ["AW-656248674/A0KMCKWZu88BEOKe9rgC"]})} className={styles.boxLink}>   
+         <div className={styles.triangle}/>
+        <div className={styles.rankNumber}>
         {ranking}
         </div>
+            <div className={styles.box}>
+            <div className={styles.wrap}>
+            <LogoImage src={logoImage} className={styles.logoImage}/>
+            <div className={styles.number}>
+             <RichText render={ratingNumber}/>                    
+             </div>
+            <AiFillRightCircle className={styles.arrow}/>
+            </div>
+            </div>
              </OutboundLink>
                  
-             </div>
-             </div>
+             
+            
 
     )
 }

@@ -1,7 +1,8 @@
 .wrapper{
     display: flex;
     flex-direction: row;
-    width: 908px;
+    width: 785px;
+    padding: 0px 15px;
     justify-content: space-evenly;
     border-bottom: 2px solid #FFAD80;
     padding-bottom: 60px;
