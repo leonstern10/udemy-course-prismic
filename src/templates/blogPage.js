@@ -53,6 +53,36 @@ query BlogQuery($id: String) {
                   section_title
                 }
               }
+              ... on PRISMIC_BlogpageBodyAbout___contact {
+                type
+                label
+                primary {
+                  about_content
+                  about_title
+                  button_label
+                  contact_titulo
+                  contact_content
+                  contact_link {
+                    ... on PRISMIC_Contact_page {
+                      form_title
+                      _meta {
+                        uid
+                      }
+                    }
+                  }
+                }
+              }
+              ... on PRISMIC_BlogpageBodyFaq {
+                type
+                label
+                primary {
+                  faq_title
+                }
+                fields {
+                  answer
+                  question
+                }
+              }
               ... on PRISMIC_BlogpageBodySmall_table {
                 type
                 label
