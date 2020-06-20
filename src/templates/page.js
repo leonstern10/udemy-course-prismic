@@ -31,6 +31,11 @@ prismic {
                 article_image
                 article_title
                 page_link {
+                  ... on PRISMIC_Blogpage {
+                    _meta {
+                      uid
+                    }
+                  }
                   ... on PRISMIC_Page {
                     _meta {
                       uid

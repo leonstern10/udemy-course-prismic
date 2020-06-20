@@ -23,6 +23,7 @@ const Sidebar = ({title, sides}) => {
                     articleImage= {side.article_image.url}
                     title={side.article_title}
                     pageLink={`/${side.page_link._meta.uid}`}
+                   
                     key={i}/>
                         
                    

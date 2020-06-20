@@ -55,7 +55,7 @@ const SliceZone = ({body}) => {
                                     sidetables={bodyContent.fields}
                                     title={bodyContent.primary.sidetable_title}
                                     buttonLabel={bodyContent.primary.button_label}
-                                    compareAll={bodyContent.primary.compare_all.url} />
+                                    compareAll={bodyContent.primary.compare_all._meta.uid} />
                         )
                     }else if (bodyContent.type ==='small_table'){
                         return ( 

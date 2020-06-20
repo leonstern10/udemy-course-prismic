@@ -26,8 +26,12 @@ query BlogQuery($id: String) {
                   button_label
                   sidetable_title
                   compare_all {
-                    ... on PRISMIC__ExternalLink {
-                      url
+                    ... on PRISMIC_Page {
+                      _meta {
+                        uid
+                        type
+                      }  
+                      _linkType
                     }
                   }
                 }

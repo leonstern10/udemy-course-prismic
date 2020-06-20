@@ -12,12 +12,12 @@ object-fit: cover;
 
 `;
 
-const SideBox = ({ title, articleImage, pageLink}) => {
+const SideBox = ({ title, articleImage, pageLink, blogpageLink}) => {
     return (
         
         <div className={styles.box}>
             <div className={styles.wrap}>
-            <Link to={pageLink} > 
+            <Link to={pageLink}> 
             <BackImage src={articleImage} className={styles.articleImage}/>
             <div className={styles.text}>
                
