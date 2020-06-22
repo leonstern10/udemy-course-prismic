@@ -12,13 +12,11 @@
     font-size: 32px;
 }
 
-.container{
 
-    box-sizing: border-box;
-    border: 1px solid #C0C0C0;
-    padding: 22px 15px;
-
-    max-width: 854px;
+@media screen and (max-width: 740px) {
+    .wrapper{
+        margin: unset;
+    }
 }
 
 @media screen and (max-width: 470px) {

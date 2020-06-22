@@ -117,8 +117,14 @@ padding: 0 100px;
 .page-wrapper{
   margin: 30px auto;
 }
+@media (max-width: 760px) {
+  padding: 0 40px;
+ }
 @media (max-width: 700px) {
   margin: 20px auto;
+ }
+ @media (max-width: 550px) {
+  padding:0 20px;
  }
 @media (max-width: 350px) {
  padding:0 5px;
