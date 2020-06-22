@@ -1,9 +1,15 @@
+.grid{
+width: 785px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+}
 .wrapper{
     display: flex;
     flex-direction: row;
-    width: 785px;
-    padding: 0px 15px;
-    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 15px;
+    justify-content: space-between;
     
     padding-bottom: 60px;
 

@@ -8,6 +8,7 @@ import styles from "../css/smallTable.module.css";
 
 const SmallTable = ({smalltables}) => {
     return (
+ <div className={styles.grid}>   
  <div className={styles.wrapper}>
 {smalltables.map((smalltable,i) => {
                 return (
@@ -21,6 +22,7 @@ const SmallTable = ({smalltables}) => {
                     key={i}/>
                     )
                 })}
+        </div>
         </div>
     )
 }
