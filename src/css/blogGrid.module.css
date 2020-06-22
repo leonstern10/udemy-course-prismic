@@ -20,7 +20,7 @@
 }
 @media screen and (max-width: 522px) {
     .wrapper{
-        max-width: 400px;
+        max-width: 460px;
     }
 }
 
@@ -28,6 +28,11 @@
     .title h1{
         font-size: 26px;
     }
+    .wrapper{
+        max-width: 390px;
+    }
+}
+@media screen and (max-width: 412px) {
     .wrapper{
         max-width: 300px;
     }
