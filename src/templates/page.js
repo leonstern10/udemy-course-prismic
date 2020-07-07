@@ -138,12 +138,12 @@ const metaDecription = props.data.prismic.allPages.edges[0].node.meta_descriptio
 const AltImage = props.data.prismic.allPages.edges[0].node.post_image.alt;
 
 
-let description =  '';
-          if (typeof content === 'string') {
-            description = content
-          } else { // content is an object 
-            description = content[1].text
-          }
+// let description =  '';
+//           if (typeof content === 'string') {
+//             description = content
+//           } else { // content is an object 
+//             description = content[1].text
+//           }
     return (
         <Layout>
           <SEO 
